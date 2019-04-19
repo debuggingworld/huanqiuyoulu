@@ -1,10 +1,11 @@
-/*
 package com.hq.db;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.math.BigInteger;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -20,9 +21,9 @@ import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.log4j.Logger;
 
 import com.alibaba.druid.pool.DruidDataSource;
-import com.hq.db.db.annotation.Colunm;
-import com.hq.db.db.annotation.Exclude;
-import com.hq.db.db.annotation.Table;
+import com.hq.db.annotation.Colunm;
+import com.hq.db.annotation.Exclude;
+import com.hq.db.annotation.Table;
 //操作数据库的工具类
 public class Db //extends QueryRunner
 {
@@ -63,22 +64,18 @@ public class Db //extends QueryRunner
         }
     }
 
-    */
-/**
+    /**
      * 通过DataSource得到Connection
      * @return
      * @throws SQLException
-     *//*
-
+     */
     public static Connection getConnection() throws SQLException{
         //得到ThreadLocal中的connection
         Connection con = conn.get();
         //如果开启了事务，则con不为空，应该直接返回con
-	       */
-/* if(con != null){
+	       /* if(con != null){
 	            return con;
-	        } *//*
-
+	        } */
         if(null==con||con.isClosed())
         {
             con=ds.getConnection();
@@ -88,21 +85,17 @@ public class Db //extends QueryRunner
         return con;
     }
 
-    */
-/**
+    /**
      * 开启事务
      * @throws SQLException
-     *//*
-
+     */
     public static void beginTransaction() throws SQLException {
         //得到ThreadLocal中的connection
-	     */
-/*   Connection con = conn.get();
+	     /*   Connection con = conn.get();
 	        //判断con是否为空，如果不为空，则说明事务已经开启
 	        if(con != null){
 	            throw new SQLException("事务已经开启了,不能重复开启事务");
-	        } *//*
-
+	        } */
         //如果不为空，则开启事务
         Connection con = getConnection();
         //设置事务提交为手动
@@ -111,13 +104,11 @@ public class Db //extends QueryRunner
         conn.set(con);
     }
 
-    */
-/**
+    /**
      * 提交事务
      * @throws SQLException
-     *//*
-
-    public static void commitTransaction() throws SQLException {
+     */
+ /*   public static void commitTransaction() throws SQLException {
         //得到ThreadLocal中的connection
         Connection con = conn.get();
         //判断con是否为空，如果为空，则说明没有开启事务
@@ -130,15 +121,13 @@ public class Db //extends QueryRunner
         con.close();
         //将连接移出ThreadLocal
         conn.remove();
-    }
+    }*/
 
-    */
-/**
+    /**
      * 回滚事务
      * @throws SQLException
-     *//*
-
-    public static void rollbackTransaction() {
+     */
+   /* public static void rollbackTransaction() {
         try {
             //得到ThreadLocal中的connection
             Connection con = conn.get();
@@ -155,15 +144,13 @@ public class Db //extends QueryRunner
         } catch (SQLException e) {
             log.error("ERROR_002_com.hq.db_回滚事务失败_line145..."+e);
         }
-    }
+    }*/
 
-    */
-/**
+    /**
      * 关闭事务
      * @param connection
      * @throws SQLException
-     *//*
-
+     */
     public static void releaseConnection(Connection connection) throws SQLException {
         //得到ThreadLocal中的connection
         Connection con = conn.get();
@@ -232,20 +219,16 @@ public class Db //extends QueryRunner
         releaseConnection(conn);
         return result;
     }
-    */
-/**
+    /**
      * 增删改查方法************************************************************************************
-     *//*
+     */
 
-
-    */
-/**
+    /**
      * 增加一个对像
      * @param t  直接传一下对象
      * @return 最后加入对象的id,如果是-1就是没有成功
      * @throws SQLException
-     *//*
-
+     */
     public static<T> long add(T t) throws SQLException
     {
         //解析表名，
@@ -291,13 +274,11 @@ public class Db //extends QueryRunner
         }
         return relastid;
     }
-    */
-/**
+    /**
      * 修改对象
      * @param t
      * @throws SQLException
-     *//*
-
+     */
     public static<T> void update(T t) throws SQLException
     {
 
@@ -317,7 +298,6 @@ public class Db //extends QueryRunner
             log.debug(sql);
             //执行sql 传t的参数
 
-*/
 /*	Connection con=Db.getConnection();
 						PreparedStatement ps=con.prepareStatement(sql);
 						for(int i=0;i<values.size();i++)
@@ -326,8 +306,7 @@ public class Db //extends QueryRunner
 						}
 
 						ps.setObject(values.size()+1,fid.get(t) );
-						int re=ps.executeUpdate();*//*
-
+						int re=ps.executeUpdate();*/
 
             //追加id最后
             Field fid=t.getClass().getDeclaredField("id");
@@ -342,14 +321,12 @@ public class Db //extends QueryRunner
 
 
     }
-    */
-/**
+    /**
      * 删除对象
      * @param id
      * @param clazz
      * @throws SQLException
-     *//*
-
+     */
     public static<T> void delete(long id, Class<T> clazz) throws SQLException {
 
         String tablename=getTableName(clazz);
@@ -357,14 +334,12 @@ public class Db //extends QueryRunner
         update(sql,id);
 
     }
-    */
-/**
+    /**
      * 查询一个对象
      * @param id
      * @param clazz
      * @return
-     *//*
-
+     */
     public static<T> T get(long id,Class<T> clazz)throws SQLException
     {
         T t=null;
@@ -376,11 +351,9 @@ public class Db //extends QueryRunner
         return t;
     }
 
-    */
-/**
+    /**
      * 查询表中所有数据
-     *//*
-
+     */
     public static<T> List<T> getAll(Class<T> clazz) throws SQLException
     {
         List<T> list=new ArrayList<T>();
@@ -405,15 +378,13 @@ public class Db //extends QueryRunner
         list=query(sql, new BeanListHandler<T>(clazz),params);
         return list;
     }
-    */
-/**
+    /**
      * 对全表分页查询
      * @param pageNo
      * @param pageSize
      * @return
      * @throws SQLException
-     *//*
-
+     */
     public static<T> PageDiv<T> getByPage(Class<T> clazz,int pageNo, int pageSize) throws SQLException {
         PageDiv<T> pd=null;
 
@@ -442,16 +413,14 @@ public class Db //extends QueryRunner
     }
 
 
-    */
-/**
+    /**
      * 根把sql语句分页
      * @param sql   select .... from .... 不用limit
      * @param pageNo
      * @param pageSize
      * @return
      * @throws SQLException
-     *//*
-
+     */
     public static<T> PageDiv<T> getByPage(Class<T> clazz,String sql, int pageNo, int pageSize,Object ... param) throws SQLException {
         PageDiv<T> pd=null;
 
@@ -483,17 +452,13 @@ public class Db //extends QueryRunner
 
         return pd;
     }
-    */
-/*********************通用方法封装********************************//*
+    /*********************通用方法封装********************************/
 
-
-    */
-/**
+    /**
      * 解析表名
      * @param t
      * @return
-     *//*
-
+     */
     public static<T> String getTableName(Class<T> clazz)
     {
         String re=null;
@@ -512,13 +477,11 @@ public class Db //extends QueryRunner
         return re;
     }
 
-    */
-/**
+    /**
      * 解析类上所有成员，将其成员名和值加入map
      * @param t
      * @return
-     *//*
-
+     */
     public static<T> TreeMap<String,Object> parseAllField(T t)
     {
         TreeMap<String,Object> map=new TreeMap<String,Object>();
@@ -556,15 +519,13 @@ public class Db //extends QueryRunner
         }
         return map;
     }
-    */
-/**
+    /**
      * 把map中的数据解析到flist,qlist values中
      * @param flist
      * @param qlist
      * @param values
      * @param map
-     *//*
-
+     */
     public static void parseFildAndQuery(StringBuilder flist,List<Object> values,TreeMap<String,Object>  map)
     {
         if(null!=map&&null!=map.keySet()&&map.keySet().size()>0)
@@ -581,4 +542,3 @@ public class Db //extends QueryRunner
 
     }
 }
-*/

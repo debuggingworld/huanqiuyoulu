@@ -7,10 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93aada36-7923-44a9-b274-7ad3d9d6713d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/log4j.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hq/db/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hq/db/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/hq/db/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/hq/db/test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hq/db/DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hq/db/DB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hq/db/Db_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hq/db/Db_1.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,48 +19,75 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hq/db/test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/hq/db/Db_1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1025">
-              <caret line="28" column="57" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/log4j.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/redcmsv6.log">
-          <provider selected="true" editor-type-id="LogFileEditorProvider" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/redcms.log">
-          <provider selected="true" editor-type-id="LogFileEditorProvider" />
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="vertical" split-proportion="0.1">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/hq/db/test.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="335">
+                  <caret line="21" selection-start-line="21" selection-end-line="21" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/com/hq/db/Db_1.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-143">
+                  <caret line="159" column="39" lean-forward="true" selection-start-line="159" selection-start-column="39" selection-end-line="159" selection-end-column="39" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#1135#1147#0" expanded="true" />
+                    <element signature="e#5254#5255#0" expanded="true" />
+                    <element signature="e#5292#5293#0" expanded="true" />
+                    <element signature="e#7509#7517#0" expanded="true" />
+                    <element signature="e#9092#9100#0" expanded="true" />
+                    <element signature="e#14622#14637#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/hq/db/DB.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="84">
+                  <caret line="65" selection-start-line="65" selection-end-line="65" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/redcms.log">
+              <provider selected="true" editor-type-id="LogFileEditorProvider" />
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/com/hq/db/DB.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-412">
+                  <caret line="123" column="57" selection-start-line="123" selection-start-column="57" selection-end-line="123" selection-end-column="57" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -80,13 +106,13 @@
         <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/src/com/hq/Db_1.java" />
         <option value="$PROJECT_DIR$/src/com/hq/db/db.java" />
-        <option value="$PROJECT_DIR$/src/com/hq/db/Db_1.java" />
         <option value="$PROJECT_DIR$/src/jdbc.properties" />
-        <option value="$PROJECT_DIR$/src/com/hq/db/DB.java" />
         <option value="$PROJECT_DIR$/src/com/hq/db/test.java" />
         <option value="$PROJECT_DIR$/redcmsv6.log" />
         <option value="$PROJECT_DIR$/redcms.log" />
         <option value="$PROJECT_DIR$/src/log4j.properties" />
+        <option value="$PROJECT_DIR$/src/com/hq/db/Db_1.java" />
+        <option value="$PROJECT_DIR$/src/com/hq/db/DB.java" />
       </list>
     </option>
   </component>
@@ -149,14 +175,14 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555668843520" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555679051292" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -292,18 +318,19 @@
       <updated>1555584972430</updated>
       <workItem from="1555584975619" duration="3441000" />
       <workItem from="1555658961426" duration="9819000" />
-      <workItem from="1555669010784" duration="837000" />
+      <workItem from="1555669010784" duration="1435000" />
+      <workItem from="1555676702458" duration="2703000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14097000" />
+    <option name="totallyTimeSpent" value="17398000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28441754" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28895614" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -336,7 +363,7 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.5377207" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28895614" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -353,7 +380,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.3289689" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3295082" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.3295082" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3295082" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
@@ -379,16 +406,6 @@
     <entry file="file://$PROJECT_DIR$/res/首页3.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hq/db/DB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/jdbc.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -403,9 +420,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/redcmsv6.log">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="LogFileEditorProvider" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hq/db/test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
+        <state relative-caret-position="335">
           <caret line="21" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -413,33 +438,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/redcmsv6.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+    <entry file="file://$PROJECT_DIR$/src/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/redcms.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="LogFileEditorProvider" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hq/db/Db_1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1025">
-          <caret line="28" column="57" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="57" />
+        <state relative-caret-position="-143">
+          <caret line="159" column="39" lean-forward="true" selection-start-line="159" selection-start-column="39" selection-end-line="159" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1135#1147#0" expanded="true" />
+            <element signature="e#5254#5255#0" expanded="true" />
+            <element signature="e#5292#5293#0" expanded="true" />
+            <element signature="e#7509#7517#0" expanded="true" />
+            <element signature="e#9092#9100#0" expanded="true" />
+            <element signature="e#14622#14637#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hq/db/DB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-412">
+          <caret line="123" column="57" selection-start-line="123" selection-start-column="57" selection-end-line="123" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
