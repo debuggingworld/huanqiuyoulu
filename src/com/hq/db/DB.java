@@ -196,6 +196,17 @@ public class DB {
         return result;
     }
 
+    //------------------------通用方法封装-----------------------------------------------
+    public static <T> String getTableName(Class<T> calzz){
+        String result = null;
+
+    }
 
 
+    //-----------------------封装对对象的增删改查-------------------------------------------
+
+    public static <T> long add(T t){
+        // 解析表名
+
+    }
 }
