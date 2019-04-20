@@ -21,7 +21,7 @@ import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.log4j.Logger;
 
 import com.alibaba.druid.pool.DruidDataSource;
-import com.hq.db.annotation.Colunm;
+
 import com.hq.db.annotation.Exclude;
 import com.hq.db.annotation.Table;
 //操作数据库的工具类
@@ -528,7 +528,7 @@ public class Db //extends QueryRunner
      */
     public static void parseFildAndQuery(StringBuilder flist,List<Object> values,TreeMap<String,Object>  map)
     {
-        if(null!=map&&null!=map.keySet()&&map.keySet().size()>0)
+       /* if(null!=map&&null!=map.keySet()&&map.keySet().size()>0)
         {
             Iterator<String> it=map.keySet().iterator();
             while(it.hasNext())
@@ -537,7 +537,7 @@ public class Db //extends QueryRunner
                 flist.append(key+"=?,");
                 values.add(map.get(key));
             }
-        }
+        }*/
         if(flist.length()>0)flist.delete(flist.length()-1, flist.length());
 
     }

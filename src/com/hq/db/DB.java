@@ -1,13 +1,21 @@
 package com.hq.db;
 
 import com.alibaba.druid.pool.DruidDataSource;
+import com.hq.db.annotation.Column;
+import com.hq.db.annotation.Exclude;
+import com.hq.db.annotation.Table;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.ResultSetHandler;
 import org.apache.log4j.Logger;
 
+import java.lang.annotation.Annotation;
+import java.lang.reflect.Field;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.Iterator;
+import java.util.List;
 import java.util.ResourceBundle;
+import java.util.TreeMap;
 
 /**
  * @author zth
@@ -197,16 +205,98 @@ public class DB {
     }
 
     //------------------------通用方法封装-----------------------------------------------
-    public static <T> String getTableName(Class<T> calzz){
-        String result = null;
 
+    /**
+     * 解析表名
+     * @param clazz
+     * @param <T>
+     * @return
+     */
+    public static <T> String getTableName(Class<T> clazz){
+        String result = null;
+        Annotation ano = clazz.getDeclaredAnnotation(Table.class);
+        if (null != ano && ano instanceof Table){
+            Table table = (Table)ano;
+            result = table.value();
+        }else {
+            // 表名和类名相同，第一个字母小写
+            String allName = clazz.getName();
+            int lastDot = allName.lastIndexOf(".");
+            result = allName.substring(lastDot+1).toLowerCase();
+        }
+        return result;
     }
+
+    /**
+     * 解析类成员，将成员名和值加入 map
+     * @param t
+     * @param <T>
+     * @return
+     */
+    public static <T>TreeMap<String,Object> parseAllField(T t){
+        TreeMap<String,Object> map = new TreeMap<>();
+
+        Field[] fields = t.getClass().getDeclaredFields();
+        if (fields != null && fields.length >0){
+            for (Field field:fields) {
+                String fname = field.getName();
+                // 排除字段
+                if ("id".equals(fname)) continue;
+                if ("serialVersionUID".equals(fname)) continue;
+
+                Annotation ano = field.getAnnotation(Exclude.class);
+                if (null != ano && ano instanceof Exclude) continue;
+
+                // 列名解析
+                Annotation clm = field.getAnnotation(Column.class);
+                field.setAccessible(true);
+
+                try {
+                    // 字段中值为空的话不参与数据库操作
+                    if (null == field.get(t)) continue;
+
+                    if (null != clm && clm instanceof Column){
+                        map.put(((Column)clm).value(),field.get(t));
+                    }else {
+                        map.put(fname,field.get(t));
+                    }
+
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return map;
+    }
+
+    /**
+     * 将 map 中的数据解析到 flist,qlist 中
+     * @param flist
+     * @param values
+     * @param map
+     */
+    public static void parseFildAndQuery(StringBuilder flist, List<Object> values,TreeMap<String,Object> map){
+        if (null!=map && null!= map.keySet() && map.keySet().size()>0){
+            Iterator<String> iterator = map.keySet().iterator();
+            while (iterator.hasNext()){
+                String key = iterator.next();
+                flist.append(key+"=?,");
+                values.add(map.get(key));
+            }
+        }
+
+        if (flist.length()>0){
+            flist.delete(flist.length()-1,flist.length());
+        }
+    }
+
+
 
 
     //-----------------------封装对对象的增删改查-------------------------------------------
 
     public static <T> long add(T t){
         // 解析表名
-
+return 0;
     }
 }

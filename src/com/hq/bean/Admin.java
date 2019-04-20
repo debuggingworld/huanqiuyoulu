@@ -1,10 +1,15 @@
 package com.hq.bean;
 
+import com.hq.db.annotation.Column;
+import com.hq.db.annotation.Table;
+
 /**
  * @author zth
  * @Date 2019-04-20 10:24
  */
+
 public class Admin {
+    private static final long serialVersionUID = 1L;
     private int id;
     private String email;
     private String upwd;

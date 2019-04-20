@@ -7,12 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93aada36-7923-44a9-b274-7ad3d9d6713d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/hq/db/annotation/Column.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/hq/db/annotation/Exclude.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/hq/db/annotation/Table.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/hq/db/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/huanqiuyoulu.iml" beforeDir="false" afterPath="$PROJECT_DIR$/huanqiuyoulu.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hq/bean/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hq/bean/Admin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hq/db/DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hq/db/DB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hq/db/Db_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hq/db/Db_1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hq/db/test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/hq/db/DB.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/hq/db/DB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/hq/db/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/hq/db/test.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,28 +25,22 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.1">
+    <splitter split-orientation="vertical" split-proportion="0.3180328">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/hq/db/test.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="150">
-                  <caret line="21" selection-start-line="21" selection-end-line="21" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/hq/db/Db_1.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-366">
-                  <caret line="461" column="28" selection-start-line="461" selection-start-column="28" selection-end-line="461" selection-end-column="28" />
+                <state relative-caret-position="552">
+                  <caret line="542" column="5" lean-forward="true" selection-start-line="542" selection-start-column="5" selection-end-line="542" selection-end-column="5" />
                   <folding>
                     <element signature="imports" expanded="true" />
+                    <element signature="e#1099#1111#0" expanded="true" />
+                    <element signature="e#5166#5167#0" expanded="true" />
+                    <element signature="e#5204#5205#0" expanded="true" />
+                    <element signature="e#7421#7429#0" expanded="true" />
+                    <element signature="e#9004#9012#0" expanded="true" />
+                    <element signature="e#14521#14536#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -52,8 +49,20 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/hq/db/DB.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1475">
-                  <caret line="66" selection-start-line="66" selection-end-line="66" />
+                <state relative-caret-position="479">
+                  <caret line="299" column="8" selection-start-line="299" selection-start-column="8" selection-end-line="299" selection-end-column="8" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/hq/bean/Admin.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="129">
+                  <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -73,8 +82,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/hq/db/DB.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="169">
-                  <caret line="201" selection-start-line="201" selection-end-line="201" />
+                <state relative-caret-position="202">
+                  <caret line="206" column="36" selection-start-line="206" selection-start-column="30" selection-end-line="206" selection-end-column="36" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -83,37 +92,10 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/hq/db/annotation/Table.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="159">
-                  <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/hq/db/annotation/Column.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="284">
-                  <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/hq/db/annotation/Exclude.java">
+            <entry file="file://$PROJECT_DIR$/src/com/hq/db/Test.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="300">
-                  <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                  <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
@@ -140,16 +122,17 @@
         <option value="$PROJECT_DIR$/src/com/hq/Db_1.java" />
         <option value="$PROJECT_DIR$/src/com/hq/db/db.java" />
         <option value="$PROJECT_DIR$/src/jdbc.properties" />
-        <option value="$PROJECT_DIR$/src/com/hq/db/test.java" />
         <option value="$PROJECT_DIR$/redcmsv6.log" />
         <option value="$PROJECT_DIR$/redcms.log" />
         <option value="$PROJECT_DIR$/src/log4j.properties" />
-        <option value="$PROJECT_DIR$/src/com/hq/db/Db_1.java" />
-        <option value="$PROJECT_DIR$/src/com/hq/bean/Admin.java" />
-        <option value="$PROJECT_DIR$/src/com/hq/db/DB.java" />
         <option value="$PROJECT_DIR$/src/com/hq/db/annotation/Table.java" />
         <option value="$PROJECT_DIR$/src/com/hq/db/annotation/Column.java" />
         <option value="$PROJECT_DIR$/src/com/hq/db/annotation/Exclude.java" />
+        <option value="$PROJECT_DIR$/src/com/hq/db/test.java" />
+        <option value="$PROJECT_DIR$/src/com/hq/db/Test.java" />
+        <option value="$PROJECT_DIR$/src/com/hq/bean/Admin.java" />
+        <option value="$PROJECT_DIR$/src/com/hq/db/Db_1.java" />
+        <option value="$PROJECT_DIR$/src/com/hq/db/DB.java" />
       </list>
     </option>
   </component>
@@ -166,7 +149,7 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="683" />
     <option name="width" value="683" />
     <option name="height" value="728" />
@@ -179,6 +162,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -186,6 +170,11 @@
             <path>
               <item name="huanqiuyoulu" type="b2602c69:ProjectViewProjectNode" />
               <item name="huanqiuyoulu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="huanqiuyoulu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="huanqiuyoulu" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="huanqiuyoulu" type="b2602c69:ProjectViewProjectNode" />
@@ -215,14 +204,6 @@
             <path>
               <item name="huanqiuyoulu" type="b2602c69:ProjectViewProjectNode" />
               <item name="huanqiuyoulu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="hq" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-              <item name="annotation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="huanqiuyoulu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="huanqiuyoulu" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -235,13 +216,15 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555733481293" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555751036083" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -269,9 +252,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.test">
-    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.hq.db.test" />
+  <component name="RunManager">
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hq.db.Test" />
       <module name="huanqiuyoulu" />
       <extension name="coverage">
         <pattern>
@@ -279,6 +262,22 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="huanqiuyoulu" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hq.db.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.hq.db" />
+      <option name="MAIN_CLASS_NAME" value="com.hq.db.Test" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -357,11 +356,13 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.Tomcat" />
-      <item itemvalue="Application.test" />
+      <item itemvalue="Application.Test" />
+      <item itemvalue="JUnit.Test.test" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.test" />
+        <item itemvalue="JUnit.Test.test" />
+        <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -379,17 +380,30 @@
       <workItem from="1555658961426" duration="9819000" />
       <workItem from="1555669010784" duration="1435000" />
       <workItem from="1555676702458" duration="3534000" />
-      <workItem from="1555723084773" duration="6321000" />
+      <workItem from="1555723084773" duration="7383000" />
+      <workItem from="1555745460660" duration="6067000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="test_test - 2019.04.20 at 15h 52m 55s.xml">
+      <configuration name="test.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Test_test - 2019.04.20 at 15h 59m 27s.xml">
+      <configuration name="Test.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Test_test - 2019.04.20 at 16h 00m 32s.xml">
+      <configuration name="Test.test" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24550000" />
+    <option name="totallyTimeSpent" value="31679000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="683" y="0" width="683" height="728" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.62279296" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19515885" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -399,7 +413,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3737705" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3327869" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -501,58 +515,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/redcms.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hq/db/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hq/bean/Admin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-          <folding>
-            <element signature="e#237#238#0" expanded="true" />
-            <element signature="e#270#271#0" expanded="true" />
-            <element signature="e#298#299#0" expanded="true" />
-            <element signature="e#330#331#0" expanded="true" />
-            <element signature="e#358#359#0" expanded="true" />
-            <element signature="e#400#401#0" expanded="true" />
-            <element signature="e#434#435#0" expanded="true" />
-            <element signature="e#465#466#0" expanded="true" />
-            <element signature="e#492#493#0" expanded="true" />
-            <element signature="e#532#533#0" expanded="true" />
-            <element signature="e#564#565#0" expanded="true" />
-            <element signature="e#595#596#0" expanded="true" />
-            <element signature="e#622#623#0" expanded="true" />
-            <element signature="e#662#663#0" expanded="true" />
-            <element signature="e#694#695#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hq/db/Db_1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-366">
-          <caret line="461" column="28" selection-start-line="461" selection-start-column="28" selection-end-line="461" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hq/db/annotation/Exclude.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -565,11 +527,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hq/db/annotation/Column.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="100">
+          <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -583,10 +542,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/redcms.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hq/db/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hq/bean/Admin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hq/db/Db_1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="542" column="5" lean-forward="true" selection-start-line="542" selection-start-column="5" selection-end-line="542" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1099#1111#0" expanded="true" />
+            <element signature="e#5166#5167#0" expanded="true" />
+            <element signature="e#5204#5205#0" expanded="true" />
+            <element signature="e#7421#7429#0" expanded="true" />
+            <element signature="e#9004#9012#0" expanded="true" />
+            <element signature="e#14521#14536#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hq/db/DB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="201" selection-start-line="201" selection-end-line="201" />
+        <state relative-caret-position="202">
+          <caret line="206" column="36" selection-start-line="206" selection-start-column="30" selection-end-line="206" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
