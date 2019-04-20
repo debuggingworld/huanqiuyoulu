@@ -6,16 +6,16 @@ import com.hq.db.annotation.Exclude;
 import com.hq.db.annotation.Table;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.ResultSetHandler;
+import org.apache.commons.dbutils.handlers.ArrayHandler;
+import org.apache.commons.dbutils.handlers.ArrayListHandler;
 import org.apache.log4j.Logger;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
+import java.math.BigInteger;
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ResourceBundle;
-import java.util.TreeMap;
+import java.util.*;
 
 /**
  * @author zth
@@ -290,13 +290,61 @@ public class DB {
         }
     }
 
-
+    /**
+     *  将 map 中的数据解析到  flist,qlist ,values中
+     * @param flist 字段名+"," (eg."name,age,sex")
+     * @param qlist ？+","   (eg."?,?,?")
+     * @param values 字段对应的值
+     * @param map
+     */
+    public static void parseFildAndQuery(StringBuilder flist, StringBuilder qlist,List<Object> values,TreeMap<String,Object> map){
+        if (null!=map && null!= map.keySet() && map.keySet().size()>0){
+            Iterator<String> iterator = map.keySet().iterator();
+            while (iterator.hasNext()){
+                String key = iterator.next();
+                flist.append(key+",");
+                qlist.append("?,");
+                values.add(map.get(key));
+            }
+        }
+        if (flist.length()>0){
+            flist.delete(flist.length()-1,flist.length());
+            qlist.delete(qlist.length()-1,qlist.length());
+        }
+    }
 
 
     //-----------------------封装对对象的增删改查-------------------------------------------
 
-    public static <T> long add(T t){
+    /**
+     * 向数据库插入一个对象
+     * @param t 待插入的对象
+     * @return 最后加入对象的id,如果是-1就是没有成功
+     * @throws SQLException
+     */
+    public static <T> long add(T t) throws SQLException {
         // 解析表名
-return 0;
+        String tname = getTableName(t.getClass());
+
+        TreeMap<String,Object> map = parseAllField(t);
+
+        StringBuilder flist = new StringBuilder();
+        StringBuilder qlist = new StringBuilder();
+        List<Object> values = new ArrayList<>();
+
+        parseFildAndQuery(flist,qlist,values,map);
+
+        String sql = "insert into "+tname+"("+flist.toString()+") values ("+qlist.toString()+")";
+        // 执行sql 传 t 的参数
+        update(sql,values.toString());
+
+        Object lastId = query("select LAST_INSERT_ID() from dual",new ArrayHandler())[0];
+        long reLastId = -1;
+        if (null != lastId && lastId instanceof Long){
+            reLastId = ((Long)lastId).longValue();
+        }else if (null != lastId && lastId instanceof BigInteger){
+            reLastId = ((BigInteger)lastId).longValue();
+        }
+        return reLastId;
     }
 }
