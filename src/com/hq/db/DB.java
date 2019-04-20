@@ -2,6 +2,7 @@ package com.hq.db;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.ResultSetHandler;
 import org.apache.log4j.Logger;
 
 import java.sql.Connection;
@@ -142,10 +143,57 @@ public class DB {
         }
     }
 
+    /**
+     * 关闭 DruidDataSource
+     */
     public static void closeDataSource(){
         if (null!=ds){
             ds.close();
         }
+    }
+
+    // -----------------------重写 QueryRunner 中的方法--------------------------
+    public static int[] batch(String sql,Object[][] params) throws SQLException {
+        Connection con = getConnection();
+        int[] result = run.batch(sql,params);
+        releaseConnection(con);
+        return result;
+    }
+
+    public static <T> T qurey(String sql ,ResultSetHandler<T> handler,Object... params) throws SQLException {
+        Connection con = getConnection();
+        T result = run.query(con,sql,handler,params);
+        releaseConnection(con);
+        return result;
+    }
+
+    public static <T> T query(String sql, ResultSetHandler<T> handler) throws SQLException {
+        Connection con = getConnection();
+        T result = run.query(con,sql,handler);
+        releaseConnection(con);
+        return result;
+
+    }
+
+    public static int update(String sql,Object... params) throws SQLException{
+        Connection con = getConnection();
+        int result = run.update(con,sql,params);
+        releaseConnection(con);
+        return result;
+    }
+
+    public static int update(String sql,Object params) throws SQLException{
+        Connection con = getConnection();
+        int result = run.update(con,sql,params);
+        releaseConnection(con);
+        return result;
+    }
+
+    public static int update(String sql) throws SQLException{
+        Connection con = getConnection();
+        int result = run.update(con,sql);
+        releaseConnection(con);
+        return result;
     }
 
 
