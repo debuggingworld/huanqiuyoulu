@@ -18,19 +18,19 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.5081967">
+    <splitter split-orientation="vertical" split-proportion="0.42786884">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/hq/db/Db_1.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-224">
-                  <caret line="265" column="52" lean-forward="true" selection-start-line="265" selection-start-column="29" selection-end-line="265" selection-end-column="52" />
+                <state relative-caret-position="-410">
+                  <caret line="364" column="61" selection-start-line="364" selection-start-column="58" selection-end-line="364" selection-end-column="61" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#5166#5167#0" expanded="true" />
                     <element signature="e#5204#5205#0" expanded="true" />
-                    <element signature="e#7421#7429#0" expanded="true" />
+                    <element signature="e#9004#9012#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -39,11 +39,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/hq/db/DB.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="65">
-                  <caret line="330" column="24" lean-forward="true" selection-start-line="330" selection-start-column="24" selection-end-line="330" selection-end-column="24" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                <state relative-caret-position="-7652">
+                  <caret line="9" column="60" lean-forward="true" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
                 </state>
               </provider>
             </entry>
@@ -72,8 +69,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/hq/db/DB.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="61">
-                  <caret line="316" column="39" selection-start-line="316" selection-start-column="29" selection-end-line="316" selection-end-column="39" />
+                <state relative-caret-position="2822">
+                  <caret line="429" column="63" selection-start-line="429" selection-start-column="63" selection-end-line="429" selection-end-column="63" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -157,7 +154,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -211,6 +207,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -377,7 +374,8 @@
       <workItem from="1555676702458" duration="3534000" />
       <workItem from="1555723084773" duration="7383000" />
       <workItem from="1555745460660" duration="8069000" />
-      <workItem from="1555761375007" duration="4616000" />
+      <workItem from="1555761375007" duration="4702000" />
+      <workItem from="1555810743880" duration="5461000" />
     </task>
     <servers />
   </component>
@@ -393,13 +391,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38297000" />
+    <option name="totallyTimeSpent" value="43844000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19818456" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.42696628" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -432,7 +430,7 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.62279296" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.42696628" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -442,7 +440,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3737705" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3327869" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -475,13 +473,6 @@
     <entry file="file://$PROJECT_DIR$/res/首页3.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
@@ -490,12 +481,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/redcmsv6.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="LogFileEditorProvider" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/log4j.properties">
       <provider selected="true" editor-type-id="text-editor">
@@ -538,6 +529,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/redcms.log">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="LogFileEditorProvider" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hq/bean/Admin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -548,11 +547,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/redcms.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+    <entry file="file://$PROJECT_DIR$/src/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -565,21 +563,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hq/db/Db_1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-224">
-          <caret line="265" column="52" lean-forward="true" selection-start-line="265" selection-start-column="29" selection-end-line="265" selection-end-column="52" />
+        <state relative-caret-position="-410">
+          <caret line="364" column="61" selection-start-line="364" selection-start-column="58" selection-end-line="364" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#5166#5167#0" expanded="true" />
             <element signature="e#5204#5205#0" expanded="true" />
-            <element signature="e#7421#7429#0" expanded="true" />
+            <element signature="e#9004#9012#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hq/db/DB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="316" column="39" selection-start-line="316" selection-start-column="29" selection-end-line="316" selection-end-column="39" />
+        <state relative-caret-position="2822">
+          <caret line="429" column="63" selection-start-line="429" selection-start-column="63" selection-end-line="429" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

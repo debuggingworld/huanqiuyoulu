@@ -8,6 +8,8 @@ import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.ResultSetHandler;
 import org.apache.commons.dbutils.handlers.ArrayHandler;
 import org.apache.commons.dbutils.handlers.ArrayListHandler;
+import org.apache.commons.dbutils.handlers.BeanHandler;
+import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.log4j.Logger;
 
 import java.lang.annotation.Annotation;
@@ -168,7 +170,7 @@ public class DB {
         return result;
     }
 
-    public static <T> T qurey(String sql ,ResultSetHandler<T> handler,Object... params) throws SQLException {
+    public static <T> T query(String sql ,ResultSetHandler<T> handler,Object... params) throws SQLException {
         Connection con = getConnection();
         T result = run.query(con,sql,handler,params);
         releaseConnection(con);
@@ -270,10 +272,10 @@ public class DB {
     }
 
     /**
-     * 将 map 中的数据解析到 flist,qlist 中
-     * @param flist
-     * @param values
-     * @param map
+     * 将Map中的值分解为值列表与（键=？）列表
+     * @param flist (eg.name=?,age=?)
+     * @param values 值的列表
+     * @param map 待解析的 TreeMap
      */
     public static void parseFildAndQuery(StringBuilder flist, List<Object> values,TreeMap<String,Object> map){
         if (null!=map && null!= map.keySet() && map.keySet().size()>0){
@@ -347,4 +349,88 @@ public class DB {
         }
         return reLastId;
     }
+
+    /**
+     * 修改对象
+     * @param t
+     * @param <T>
+     * @throws SQLException
+     */
+    public static<T> void update(T t) throws SQLException{
+        String tname = getTableName(t.getClass());
+        TreeMap<String ,Object> map = parseAllField(t);
+        StringBuilder flist = new StringBuilder();
+        List<Object> values = new ArrayList<>();
+
+        // 将Map中的值分解为值列表与（键=？）列表
+        parseFildAndQuery(flist,values,map);
+
+        String sql = "update"+tname+"set"+flist.toString()+"where id =?";
+        log.debug(sql);
+
+        // 追加 id
+        try {
+            Field field = t.getClass().getDeclaredField("id");
+            field.setAccessible(true);
+            values.add(field.get(t));
+            update(sql,values.toArray());
+        } catch (NoSuchFieldException|IllegalAccessException e) {
+            log.error("ERROR_003_com.hq.db.Db_line376_更新对象方法中出错");
+        }
+    }
+
+    /**
+     * 删除对象
+     * @throws SQLException
+     */
+    public static<T> void delete(long id,Class<T> clazz) throws SQLException{
+        String tname = getTableName(clazz);
+        String sql = "delete form "+tname+"where id =?";
+        update(sql,id);
+    }
+
+    /**
+     * 查询一个对象
+     * @param id
+     * @param clazz
+     * @param <T>
+     * @return
+     * @throws SQLException
+     */
+    public static <T> T get(long id,Class<T> clazz)throws SQLException{
+        T t = null;
+        String tname = getTableName(clazz);
+        String sql = "select * from "+tname+"where id =?";
+
+        t = query(sql,new BeanHandler<T>(clazz),id);
+        return t;
+    }
+
+    /**
+     * 查询表中所欲数据
+     */
+    public static <T> List<T> getAll(Class<T> clazz) throws SQLException{
+        List<T> list = new ArrayList<>();
+        String tname = getTableName(clazz);
+        String sql = "select * from "+tname+"order by desc";
+        list = query(sql,new BeanListHandler<T>(clazz));
+        return list;
+    }
+
+    public static <T> List<T> getAll(Class<T> clazz,String sql) throws SQLException{
+        List<T> list = new ArrayList<>();
+        String tname = getTableName(clazz);
+        list = query(sql,new BeanListHandler<T>(clazz));
+        return list;
+    }
+
+    public static <T> List<T> getAll(Class<T> clazz,String sql,Object... params) throws SQLException{
+        List<T> list = new ArrayList<>();
+        String tname = getTableName(clazz);
+        list = query(sql,new BeanListHandler<T>(clazz),params);
+        return list;
+    }
+
+
+
 }
