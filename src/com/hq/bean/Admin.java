@@ -46,4 +46,14 @@ public class Admin {
     public void setUpur(String upur) {
         this.upur = upur;
     }
+
+    @Override
+    public String toString() {
+        return "Admin{" +
+                "id=" + id +
+                ", email='" + email + '\'' +
+                ", upwd='" + upwd + '\'' +
+                ", upur='" + upur + '\'' +
+                '}';
+    }
 }

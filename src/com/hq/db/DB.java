@@ -7,7 +7,6 @@ import com.hq.db.annotation.Table;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.ResultSetHandler;
 import org.apache.commons.dbutils.handlers.ArrayHandler;
-import org.apache.commons.dbutils.handlers.ArrayListHandler;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.log4j.Logger;
@@ -60,7 +59,7 @@ public class DB {
             //ds.setValidationQuery(res.getString("validationQuery"));
 
         } catch (SQLException e) {
-            log.error("ERROR_001_com.hq.db.Db_初始化连接池失败_line52"+e.getMessage());
+            log.error("ERROR_001_com.hq.db.Db_初始化连接池失败_line62"+e.getMessage());
         }
     }
 
@@ -132,7 +131,7 @@ public class DB {
             // 将连接移除 ThreadLocal
             conn.remove();
         }catch (SQLException e){
-            log.error("ERROR_002_com.hq.db_回滚事务失败_line124..."+e.getMessage());
+            log.error("ERROR_002_com.hq.db_回滚事务失败_line134..."+e.getMessage());
         }
     }
 
@@ -338,7 +337,8 @@ public class DB {
 
         String sql = "insert into "+tname+"("+flist.toString()+") values ("+qlist.toString()+")";
         // 执行sql 传 t 的参数
-        update(sql,values.toString());
+
+        update(sql,values.toArray());
 
         Object lastId = query("select LAST_INSERT_ID() from dual",new ArrayHandler())[0];
         long reLastId = -1;
@@ -365,7 +365,7 @@ public class DB {
         // 将Map中的值分解为值列表与（键=？）列表
         parseFildAndQuery(flist,values,map);
 
-        String sql = "update"+tname+"set"+flist.toString()+"where id =?";
+        String sql = "update "+tname+" set "+flist.toString()+" where id =?";
         log.debug(sql);
 
         // 追加 id
@@ -385,7 +385,7 @@ public class DB {
      */
     public static<T> void delete(long id,Class<T> clazz) throws SQLException{
         String tname = getTableName(clazz);
-        String sql = "delete form "+tname+"where id =?";
+        String sql = "delete from "+tname+" where id =?";
         update(sql,id);
     }
 
@@ -400,19 +400,19 @@ public class DB {
     public static <T> T get(long id,Class<T> clazz)throws SQLException{
         T t = null;
         String tname = getTableName(clazz);
-        String sql = "select * from "+tname+"where id =?";
+        String sql = "select * from "+tname+" where id = ?";
 
         t = query(sql,new BeanHandler<T>(clazz),id);
         return t;
     }
 
     /**
-     * 查询表中所欲数据
+     * 查询表中所有数据
      */
     public static <T> List<T> getAll(Class<T> clazz) throws SQLException{
         List<T> list = new ArrayList<>();
         String tname = getTableName(clazz);
-        String sql = "select * from "+tname+"order by desc";
+        String sql = "select * from "+tname+" order by id desc";
         list = query(sql,new BeanListHandler<T>(clazz));
         return list;
     }
@@ -431,6 +431,65 @@ public class DB {
         return list;
     }
 
+    //-------------------------------分页查询封装----------------------------------------
 
+    /**
+     * 对全表分页查询
+     * @param clazz
+     * @param pageNO
+     * @param pageSize
+     * @param <T>
+     * @return
+     * @throws SQLException
+     */
+    public static <T> PageDiv<T> getByPage(Class<T> clazz,int pageNO,int pageSize) throws SQLException{
+        PageDiv<T> pageDiv = null;
+        // 当前页面数据
+        List<T> list = new ArrayList<>();
+
+        String tname = getTableName(clazz);
+        String sql = "select * from "+tname+" order by id desc limit ?,?";
+        log.debug(sql);
+        list = query(sql,new BeanListHandler<T>(clazz),(pageNO-1)*pageSize,pageSize);
+
+        String sqltotal = "select count(id) from "+tname;
+
+        Object re = query(sqltotal,new ArrayHandler())[0];
+
+        long total = 0;
+        if (null != re && re instanceof Long){
+            total = (Long) re;
+        }
+
+        pageDiv = new PageDiv<T>(pageNO,pageSize,total,list);
+        return pageDiv;
+    }
+
+    public static <T> PageDiv<T> getByPage(Class<T> clazz,String sql,int pageNo,int pageSize,Object... param) throws SQLException{
+        PageDiv<T> pageDiv = null;
+        //当前页面数据
+        List<T> list = new ArrayList<>();
+
+        Object[] params = new Object[param.length+2];
+        System.arraycopy(param,0,params,0,param.length);
+        params[param.length] = (pageNo-1)*pageSize;
+        params[param.length+1] = pageSize;
+
+        list = query(sql+"limit ?,?",new BeanListHandler<T>(clazz),params);
+        // select a,b,c from d where e...
+        int fromStart = sql.toLowerCase().indexOf("from");
+        String totalsql = "select count(id) "+sql.substring(fromStart);
+
+        Object re = query(totalsql,new ArrayHandler(),param)[0];
+
+        long total = 0;
+        if (null != re && re instanceof Long){
+            total = (Long) re;
+        }
+
+        pageDiv = new PageDiv<T>(pageNo,pageSize,total,list);
+        return pageDiv;
+
+    }
 
 }

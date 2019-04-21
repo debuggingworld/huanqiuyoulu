@@ -124,4 +124,18 @@ public class PageDiv<T> {
     public void setList(List<T> list) {
         this.list = list;
     }
+
+    @Override
+    public String toString() {
+        return "PageDiv{" +
+                "pageNO=" + pageNO +
+                ", pageSize=" + pageSize +
+                ", totalPage=" + totalPage +
+                ", totalCount=" + totalCount +
+                ", indexCount=" + indexCount +
+                ", start=" + start +
+                ", end=" + end +
+                ", list=" + list +
+                '}';
+    }
 }
