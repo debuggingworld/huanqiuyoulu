@@ -1,12 +1,14 @@
 package com.hq.servlet.core;
 
+import com.alibaba.fastjson.JSON;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -55,6 +57,7 @@ public abstract class Action extends HttpServlet {
     public class Mapping {
 
         private HttpServletRequest req;
+
         private HttpServletResponse resp;
 
         public Mapping(HttpServletRequest req, HttpServletResponse resp) {
@@ -143,11 +146,62 @@ public abstract class Action extends HttpServlet {
             resp.sendRedirect(path);
         }
 
+        // 直接输出值
+        public void randerText(String msg) throws IOException {
+            resp.setContentType("text/html;charset=utf-8");
 
+            PrintWriter out = resp.getWriter();
+            out.println(msg);
+            out.close();
+        }
 
+        // 输出 json
+        public void randerJson(Object object) throws IOException {
+            resp.setContentType("text/html;charset=utf-8");
 
+            PrintWriter out = resp.getWriter();
+            out.println(JSON.toJSONString(object));
+            out.close();
+        }
 
+        // 从 session 中获取值
+        public Object getSessionAttr(String param){
+            return req.getSession().getAttribute(param);
+        }
+        // 设置 session 值
+        public void setSessionAttr(String key,Object val){
+            req.getSession().setAttribute(key,val);
+        }
 
+        // 删除 session 中的值
+        public void removeSessionAttr(String key){
+            req.removeAttribute(key);
+        }
+
+        // 销毁 session
+        public void invalidateSession(){
+            req.getSession().invalidate();
+        }
+
+        public String basePath(){
+            return req.getScheme()+"://"+req.getServerName()+":"+req.getServerPort()+req.getContextPath()+"/";
+        }
+
+        public HttpServletRequest getReq() {
+            return req;
+        }
+
+        public void setReq(HttpServletRequest req) {
+            this.req = req;
+        }
+
+        public HttpServletResponse getResp() {
+            return resp;
+        }
+
+        public void setResp(HttpServletResponse resp) {
+            this.resp = resp;
+        }
 
     }
 }
