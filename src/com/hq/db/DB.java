@@ -128,7 +128,7 @@ public class DB {
             con.rollback();
             // 关闭连接
             con.close();
-            // 将连接移除 ThreadLocal
+            // 将连接移除 ThreadLocal0
             conn.remove();
         }catch (SQLException e){
             log.error("ERROR_002_com.hq.db_回滚事务失败_line134..."+e.getMessage());
@@ -141,9 +141,9 @@ public class DB {
      * @throws SQLException
      */
     public static void releaseConnection(Connection connection) throws SQLException {
-        //得到ThreadLocal中的connection
+        // 得到ThreadLocal中的connection
         Connection con = conn.get();
-        //如果参数连接与当前事务连接不相等，则说明参数连接不是事务连接，可以关闭，否则交由事务关闭
+        // 如果参数连接与当前事务连接不相等，则说明参数连接不是事务连接，可以关闭，否则交由事务关闭
         if (connection != null && con != connection){
             //如果连接没有被关闭，关闭之
             if (!connection.isClosed()){
