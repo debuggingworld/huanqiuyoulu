@@ -8,5 +8,8 @@
     <title></title>
   </head>
   <body>
+  <%
+    response.sendRedirect("admin/login");
+  %>
   </body>
 </html>

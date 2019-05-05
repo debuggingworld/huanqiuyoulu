@@ -139,7 +139,7 @@ public abstract class Action extends HttpServlet {
         }
 
         public void forward(String path) throws ServletException, IOException {
-            req.getRequestDispatcher("WEB-INF"+path).forward(req,resp);
+            req.getRequestDispatcher("/WEB-INF/"+path).forward(req,resp);
         }
 
         public void redirect(String path) throws IOException {
