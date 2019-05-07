@@ -45,11 +45,10 @@ public class LoginAction extends Action {
                 Admin admin = DB.query(sql,new BeanHandler<Admin>(Admin.class),email, Md5Encrypt.md5(pwd));
 
                 if (null != admin){
+                    System.out.println("登录成功！！！");
                     mapping.setSessionAttr("loged",admin);
-                    System.out.println("登录成功！！！！");
-                    mapping.redirect("indexadmin");
+                    mapping.redirect("indexAdmin");
                 }else {
-                    System.out.println("用户名或密码不正确！");
                     mapping.setAttr("err","用户名或密码不正确");
                     mapping.forward("admin/login.jsp");
                 }

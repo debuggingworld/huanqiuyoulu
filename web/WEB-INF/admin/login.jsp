@@ -7,16 +7,17 @@
 <html lang="en">
 
 <head>
+    <base href="<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+request.getContextPath()+"/"%>"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>登录</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <link href="../../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../../css/font-awesome.css?v=4.4.0" rel="stylesheet">
-    <link href="../../css/animate.css" rel="stylesheet">
-    <link href="../../css/style.css" rel="stylesheet">
-    <link href="../../css/login.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
     <!--[if lt IE 9]>
     <meta http-equiv="refresh" content="0;ie.html" />
     <![endif]-->
@@ -32,7 +33,7 @@
 <div class="signinpanel">
     <div class="row">
         <div class="col-sm-12">
-            <form method="post" action="login" >
+            <form method="post" action="admin/login" >
                 <h2 class="no-margins">环球优路</h2>
                 <input type="hidden" name="action" value="checkLogin" >
                 <input type="email" name="uname" class="form-control" placeholder="用户名" required />
