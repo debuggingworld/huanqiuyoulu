@@ -26,6 +26,12 @@ public class LoginAction extends Action {
         mapping.forward("admin/login.jsp");
     }
 
+    public void logout(Mapping mapping) throws ServletException, IOException {
+        mapping.removeSessionAttr("loged");
+        mapping.invalidateSession();
+        mapping.forward("admin/login.jsp");
+    }
+
     /**
      * 验证用户名和密码
      */

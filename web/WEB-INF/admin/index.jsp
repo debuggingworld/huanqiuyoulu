@@ -140,18 +140,12 @@
     <div id="page-wrapper" class="gray-bg dashbard-1">
         <div class="row" style="height: 20px;line-height: 36px">
             <div class="navbar navbar-static-top" style="margin-bottom: 0; min-height: 35px ">
-                <%--<div class="pull-left" style="margin-left: 20px">--%>
-                    <%--<span class="fa fa-home"></span>&nbsp;--%>
-                    <%--<a href="" style="color: #333; font-weight: bold;">首页</a>--%>
-                    <%--<span id="one_show"></span>--%>
-                    <%--<span id="jm_show"></span>--%>
-                <%--</div>--%>
-                    <div class="pull-left"  style=" margin-left: 20px;"><!--<a class="navbar-minimalize minimalize-styl-2 btn btn-info " href="#"><i class="fa fa-bars"></i> </a>-->
-                        <span class="fa fa-home"></span>&nbsp;
-                        <a href="" style="color: #333; font-weight: bold;">首页</a>
-                        <span id="one_show"></span>
-                        <span id="jm_show"></span>
-                    </div>
+                <div class="pull-left" style="margin-left: 20px">
+                    <span class="fa fa-home"></span>&nbsp;
+                    <a href="" style="color: #333; font-weight: bold;">首页</a>
+                    <span id="one_show"></span>
+                    <span id="jm_show"></span>
+                </div>
                 <div class="pull-right " style="margin-right: 20px;"  >
                     Welcome,${loged.email}! <a href="admin/login?action=logout">退出</a>
 

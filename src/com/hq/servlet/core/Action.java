@@ -175,7 +175,7 @@ public abstract class Action extends HttpServlet {
 
         // 删除 session 中的值
         public void removeSessionAttr(String key){
-            req.removeAttribute(key);
+            req.getSession().removeAttribute(key);
         }
 
         // 销毁 session
