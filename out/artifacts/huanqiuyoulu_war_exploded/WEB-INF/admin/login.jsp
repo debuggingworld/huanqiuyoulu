@@ -32,24 +32,25 @@
 <div class="signinpanel">
     <div class="row">
         <div class="col-sm-12">
-            <form method="post" action="index.html" >
-                    <h2 class="no-margins">环球优路</h2>
-                    <input type="email" name="uname" class="form-control" placeholder="用户名" required />
-                    <input type="password" name="upwd" class="form-control" placeholder="密码" required/>
-                    <div  class="form-group ">
-                        <input type="text " placeholder="输入验证码" style="width:160px; float: left" name="rand"  class="form-control" />
-                    </div>
-                    <div  class="form-group ">
-                        <lable><img  src="../random" style="cursor:pointer ; float: right" onclick="this.src='../random?ss='+Math.random();"/></lable>
-                    </div>
-                    <br><br>
-                    <a href="">忘记密码了？</a>
-                    <button class="btn btn-success btn-block">登录</button>
-
+            <form method="post" action="login" >
+                <h2 class="no-margins">环球优路</h2>
+                <input type="hidden" name="action" value="checkLogin" >
+                <input type="email" name="uname" class="form-control" placeholder="用户名" required />
+                <input type="password" name="upwd" class="form-control" placeholder="密码" required/>
+                <div  class="form-group ">
+                    <input type="text " placeholder="输入验证码" style="width:160px; float: left" name="rand" required class="form-control" />
+                </div>
+                <div  class="form-group ">
+                    <lable><img  src="../random" style="cursor:pointer ; float: right" onclick="this.src='../random?ss='+Math.random();"/></lable>
+                </div>
+                <br><br>
+                <a href="">忘记密码了？</a>
+                <button class="btn btn-success btn-block">登录</button>
             </form>
         </div>
     </div>
 </div>
+<%@include file="booter.jsp"%>
 </body>
 
 </html>
