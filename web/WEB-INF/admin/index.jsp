@@ -5,13 +5,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit">
 
     <title>环球优路</title>
     <base href="<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+request.getContextPath()+"/"%>"/>
-
     <meta name="keywords" content="">
     <meta name="description" content="">
 
@@ -42,7 +42,7 @@
                    </a>
                </li>
                 <li>
-                    <a class="J_menuItem top_menu " href="admin/forward?forward?page=admin/welcome.jsp">
+                    <a class="J_menuItem top_menu " href="admin/forward?page=admin/welcome.jsp">
                         <i class="fa fa-home"></i>
                         <span class="nav-label">主页</span>
                     </a>
@@ -175,7 +175,7 @@
 
 <!-- 第三方插件 -->
 <script src="js/plugins/pace/pace.min.js"></script>
-
+<%@include file="booter.jsp"%>
 </body>
 
 </html>
