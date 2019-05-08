@@ -51,7 +51,6 @@ public class LoginAction extends Action {
                 Admin admin = DB.query(sql,new BeanHandler<Admin>(Admin.class),email, Md5Encrypt.md5(pwd));
 
                 if (null != admin){
-                    System.out.println("登录成功！！！");
                     mapping.setSessionAttr("loged",admin);
                     mapping.redirect("indexAdmin");
                 }else {

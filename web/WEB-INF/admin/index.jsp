@@ -175,7 +175,8 @@
 
 <!-- 第三方插件 -->
 <script src="js/plugins/pace/pace.min.js"></script>
-<%@include file="booter.jsp"%>
+<%--<%@include file="booter.jsp"%>--%>
+    <script src="js/content.js"></script>
 </body>
 
 </html>
