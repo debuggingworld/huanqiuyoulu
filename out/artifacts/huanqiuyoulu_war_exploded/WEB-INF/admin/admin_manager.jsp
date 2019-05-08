@@ -7,6 +7,7 @@
 <head>
     <%@include file="header.jsp"%>
     <title>管理员管理</title>
+    <script type="text/javascript" src="js/sweetalert.min.js"></script>
 </head>
 <body class="gray-bg">
 
@@ -25,7 +26,7 @@
                                 <div class="panel-heading">添加管理员</div>
                                 <div class="panel-body">
                                     <form action="admin/admin" method="post" class="form-inline">
-                                        <input type="hidden" name="action" value="saveadd">
+                                        <input type="hidden" name="action" value="saveAdd">
                                         <input type="email" name="email" class="form-control" placeholder="请输入邮箱" required>
                                         <input type="password" name="upwd" class="form-control" placeholder="请输入密码" required>
                                         <div class="form-group">
@@ -39,13 +40,8 @@
                                     </form>
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
-
-
-
 
 
                 </div>
@@ -54,6 +50,6 @@
         </div>
     </div>
 </div>
-
+<%@include file="booter.jsp"%>
 </body>
 </html>

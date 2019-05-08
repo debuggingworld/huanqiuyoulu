@@ -3,6 +3,7 @@ package com.hq.servlet.admin;
 import com.hq.bean.Admin;
 import com.hq.db.DB;
 import com.hq.servlet.core.Action;
+import com.hq.utils.Md5Encrypt;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.log4j.Logger;
 
@@ -43,6 +44,7 @@ public class AdminAction extends Action {
             mapping.setAttr("err","增加失败");
             log.error("com.hq.servlet.admin.AdminAction_Error_增加管理员失败"+e.getMessage());
         }
+
     }
 
     public void update(Mapping mapping) throws ServletException, IOException{

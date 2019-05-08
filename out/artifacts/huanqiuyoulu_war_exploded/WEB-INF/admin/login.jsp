@@ -11,6 +11,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>登录</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link href="css/bootstrap.min.css" rel="stylesheet">

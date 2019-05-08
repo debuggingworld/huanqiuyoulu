@@ -124,6 +124,7 @@ public abstract class Action extends HttpServlet {
                         }
                     }
                 }catch (Exception e){
+                    e.printStackTrace();
                     System.out.println("ERROR_002_填充对象值出错");
                 }
             }

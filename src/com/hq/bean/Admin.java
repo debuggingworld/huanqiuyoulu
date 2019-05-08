@@ -9,7 +9,6 @@ import com.hq.db.annotation.Table;
  */
 
 public class Admin {
-    private static final long serialVersionUID = 1L;
     private int id;
     private String email;
     private String upwd;
