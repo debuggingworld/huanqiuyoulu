@@ -37,10 +37,10 @@
             <form method="post" action="admin/login" >
                 <h2 class="no-margins">环球优路</h2>
                 <input type="hidden" name="action" value="checkLogin" >
-                <input type="email" name="uname" class="form-control" placeholder="用户名" required />
-                <input type="password" name="upwd" class="form-control" placeholder="密码" required/>
+                <input type="email" name="uname" class="form-control"  value="admin@qq.com" placeholder="用户名" required />
+                <input type="password" name="upwd" class="form-control" value="admin" placeholder="密码" required/>
                 <div  class="form-group ">
-                    <input type="text " placeholder="输入验证码" style="width:160px; float: left" name="rand" required class="form-control" />
+                    <input type="text " placeholder="输入验证码"  style="width:160px; float: left"  name="rand" required class="form-control" />
                 </div>
                 <div  class="form-group ">
                     <lable><img  src="../random" style="cursor:pointer ; float: right" onclick="this.src='../random?ss='+Math.random();"/></lable>

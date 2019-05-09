@@ -44,7 +44,7 @@ public class AdminAction extends Action {
             mapping.setAttr("err","增加失败");
             log.error("com.hq.servlet.admin.AdminAction_Error_增加管理员失败"+e.getMessage());
         }
-
+        this.index(mapping);
     }
 
     public void update(Mapping mapping) throws ServletException, IOException{

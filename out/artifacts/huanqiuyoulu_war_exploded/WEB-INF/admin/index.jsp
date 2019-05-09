@@ -177,6 +177,7 @@
 <script src="js/plugins/pace/pace.min.js"></script>
 <%--<%@include file="booter.jsp"%>--%>
     <script src="js/content.js"></script>
+    <script src="js/sweetalert.min.js"></script>
 </body>
 
 </html>
