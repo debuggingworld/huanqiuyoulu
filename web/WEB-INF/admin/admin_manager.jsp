@@ -27,8 +27,13 @@
                                 <div class="panel-body">
                                     <form action="admin/admin" method="post" class="form-inline">
                                         <input type="hidden" name="action" value="saveAdd">
-                                        <input type="email" name="email" class="form-control" placeholder="请输入邮箱" required>
-                                        <input type="password" name="upwd" class="form-control" placeholder="请输入密码" required>
+                                        <div class="form-group">
+                                            <input type="email" name="email" class="form-control" placeholder="请输入邮箱" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" name="upwd" class="form-control" placeholder="请输入密码" required>
+                                        </div>
+
                                         <div class="form-group">
                                             <select name="upur" class="form-group">
                                                 <option value="100000">管理员</option>
@@ -47,8 +52,6 @@
 
                                     <table class="table table-striped table-hover" style="word-break:break-all; ">
                                         <tr><th>id</th><th>用户名</th><th>密码</th><th>级别</th><th>管理</th></tr>
-
-
                                     <%
                                         int index= 1;
                                         List<Admin> list = (List<Admin>)request.getAttribute("list");
@@ -82,6 +85,7 @@
                                             </td>
                                         </tr>
                                     </form>
+
                                     <%
                                         }
                                     %>

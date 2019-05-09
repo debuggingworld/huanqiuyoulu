@@ -51,6 +51,10 @@ public class AdminAction extends Action {
         Admin admin = new Admin();
         mapping.getBean(admin);
 
+        String newpwd = mapping.getString("newpwd");
+        if (null != newpwd || !"".equals(newpwd)){
+            admin.setUpwd(Md5Encrypt.md5(newpwd));
+        }
         try {
             DB.update(admin);
             mapping.setAttr("msg","修改成功");
