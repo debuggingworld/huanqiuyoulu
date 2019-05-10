@@ -5,10 +5,12 @@ import com.hq.db.DB;
 import com.hq.fileUpload.FilePart;
 import com.hq.fileUpload.FileUploadUtil;
 import com.hq.servlet.core.Action;
+import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import java.io.File;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
@@ -60,4 +62,40 @@ public class FocuspicAction extends Action {
         }
         this.index(mapping);
     }
+
+    public void delfocusPic(Mapping mapping) throws ServletException, IOException{
+        int id = mapping.getInt("id");
+
+        try {
+            Focuspic fpic=DB.query("select * from focuspic where id=?", new BeanHandler<Focuspic>(Focuspic.class),id);
+            DB.update("delete from focuspic where id=?", id);
+
+            int lastIndex = fpic.getPath().lastIndexOf("ups");
+
+            File delf = new File(this.getServletContext().getRealPath(fpic.getPath().substring(lastIndex)));
+            delf.delete();
+            mapping.setAttr("msg", "删除成功!");
+
+        } catch (SQLException e) {
+            mapping.setAttr("err", "删除失败!");
+            log.error("com.hq.servlet.admin.FocuspicAction_删除焦点图失败！");
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

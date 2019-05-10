@@ -43,7 +43,7 @@ public abstract class Action extends HttpServlet {
             e.printStackTrace();
             System.out.println("ERROR_1000_找不到目标方法！" + e.getMessage());
 
-            req.getRequestDispatcher("error/error404.jsp").forward(req,resp);
+//            req.getRequestDispatcher("error/error404.jsp").forward(req,resp);
         }
 
     }
