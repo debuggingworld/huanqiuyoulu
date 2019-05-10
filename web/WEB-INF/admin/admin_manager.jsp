@@ -15,14 +15,14 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="ibox float-e-margins">
-                <div class="ibox-title">
+                <div class="ibox-title bg-info">
                     <h5>管理员管理</h5>
                 </div>
                 <div class="ibox-content">
                     <div class="row">
                         <div class="col-sm-12">
 
-                            <div class="panel panel-primary">
+                            <div class="panel panel-default ">
                                 <div class="panel-heading">添加管理员</div>
                                 <div class="panel-body">
                                     <form action="admin/admin" method="post" class="form-inline">
@@ -41,12 +41,12 @@
                                                 <option value="001000">一般</option>
                                             </select>
                                         </div>
-                                        <button type="submit" class="btn btn-primary">增加</button>
+                                        <button type="submit" class="btn btn-info">增加</button>
                                     </form>
                                 </div>
                             </div>
 
-                            <div class="panel panel-primary">
+                            <div class="panel panel-default">
                                 <div class="panel-heading">修改管理员</div>
                                 <div class="panel-body">
 
@@ -80,7 +80,7 @@
                                                 </select>
                                             </td>
                                             <td>
-                                                <button type="submit" class="btn btn-primary">修改</button>
+                                                <button type="submit" class="btn btn-info">修改</button>
                                                 <a href="admin/admin?action=del&id=<%=admin.getId()%>" class="btn btn-danger">删除</a>
                                             </td>
                                         </tr>
