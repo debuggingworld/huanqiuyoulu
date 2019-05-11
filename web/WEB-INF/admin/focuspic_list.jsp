@@ -36,6 +36,9 @@
             text-decoration: none;
         }
     </style>
+    <script>
+        document.
+    </script>
 </head>
 <body class="gray-bg">
 <div class="wrapper wrapper-content animated fadeInRight">
@@ -63,23 +66,19 @@
                                 %>
                             </select>
                         </div>
-                        <div class="form-group ">
-                            <div class="form-control">
-                                <a href="javascript:;" class="file " style=" ;width: 100%;height: 100%">上传文件
+                        <div class="form-group " >
+                            <div class="form-control"  style="padding: 0px">
+                                <a href="javascript:;" class="file " style="width: 100%" >上传文件
                                     <input type="file"  name="pic">
                                 </a>
                             </div>
 
-
-                            <%--<div >
-                                <div class="input-group">
-                                    <input id='location' class="form-control" onclick="$('#i-file').click();">
-                                    <label class="input-group-btn">
-                                        <input type="button" id="i-check" value="浏览文件" class="btn btn-primary" onclick="$('#i-file').click();">
-                                    </label>
-                                </div>
-                            </div>--%>
-                            <%--<input type="file" name="pic" id='i-file'  onchange="$('#location').val($('#i-file').val());" style="display: none">--%>
+                        </div>
+                        <div class="form-group">
+                            <span class="form-control showFileName"></span>
+                        </div>
+                        <div class="form-group">
+                            <span class="form-control fileerrorTip" ></span>
                         </div>
                         <div class="form-group">
                             <input type="text" class="form-control" name="link" placeholder="外链">
