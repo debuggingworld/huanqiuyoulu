@@ -15,6 +15,17 @@ import java.util.*;
  * @Date 2019-05-04 23:50
  */
 public class FileUploadUtil {
+    // 上传后文件在服务器上的路径
+    String path = null;
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
     // 最大上传文件的大小
     private long maxSize = 1024*1024*10;
     // 允许的扩展名
@@ -94,10 +105,10 @@ public class FileUploadUtil {
                     continue;
                 }
                 // 检查扩展名
-               /* if (Arrays.toString(allowExt).indexOf(getFileExtName(item.getName()).toLowerCase()) == -1){
+                if (Arrays.toString(allowExt).indexOf(getFileExtName(item.getName()).toLowerCase()) == -1){
                     filePart.setResult(2);
                     continue;
-                }*/
+                }
 
                 try {
                     String ymd = formatDir.format(new Date());
@@ -111,7 +122,7 @@ public class FileUploadUtil {
                     filePart.setNewName(newName);
 
                     File uploadedFile = new File(dirFile,newName);
-
+                    path = uploadedFile.getAbsolutePath();
                     item.write(uploadedFile);
 
                 }catch (Exception e){

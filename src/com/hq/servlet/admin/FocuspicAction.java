@@ -53,7 +53,7 @@ public class FocuspicAction extends Action {
             if (fup.getFileParts().size() == 1 && fup.getFileParts().get(0).getResult() == 0){
                 FilePart fp=fup.getFileParts().get(0);
                 String sql="insert into focuspic( path, level,dis,link) value(?,?,?,?)";
-                DB.update(sql,mapping.basePath()+"ups/"+fp.getNewName(),fup.getFormValues().get("level"),fup.getFormValues().get("dis"),fup.getFormValues().get("link"));
+                DB.update(sql,fup.getPath(),fup.getFormValues().get("level"),fup.getFormValues().get("dis"),fup.getFormValues().get("link"));
                 mapping.setAttr("msg", "增加成功！");
             }
         } catch (Exception e) {

@@ -36,9 +36,7 @@
             text-decoration: none;
         }
     </style>
-    <script>
-        document.
-    </script>
+
 </head>
 <body class="gray-bg">
 <div class="wrapper wrapper-content animated fadeInRight">
@@ -66,20 +64,19 @@
                                 %>
                             </select>
                         </div>
+                        <div class="form-group">
+
+                                <input type="text" class="form-control" placeholder="请选择上传图片" readonly id="fileName">
+                        </div>
                         <div class="form-group " >
                             <div class="form-control"  style="padding: 0px">
-                                <a href="javascript:;" class="file " style="width: 100%" >上传文件
-                                    <input type="file"  name="pic">
+                                <a href="javascript:;" class="file " style="width: 100%" >选择图片
+                                    <input type="file"  onchange="document.getElementById('fileName').value=this.value"  name="pic">
                                 </a>
                             </div>
 
                         </div>
-                        <div class="form-group">
-                            <span class="form-control showFileName"></span>
-                        </div>
-                        <div class="form-group">
-                            <span class="form-control fileerrorTip" ></span>
-                        </div>
+
                         <div class="form-group">
                             <input type="text" class="form-control" name="link" placeholder="外链">
                         </div>
