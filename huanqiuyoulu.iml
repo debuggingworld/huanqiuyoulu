@@ -43,5 +43,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" exported="" name="fastjson-1.2.45" level="project" />
+    <orderEntry type="library" exported="" name="lib" level="project" />
   </component>
 </module>

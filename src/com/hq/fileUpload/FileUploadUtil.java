@@ -94,10 +94,10 @@ public class FileUploadUtil {
                     continue;
                 }
                 // 检查扩展名
-                if (Arrays.toString(allowExt).indexOf(getFileExtName(item.getName()).toLowerCase()) == -1){
+               /* if (Arrays.toString(allowExt).indexOf(getFileExtName(item.getName()).toLowerCase()) == -1){
                     filePart.setResult(2);
                     continue;
-                }
+                }*/
 
                 try {
                     String ymd = formatDir.format(new Date());

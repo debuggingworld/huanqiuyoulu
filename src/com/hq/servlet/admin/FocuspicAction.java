@@ -54,11 +54,12 @@ public class FocuspicAction extends Action {
                 FilePart fp=fup.getFileParts().get(0);
                 String sql="insert into focuspic( path, level,dis,link) value(?,?,?,?)";
                 DB.update(sql,mapping.basePath()+"ups/"+fp.getNewName(),fup.getFormValues().get("level"),fup.getFormValues().get("dis"),fup.getFormValues().get("link"));
-                mapping.setAttr("msg", "增加焦点成功！");
+                mapping.setAttr("msg", "增加成功！");
             }
         } catch (Exception e) {
             log.error("com.hq.servlet.admin.FocuspicAction_上传焦点图失败!"+e);
-            mapping.setAttr("err", "增加焦点失败！");
+            mapping.setAttr("err", "增加失败！");
+            e.printStackTrace();
         }
         this.index(mapping);
     }
