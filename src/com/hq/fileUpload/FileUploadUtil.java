@@ -15,16 +15,6 @@ import java.util.*;
  * @Date 2019-05-04 23:50
  */
 public class FileUploadUtil {
-    // 上传后文件在服务器上的路径
-    String path = null;
-
-    public String getPath() {
-        return path;
-    }
-
-    public void setPath(String path) {
-        this.path = path;
-    }
 
     // 最大上传文件的大小
     private long maxSize = 1024*1024*10;
@@ -119,10 +109,9 @@ public class FileUploadUtil {
                     }
 
                     String newName = ymd+random.nextInt(1000)+getFileExtName(item.getName());
-                    filePart.setNewName(newName);
-
+                    filePart.setNewName(ymd+"/"+newName);
                     File uploadedFile = new File(dirFile,newName);
-                    path = uploadedFile.getAbsolutePath();
+
                     item.write(uploadedFile);
 
                 }catch (Exception e){

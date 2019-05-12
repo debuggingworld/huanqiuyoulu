@@ -53,8 +53,10 @@ public class FocuspicAction extends Action {
             if (fup.getFileParts().size() == 1 && fup.getFileParts().get(0).getResult() == 0){
                 FilePart fp=fup.getFileParts().get(0);
                 String sql="insert into focuspic( path, level,dis,link) value(?,?,?,?)";
-                DB.update(sql,fup.getPath(),fup.getFormValues().get("level"),fup.getFormValues().get("dis"),fup.getFormValues().get("link"));
+                DB.update(sql,mapping.basePath()+"ups/"+fp.getNewName(),fup.getFormValues().get("level"),fup.getFormValues().get("dis"),fup.getFormValues().get("link"));
                 mapping.setAttr("msg", "增加成功！");
+            }else {
+                mapping.setAttr("err", "文件过大或不是图片！");
             }
         } catch (Exception e) {
             log.error("com.hq.servlet.admin.FocuspicAction_上传焦点图失败!"+e);
@@ -64,7 +66,7 @@ public class FocuspicAction extends Action {
         this.index(mapping);
     }
 
-    public void delfocusPic(Mapping mapping) throws ServletException, IOException{
+    public void delFocusPic(Mapping mapping) throws ServletException, IOException{
         int id = mapping.getInt("id");
 
         try {
@@ -81,22 +83,6 @@ public class FocuspicAction extends Action {
             mapping.setAttr("err", "删除失败!");
             log.error("com.hq.servlet.admin.FocuspicAction_删除焦点图失败！");
         }
+        this.index(mapping);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

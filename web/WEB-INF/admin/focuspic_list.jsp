@@ -1,4 +1,5 @@
-<%--
+<%@ page import="java.util.List" %>
+<%@ page import="com.hq.bean.Focuspic" %><%--
   @author zth
   @create  2019-05-09 16:35
 --%>
@@ -51,7 +52,7 @@
 
                     <form class="form-inline" method="post" enctype="multipart/form-data" action="admin/focuspic?action=uploadPic" >
                         <div class="form-group">
-                            <input type="text" class="form-control" name="dis" placeholder="焦点图描述">
+                            <input type="text" class="form-control" maxlength="45" name="dis" placeholder="焦点图描述">
                         </div>
                         <div class="form-group">
                             <select name="level" class="form-control">
@@ -84,6 +85,26 @@
                             <button type="submit" class="btn btn-info" >增加焦点图</button>
                         </div>
                     </form>
+
+                    <div style="margin-top: 20px">
+                        <%
+                            List<Focuspic> flist = (List<Focuspic>)request.getAttribute("flist");
+                            if (null != flist && flist.size()>0){
+                                for (Focuspic focuspic:flist) {
+                        %>
+                                <div style="display: inline-block;padding-top: 10px;padding-right: 20px " >
+                                    <img class="img-rounded" style="width: 230px ;" src="<%=focuspic.getPath()%> ">
+
+                                    <div style="background: #E8E8E8; ">
+                                        <p style="padding: 10px 0px 0px 10px;display: inline-block; "><%=focuspic.getDis()%></p>
+                                        <a style="margin-top: 10px" href="admin/focuspic?action=delFocusPic&id=<%=focuspic.getId()%>" class="btn btn-xs btn-danger pull-right">删除</a>
+                                    </div>
+                                </div>
+                        <%
+                                }
+                            }
+                        %>
+                    </div>
 
                 </div>
             </div>
