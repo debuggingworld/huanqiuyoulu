@@ -7,13 +7,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93aada36-7923-44a9-b274-7ad3d9d6713d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib__2_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/hq/bean/City.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/hq/bean/CityPic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/hq/servlet/admin/CityAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/admin/city_add.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/admin/city_list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/jstl.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/standard.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/huanqiuyoulu_war_exploded/WEB-INF/classes/com/hq/fileUpload/FileUploadUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/huanqiuyoulu_war_exploded/WEB-INF/classes/com/hq/fileUpload/FileUploadUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hq/fileUpload/FileUploadUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hq/fileUpload/FileUploadUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hq/servlet/admin/FocuspicAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hq/servlet/admin/FocuspicAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/admin/focuspic_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/admin/focuspic_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/hq/fileUpload/FileUploadUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/hq/fileUpload/FileUploadUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/hq/servlet/admin/FocuspicAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/hq/servlet/admin/FocuspicAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/huanqiuyoulu.iml" beforeDir="false" afterPath="$PROJECT_DIR$/huanqiuyoulu.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/a1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/a2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/a3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/a4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/a5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/a6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/a7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/a8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/a9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/browser.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/browser.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/iconfont-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/icons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/loading-upload.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/locked.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/login-background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/p1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/p2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/p3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/p_big1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/p_big2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/p_big3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/profile.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/profile_big.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/profile_small.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/progress.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/sprite-skin-flat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/success.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/upload.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/images/upload.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/user.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/webuploader.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/wenku_logo.png" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,40 +63,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/core/Action.java">
+        <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/admin/CityAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/admin/FocuspicAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="923">
-              <caret line="86" column="5" lean-forward="true" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hq/db/DB.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5050">
-              <caret line="218" selection-start-line="218" selection-end-line="218" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hq/fileUpload/FileUploadUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="90" column="19" lean-forward="true" selection-start-line="90" selection-start-column="19" selection-end-line="90" selection-end-column="19" />
+            <state relative-caret-position="850">
+              <caret line="44" selection-start-line="44" selection-end-line="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,41 +75,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/city_add.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="56" column="49" selection-start-line="56" selection-start-column="49" selection-end-line="56" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/city_list.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="625">
+              <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2475">
+              <caret line="99" column="29" selection-start-line="99" selection-start-column="29" selection-end-line="99" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/focuspic_list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="97" column="68" selection-start-line="97" selection-start-column="68" selection-end-line="97" selection-end-column="68" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#3;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#5;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hq/bean/Focuspic.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-              <folding>
-                <element signature="e#236#237#0" expanded="true" />
-                <element signature="e#261#262#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/test.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="2175">
+              <caret line="87" selection-start-line="87" selection-end-line="87" />
             </state>
           </provider>
         </entry>
@@ -193,6 +197,11 @@
         <option value="$PROJECT_DIR$/src/com/hq/fileUpload/FileUploadUtil.java" />
         <option value="$PROJECT_DIR$/src/com/hq/servlet/admin/FocuspicAction.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/admin/focuspic_list.jsp" />
+        <option value="$PROJECT_DIR$/src/com/hq/bean/City.java" />
+        <option value="$PROJECT_DIR$/src/com/hq/bean/CityPic.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/admin/city_list.jsp" />
+        <option value="$PROJECT_DIR$/src/com/hq/servlet/admin/CityAction.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/admin/city_add.jsp" />
       </list>
     </option>
   </component>
@@ -223,6 +232,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -233,117 +243,24 @@
             <path>
               <item name="huanqiuyoulu" type="b2602c69:ProjectViewProjectNode" />
               <item name="huanqiuyoulu" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="huanqiuyoulu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="huanqiuyoulu" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="huanqiuyoulu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="huanqiuyoulu" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="huanqiuyoulu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="huanqiuyoulu" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="huanqiuyoulu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="huanqiuyoulu" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="huanqiuyoulu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="huanqiuyoulu" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-              <item name="huanqiuyoulu_war_exploded" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="huanqiuyoulu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="huanqiuyoulu" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-              <item name="huanqiuyoulu_war_exploded" type="462c0819:PsiDirectoryNode" />
-              <item name="ups" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="huanqiuyoulu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="huanqiuyoulu" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-              <item name="huanqiuyoulu_war_exploded" type="462c0819:PsiDirectoryNode" />
-              <item name="ups" type="462c0819:PsiDirectoryNode" />
-              <item name="20190512" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="huanqiuyoulu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="huanqiuyoulu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="huanqiuyoulu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="huanqiuyoulu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="hq" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="huanqiuyoulu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="huanqiuyoulu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="hq" type="462c0819:PsiDirectoryNode" />
-              <item name="fileUpload" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="huanqiuyoulu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="huanqiuyoulu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="hq" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="huanqiuyoulu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="huanqiuyoulu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="hq" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="huanqiuyoulu" type="b2602c69:ProjectViewProjectNode" />
               <item name="huanqiuyoulu" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="huanqiuyoulu" type="b2602c69:ProjectViewProjectNode" />
               <item name="huanqiuyoulu" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="huanqiuyoulu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="huanqiuyoulu" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="huanqiuyoulu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="huanqiuyoulu" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -363,11 +280,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\huanqiuyoulu\web\images" />
       <recent name="G:\huanqiuyoulu\web\WEB-INF\lib" />
       <recent name="G:\huanqiuyoulu\web\css" />
       <recent name="G:\huanqiuyoulu\web\js" />
       <recent name="G:\huanqiuyoulu\web\WEB-INF\admin" />
-      <recent name="G:\huanqiuyoulu\web\images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -561,7 +478,11 @@
       <workItem from="1557562542741" duration="3778000" />
       <workItem from="1557588071495" duration="6189000" />
       <workItem from="1557596335372" duration="807000" />
-      <workItem from="1557626493757" duration="4527000" />
+      <workItem from="1557626493757" duration="8018000" />
+      <workItem from="1557644947173" duration="103000" />
+      <workItem from="1557675051883" duration="594000" />
+      <workItem from="1557714395597" duration="5221000" />
+      <workItem from="1557729350336" duration="2497000" />
     </task>
     <task id="LOCAL-00001" summary="AdminAction">
       <created>1557319201839</created>
@@ -626,7 +547,14 @@
       <option name="project" value="LOCAL" />
       <updated>1557595860876</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="完成焦点图">
+      <created>1557631129623</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1557631129623</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -662,13 +590,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="198908000" />
+    <option name="totallyTimeSpent" value="210814000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="629" y="52" width="760" height="641" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49567723" visible="true" weight="0.2549168" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49567723" weight="0.17019667" />
       <window_info id="Structure" order="1" sideWeight="0.50432277" side_tool="true" weight="0.22012103" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -678,7 +606,7 @@
       <window_info id="Web" order="7" sideWeight="0.5010846" side_tool="true" weight="0.4750378" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3409836" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34262297" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.42131147" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.17213115" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -701,7 +629,7 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49567723" visible="true" weight="0.5072231" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49567723" visible="true" weight="0.17019667" />
       <window_info id="Structure" order="1" sideWeight="0.50432277" side_tool="true" weight="0.22012103" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -711,7 +639,7 @@
       <window_info id="Web" order="7" sideWeight="0.5010846" side_tool="true" weight="0.4750378" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3409836" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3295082" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.42131147" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.17213115" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -749,7 +677,8 @@
     <MESSAGE value="deBug" />
     <MESSAGE value="美化input file" />
     <MESSAGE value="2019年5月12日01:30:43" />
-    <option name="LAST_COMMIT_MESSAGE" value="2019年5月12日01:30:43" />
+    <MESSAGE value="完成焦点图" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成焦点图" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -779,27 +708,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/img/a4.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/img/iconfont-logo.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/img/locked.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/img/p1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/images/input-checked.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/images/input-unchecked.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/welcome.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/core/Test.java" />
     <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/core/ForWardAction.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -885,24 +793,10 @@
     <entry file="file://$PROJECT_DIR$/web/js/fileinput.min.js" />
     <entry file="file://$PROJECT_DIR$/web/css/fileinput.min.css" />
     <entry file="file://$PROJECT_DIR$/web/js/my.js" />
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/booter.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="5" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/header.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2475">
-          <caret line="99" column="29" selection-start-line="99" selection-start-column="29" selection-end-line="99" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -1023,10 +917,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="e#236#237#0" expanded="true" />
-            <element signature="e#261#262#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1034,9 +924,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="90" column="19" lean-forward="true" selection-start-line="90" selection-start-column="19" selection-end-line="90" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1051,25 +938,71 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="923">
           <caret line="86" column="5" lean-forward="true" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hq/bean/CityPic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hq/bean/City.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/booter.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-50">
+          <caret line="5" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/admin/CityAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/city_list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2475">
+          <caret line="99" column="29" selection-start-line="99" selection-start-column="29" selection-end-line="99" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/focuspic_list.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="97" column="68" selection-start-line="97" selection-start-column="68" selection-end-line="97" selection-end-column="68" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#3;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="2175">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/images/input-unchecked.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/images/input-checked.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/city_add.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="56" column="49" selection-start-line="56" selection-start-column="49" selection-end-line="56" selection-end-column="49" />
         </state>
       </provider>
     </entry>
