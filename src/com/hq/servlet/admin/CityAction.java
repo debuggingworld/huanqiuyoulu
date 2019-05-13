@@ -44,4 +44,8 @@ public class CityAction extends Action {
         }
         mapping.forward("admin/city_add.jsp");
     }
+
+    public void tosave(Mapping mapping) throws ServletException, IOException{
+
+    }
 }

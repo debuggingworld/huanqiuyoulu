@@ -50,7 +50,7 @@
                                 <div class="panel-heading">修改管理员</div>
                                 <div class="panel-body">
 
-                                    <table class="table table-striped table-hover" style="word-break:break-all; ">
+                                    <table class="table table-hover" style="word-break:break-all; ">
                                         <tr><th>id</th><th>用户名</th><th>密码</th><th>级别</th><th>管理</th></tr>
                                     <%
                                         int index= 1;
