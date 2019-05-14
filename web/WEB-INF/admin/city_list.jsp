@@ -24,16 +24,36 @@
 
                         <c:forEach items="${countrys}" var="cty">
                             <li>
-                                <a href="admin/city"><i class="fa fa-folder">&nbsp;&nbsp;&nbsp;${cty.name}</i> </a>
+                                <a href="admin/city?cid=${cty.id}"><i class="fa fa-folder">&nbsp;&nbsp;&nbsp;${cty.name}</i> </a>
                             </li>
                         </c:forEach>
                         <div class="clearfix"></div>
                     </ul>
                 </div>
-
-
             </div>
         </div>
+
+        <div class="col-sm-9 animated fadeInRight">
+            <div>
+                <c:if test="${not empty country}">
+                    <h3>${country.name}&nbsp;&nbsp; <a href="admin/city?action=edit&cityid={country.id}" style="margin: 0px" class="btn btn-xs btn-info">修改</a></h3>
+                </c:if>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div>
+                    <c:forEach items="${cities}" var="city">
+                        <a href="admin/city?action=edit&cityid=${city.id}">
+                            <img src="${city.pic}" class="img-rounded" style="width: 350px">
+                            <br>
+                                <span>${city.name}</span>
+                        </a>
+                    </c:forEach>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 
