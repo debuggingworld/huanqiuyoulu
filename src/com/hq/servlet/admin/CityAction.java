@@ -12,6 +12,7 @@ import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import java.io.File;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
@@ -59,8 +60,8 @@ public class CityAction extends Action {
      */
     public void toadd(Mapping mapping) throws ServletException, IOException{
         try {
-            List<City> cities = DB.getAll(City.class);
-            mapping.setAttr("cities",cities);
+            List<City> citys=DB.getAll(City.class, "select * from city where display=1 and parent_id=0 order by level");
+            mapping.setAttr("cities",citys);
         } catch (SQLException e) {
             log.error("查询国家出错"+e.getMessage());
         }
@@ -146,22 +147,46 @@ public class CityAction extends Action {
         }
         this.edit(mapping);
     }
+
+    /**
+     * 修改国家城市图片
+     */
+    public void cityspicupdate(Mapping mapping) throws ServletException, IOException{
+        CityPic cityPic = new CityPic();
+        mapping.getBean(cityPic);
+
+        String sql = "update citypic set level = ?,dis=? where id=?";
+        try {
+            DB.update(sql,cityPic.getLevel(),cityPic.getDis(),cityPic.getId());
+            mapping.setAttr("cityid",cityPic.getCity_id());
+            mapping.setAttr("msg","修改成功");
+        } catch (SQLException e) {
+            log.error("com.hq.servlet.admin.CityAction_修改国家城市图片失败"+e.getMessage());
+            mapping.setAttr("err","修改失败");
+        }
+        this.edit(mapping);
+
+    }
+
+    /**
+     * 删除国家图片
+     */
+    public void cityspicdel(Mapping mapping) throws ServletException, IOException{
+        String path = mapping.getString("path");
+        int id = mapping.getInt("id");
+        String basePath = this.getServletContext().getRealPath("ups");
+
+        File file = new File(basePath,path);
+        file.delete();
+
+        try {
+            DB.update("delete from citypic where id =?",id);
+            mapping.setAttr("cityid",mapping.getInt("country_id"));
+            mapping.setAttr("msg","删除成功");
+        } catch (SQLException e) {
+            mapping.setAttr("err","删除失败");
+            e.printStackTrace();
+        }
+
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

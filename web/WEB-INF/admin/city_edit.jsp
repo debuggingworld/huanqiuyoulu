@@ -144,6 +144,42 @@
             </div>
         </form>
 
+        <hr>
+        <%
+            System.out.println(request);
+        %>
+        <ul>
+            <c:forEach items="${cityPics}" var="cpic">
+                <li>
+                    <form action="admin/city" class="form-inline" method="post">
+                        <input type="hidden" name="action" value="cityspicupdate">
+                        <img src="${cpic.path}" class="img-rounded" style="width:35px ">
+                        <input type="hidden" name="city_id" value="${cpic.city_id}">
+                        <input type="hidden" name="id" value="${cpic.id}">
+
+                        <div class="form-group">
+                            <select name="level" class="form-control">
+                                <%
+                                    for (int i = 9; i >0 ; i--) {
+                                        request.setAttribute("tti",i);
+                                %>
+                                <option value="<%=i%>" <c:if test="${tti == cpic.level}">selected="selected"</c:if></option>
+                                <%
+                                    }
+                                %>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="dis" placeholder="图片描述" value="${cpic.dis}">
+                        </div>
+                        <input type="submit" class="btn btn-xs btn-primary" value="修改">
+                        <a href="admin/city?action=cityspicdel&id=${cpic.id}&path=${cpic.path}&cityid=${cpic.city_id}" class="btn btn-xs btn-danger">删除</a>
+                    </form>
+                </li>
+            </c:forEach>
+        </ul>
+
 
 
 
