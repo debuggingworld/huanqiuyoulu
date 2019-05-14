@@ -176,7 +176,12 @@ public class CityAction extends Action {
         int id = mapping.getInt("id");
         String basePath = this.getServletContext().getRealPath("ups");
 
-        File file = new File(basePath,path);
+        int index = path.lastIndexOf("ups");
+
+        String subPath = path.substring(index+3);
+
+        File file = new File(basePath,subPath);
+        System.out.println(file.toString());
         file.delete();
 
         try {
@@ -187,6 +192,6 @@ public class CityAction extends Action {
             mapping.setAttr("err","删除失败");
             e.printStackTrace();
         }
-
+        this.edit(mapping);
     }
 }

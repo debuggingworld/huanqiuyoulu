@@ -37,7 +37,7 @@
         <div class="col-sm-9 animated fadeInRight">
             <div>
                 <c:if test="${not empty country}">
-                    <h3>${country.name}&nbsp;&nbsp; <a href="admin/city?action=edit&cityid={country.id}" style="margin: 0px" class="btn btn-xs btn-info">修改</a></h3>
+                    <h3>${country.name}&nbsp;&nbsp; <a href="admin/city?action=edit&cityid=${country.id}" style="margin: 0px" class="btn btn-xs btn-info">修改</a></h3>
                 </c:if>
             </div>
             <div class="row">
