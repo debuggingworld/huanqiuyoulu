@@ -43,8 +43,19 @@
         </div>
 
         <%--右侧--%>
-        <div class="col-sm-10">
-            
+        <div class="col-sm-10" style="border-left: 1px #ccc solid ;">
+            <div class="row">
+                <c:if test="${not empty country}">
+                    <span style="font-size:20px; font-weight: bold; ">&nbsp;&nbsp;${country.name }</span>
+                </c:if>
+                <a href="admin/house?action=toadd" class="btn btn-info" style="margin: 10px 20px">
+                    +添加楼盘项目
+                </a>
+            </div>
+
+            <table class="table table-hover table-striped table-condensed table-responsive">
+                <tr><th>ID</th><th>楼盘</th><th>时间</th><th>管理</th></tr>
+            </table>
         </div>
     </div>
 </div>
