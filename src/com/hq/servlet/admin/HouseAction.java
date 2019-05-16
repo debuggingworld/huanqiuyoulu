@@ -45,6 +45,7 @@ public class HouseAction extends Action {
                 pageDiv = DB.getByPage(House.class,"select * from house where country_id = ? order by level,id ",paseNo,pageSize,cid);
             }else {
                 pageDiv = DB.getByPage(House.class,"select * from house  order by level,id ",paseNo,pageSize);
+
             }
 
             mapping.setAttr("cid",cid);
@@ -56,6 +57,19 @@ public class HouseAction extends Action {
         }
 
         mapping.forward("admin/house_list.jsp");
+    }
+
+    /**
+     * 跳转到添加楼盘页面
+     */
+    public void toadd(Mapping mapping) throws ServletException, IOException{
+        try {
+            List<City> countrys = DB.getAll(City.class,"select * from city where display = 1 and parent_id = 0 order by level");
+            mapping.setAttr("countrys",countrys);
+        } catch (SQLException e) {
+            log.error("com.hq.servlet.admin.HouseAction_跳转到添加楼盘页面出错"+e.getMessage());
+        }
+        mapping.forward("admin/house_add.jsp");
     }
 }
 
