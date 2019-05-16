@@ -1,5 +1,6 @@
 package com.hq.servlet.admin;
 
+import com.alibaba.fastjson.JSON;
 import com.hq.bean.City;
 import com.hq.bean.CityPic;
 import com.hq.db.DB;
@@ -14,6 +15,7 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -193,5 +195,28 @@ public class CityAction extends Action {
             e.printStackTrace();
         }
         this.edit(mapping);
+    }
+
+    /**
+     * 查询指定国家下的所有城市
+     */
+    public void subcitys(Mapping mapping) throws ServletException, IOException{
+        int parentid = mapping.getInt("parent_id");
+        List<City> cities = null;
+        String result = null;
+
+        try{
+            if (parentid >0){
+                cities = DB.query("select * from city where display = 1 and parent_id = ? order by level",new BeanListHandler<City>(City.class),parentid);
+                result = JSON.toJSONString(cities);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        mapping.getResp().setContentType("application/json;charset=utf-8");
+        PrintWriter out = mapping.getResp().getWriter();
+        out.print(result);
+        out.close();
     }
 }
