@@ -35,7 +35,7 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <select name="upur" class="form-group">
+                                            <select name="upur" class="form-control">
                                                 <option value="100000">管理员</option>
                                                 <option value="010000">普通管理员</option>
                                                 <option value="001000">一般</option>
