@@ -9,6 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>增加国家/城市</title>
     <%@include file="header.jsp"%>
+    <script charset="utf-8" src="kindeditor/kindeditor-all-min.js"></script>
+    <script charset="utf-8" src="kindeditor/lang/zh-CN.js"></script>
 </head>
 <body>
 <div class="ibox float-e-margins">
@@ -43,10 +45,34 @@
                 </div>
             </div>
 
-            <div class="form-group">
+           <%-- <div class="form-group">
                 <div class="col-sm-12">
                     国家/城市特色描述：
                     <textarea name="dis" class="form-control" id="txt1"></textarea>
+                    <script type="text/javascript">
+
+                        KindEditor.ready(function(K) {
+                            window.editor = K.create('#txt1',{
+                                uploadJson : 'admin/fileupload',
+                                allowFileManager : false
+                            });
+                        });
+                    </script>
+                </div>
+            </div>--%>
+            <div class="form-group col-sm-12 ">
+               <h4> 国家/城市特色描述：</h4>
+                <div class="col-sm-12 pull-left" >
+                    <textarea col="23" rows="5" name="dis" id="txt1_id" class="form-control" style="width:100%;height:200px;" > </textarea>
+                    <script type="text/javascript">
+
+                        KindEditor.ready(function(K) {
+                            window.editor = K.create('#txt1_id',{
+                                uploadJson : 'admin/fileupload',
+                                allowFileManager : false
+                            });
+                        });
+                    </script>
                 </div>
             </div>
             <div class="form-group">
@@ -69,15 +95,9 @@
 </div>
 
 <%@include file="booter.jsp"%>
-<script charset="utf-8" src="kindeditor/kindeditor-all-min.js"></script>
-<script charset="utf-8" src="kindeditor/lang/zh-CN.js"></script>
 
 <script>
     KindEditor.ready(function (K) {
-        window.editor = K.create('#txt1',{
-            uploadJson:'admin/fileupload'
-            }
-        );
 
         K('#uppic01').click(function() {
             editor.loadPlugin('image', function() {
@@ -95,8 +115,6 @@
         });
     });
 </script>
-
-
 
 </body>
 </html>

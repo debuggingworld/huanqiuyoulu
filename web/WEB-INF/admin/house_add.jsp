@@ -230,8 +230,8 @@
                                 <label  class="col-sm-2 col-md-1 control-label">特色:</label>
                                 <div class="col-sm-8 col-md-10" >
                                     <textarea col=23 rows="5" name="txt3" id="txt3_id" class="form-control" style="width:100%;height:200px;" > </textarea>
-                                    <script type="text/javascript">
 
+                                    <script type="text/javascript">
                                         KindEditor.ready(function(K) {
                                             window.editor = K.create('#txt3_id',{
                                                 uploadJson : 'admin/fileupload',
@@ -250,8 +250,7 @@
 
                                     <input  type="hidden"  value="" name="pic" id="pic_field"/>
 
-                                    <img src="img/upload.jpg" width="68" height="57" style="cursor: pointer;" id="pic_id" />
-                                    <!-- <label class="laydate-icon col-sm-1"></label>-->
+                                    <img src="images/upload.jpg" class="img-rounded"   style="cursor: pointer;width: 50px" id="pic_id" />
                                     <script type="text/javascript">
                                         KindEditor.ready(function(K) {
                                             var editor = K.editor({
@@ -281,7 +280,6 @@
                                 <label  class="col-sm-3 col-md-2 control-label">置业目的:</label>
                                 <div class="col-sm-9 col-md-9">
                                     <ul class="dowebok">
-                                        <!--<li><input type="checkbox" name="checkbox" disabled checked data-labelauty="HTML"></li>-->
                                         <li><input type="checkbox" value="自住" name="target" checked data-labelauty="自住"></li>
                                         <li><input type="checkbox" value="商旅"  name="target" data-labelauty="商旅"></li>
                                         <li><input type="checkbox" value="投资"  name="target" data-labelauty="投资"></li>

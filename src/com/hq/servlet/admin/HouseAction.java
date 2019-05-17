@@ -11,6 +11,7 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -70,6 +71,49 @@ public class HouseAction extends Action {
             log.error("com.hq.servlet.admin.HouseAction_跳转到添加楼盘页面出错"+e.getMessage());
         }
         mapping.forward("admin/house_add.jsp");
+    }
+
+    /**
+     * 保存房产信息
+     */
+    public void saveadd(Mapping mapping) throws ServletException, IOException{
+
+            House house = new House();
+            mapping.getBean(house);
+
+            String[] alltys = mapping.getStringArray("types");
+            StringBuilder str = new StringBuilder();
+            if (null != alltys){
+                for (int i = 0; i < alltys.length; i++) {
+                    str.append(alltys[i]);
+                    if (i<alltys.length-1){
+                        str.append(",");
+                    }
+                }
+            }
+
+            house.setTypes(str.toString());
+            String[] alltarget = mapping.getStringArray("target");
+            StringBuilder str1 = new StringBuilder();
+            if (alltarget != null){
+                for (int i = 0; i < alltarget.length; i++) {
+                    str.append(alltarget[i]);
+                    if (i<alltarget.length-1){
+                        str1.append(",");
+                    }
+                }
+            }
+            house.setTypes(str1.toString());
+
+            house.setCtimes(new Date());
+        try {
+            DB.add(house);
+            mapping.setAttr("msg", "增加成功!");
+        } catch (SQLException e) {
+            mapping.setAttr("err", "增加失败!");
+            e.printStackTrace();
+        }
+        this.index(mapping);
     }
 }
 

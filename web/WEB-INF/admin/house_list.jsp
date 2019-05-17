@@ -60,6 +60,7 @@
                     <tr>
                         <td>${i.count}</td>
                         <td>${house.name}</td>
+                        <td>${house.getCtimes()}</td>
                         <td>
                             <a href="admin/house?action=edit$id=${house.id}" class="btn btn-info btn-sm">
                                 <i class="fa fa-edit">基本</i>
