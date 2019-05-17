@@ -54,7 +54,7 @@
                 </a>
             </div>
 
-            <table class="table table-hover table-striped table-condensed table-responsive">
+            <table class="table table-hover table-striped table-condensed table-responsive" style="font-size: 12px">
                 <tr><th>ID</th><th>楼盘</th><th>时间</th><th>管理</th></tr>
                 <c:forEach items="${ pageDiv.getList()}" var="house" varStatus="i">
                     <tr>
@@ -62,7 +62,7 @@
                         <td>${house.name}</td>
                         <td>${house.getCtimes()}</td>
                         <td>
-                            <a href="admin/house?action=edit$id=${house.id}" class="btn btn-info btn-sm">
+                            <a href="admin/house?action=toEdit&id=${house.id}" class="btn btn-info btn-sm">
                                 <i class="fa fa-edit">基本</i>
                             </a>
                             <a href="admin/pic_house?id=${house.id}" class="btn btn-primary btn-sm">

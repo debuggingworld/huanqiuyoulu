@@ -7,11 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93aada36-7923-44a9-b274-7ad3d9d6713d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/hq/bean/Pictures.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/admin/house_edit.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/huanqiuyoulu_war_exploded/WEB-INF/admin/city_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/huanqiuyoulu_war_exploded/WEB-INF/admin/city_add.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hq/servlet/admin/HouseAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hq/servlet/admin/HouseAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/admin/city_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/admin/city_add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/admin/house_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/admin/house_add.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/admin/house_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/admin/house_list.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/hq/servlet/admin/HouseAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/hq/servlet/admin/HouseAction.class" afterDir="false" />
     </list>
@@ -25,49 +24,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2475">
-              <caret line="99" column="29" selection-start-line="99" selection-start-column="29" selection-end-line="99" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/admin/HouseAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2020">
-              <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/house_add.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="725">
-              <caret line="29" column="73" selection-start-line="29" selection-start-column="66" selection-end-line="29" selection-end-column="73" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/city_add.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2925">
-              <caret line="117" selection-start-line="117" selection-end-line="117" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/admin/CityAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4800">
-              <caret line="209" column="152" selection-start-line="209" selection-start-column="152" selection-end-line="209" selection-end-column="152" />
+            <state relative-caret-position="1038">
+              <caret line="138" column="38" selection-start-line="138" selection-start-column="38" selection-end-line="138" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -76,19 +36,55 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/house_list.jsp">
+        <entry file="file://$PROJECT_DIR$/src/com/hq/bean/Pictures.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-879">
-              <caret line="62" column="53" lean-forward="true" selection-start-line="62" selection-start-column="53" selection-end-line="62" selection-end-column="53" />
+            <state relative-caret-position="300">
+              <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/city_list.jsp">
+        <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/core/Action.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1450">
-              <caret line="58" selection-start-line="58" selection-end-line="58" />
+            <state relative-caret-position="72">
+              <caret line="142" selection-start-line="142" selection-end-line="142" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hq/bean/House.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="10" column="23" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/house_edit.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="34" column="74" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/house_list.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1575">
+              <caret line="63" column="28" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/house_add.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="239">
+              <caret line="180" column="12" selection-start-line="180" selection-start-column="12" selection-end-line="180" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -105,8 +101,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>rele</find>
-      <find>getA</find>
       <find>geta</find>
       <find>getall</find>
       <find>log</find>
@@ -135,6 +129,8 @@
       <find>edit</find>
       <find>basic-addon1</find>
       <find>getCt</find>
+      <find>getCi</find>
+      <find>yj_many</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -143,8 +139,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/jdbc.properties" />
-        <option value="$PROJECT_DIR$/redcmsv6.log" />
         <option value="$PROJECT_DIR$/redcms.log" />
         <option value="$PROJECT_DIR$/src/log4j.properties" />
         <option value="$PROJECT_DIR$/src/com/hq/db/annotation/Table.java" />
@@ -189,11 +183,13 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/admin/city_list.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/admin/city_edit.jsp" />
         <option value="$PROJECT_DIR$/src/com/hq/bean/House.java" />
-        <option value="$PROJECT_DIR$/src/com/hq/servlet/admin/CityAction.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/admin/house_add.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/admin/city_add.jsp" />
-        <option value="$PROJECT_DIR$/src/com/hq/servlet/admin/HouseAction.java" />
+        <option value="$PROJECT_DIR$/src/com/hq/servlet/admin/CityAction.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/admin/house_list.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/admin/house_edit.jsp" />
+        <option value="$PROJECT_DIR$/src/com/hq/servlet/admin/HouseAction.java" />
+        <option value="$PROJECT_DIR$/src/com/hq/bean/Pictures.java" />
       </list>
     </option>
   </component>
@@ -211,8 +207,8 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="76" />
+    <option name="y" value="264" />
     <option name="width" value="1254" />
     <option name="height" value="572" />
   </component>
@@ -250,14 +246,6 @@
               <item name="out" type="462c0819:PsiDirectoryNode" />
               <item name="artifacts" type="462c0819:PsiDirectoryNode" />
               <item name="huanqiuyoulu_war_exploded" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="huanqiuyoulu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="huanqiuyoulu" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-              <item name="huanqiuyoulu_war_exploded" type="462c0819:PsiDirectoryNode" />
-              <item name="ups" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="huanqiuyoulu" type="b2602c69:ProjectViewProjectNode" />
@@ -340,11 +328,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\huanqiuyoulu\web\WEB-INF\admin" />
       <recent name="G:\huanqiuyoulu\src\com\hq\bean" />
       <recent name="G:\huanqiuyoulu\web\img" />
       <recent name="G:\huanqiuyoulu\out\artifacts\huanqiuyoulu_war_exploded\images" />
       <recent name="G:\huanqiuyoulu\web\images" />
-      <recent name="G:\huanqiuyoulu\web\WEB-INF\lib" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -561,7 +549,8 @@
       <workItem from="1558010257622" duration="2704000" />
       <workItem from="1558021578289" duration="3570000" />
       <workItem from="1558054050355" duration="4646000" />
-      <workItem from="1558059481111" duration="450000" />
+      <workItem from="1558059481111" duration="5971000" />
+      <workItem from="1558067964282" duration="4206000" />
     </task>
     <task id="LOCAL-00001" summary="AdminAction">
       <created>1557319201839</created>
@@ -696,7 +685,14 @@
       <option name="project" value="LOCAL" />
       <updated>1558025294453</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="完成楼盘添加">
+      <created>1558060015381</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1558060015381</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -732,13 +728,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="280824000" />
+    <option name="totallyTimeSpent" value="290551000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49567723" visible="true" weight="0.16792738" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49567723" visible="true" weight="0.2708018" />
       <window_info id="Structure" order="1" sideWeight="0.50432277" side_tool="true" weight="0.22012103" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -748,7 +744,7 @@
       <window_info id="Web" order="7" sideWeight="0.5010846" side_tool="true" weight="0.4750378" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3409836" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.6819672" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31639344" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.49344262" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -771,7 +767,7 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49567723" visible="true" weight="0.27889448" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49567723" visible="true" weight="0.2713568" />
       <window_info id="Structure" order="1" sideWeight="0.50432277" side_tool="true" weight="0.22012103" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -781,7 +777,7 @@
       <window_info id="Web" order="7" sideWeight="0.5010846" side_tool="true" weight="0.4750378" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3409836" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.19406393" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.51826483" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.49344262" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -829,7 +825,8 @@
     <MESSAGE value="2019年5月16日09:56:20" />
     <MESSAGE value="添加楼盘" />
     <MESSAGE value="2019年5月17日00:47:48" />
-    <option name="LAST_COMMIT_MESSAGE" value="2019年5月17日00:47:48" />
+    <MESSAGE value="完成楼盘添加" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成楼盘添加" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -859,16 +856,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/images/input-checked.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/admin_manager.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-506">
-          <caret line="52" column="56" selection-start-line="52" selection-start-column="56" selection-end-line="52" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/admin/AdminAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
@@ -900,13 +887,6 @@
     <entry file="file://$PROJECT_DIR$/out/artifacts/huanqiuyoulu_war_exploded/ups/20190514/20190514908.jpg" />
     <entry file="file://$PROJECT_DIR$/out/artifacts/huanqiuyoulu_war_exploded/ups/20190514/20190514620.jpg" />
     <entry file="file://$PROJECT_DIR$/out/artifacts/huanqiuyoulu_war_exploded/ups/20190514/20190514866.jpg" />
-    <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/core/Action.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="82" column="33" selection-start-line="82" selection-start-column="33" selection-end-line="82" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/focuspic_list.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
@@ -998,29 +978,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2475">
+        <state relative-caret-position="510">
           <caret line="99" column="29" selection-start-line="99" selection-start-column="29" selection-end-line="99" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/house_add.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="29" column="73" selection-start-line="29" selection-start-column="66" selection-end-line="29" selection-end-column="73" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/city_add.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2925">
+        <state relative-caret-position="510">
           <caret line="117" selection-start-line="117" selection-end-line="117" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/admin/CityAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4800">
-          <caret line="209" column="152" selection-start-line="209" selection-start-column="152" selection-end-line="209" selection-end-column="152" />
+        <state relative-caret-position="471">
+          <caret line="222" lean-forward="true" selection-start-line="222" selection-end-line="222" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1029,32 +1002,60 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/city_list.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1450">
+        <state relative-caret-position="338">
           <caret line="58" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hq/bean/House.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="23" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/house_list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1575">
+          <caret line="63" column="28" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/house_add.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="180" column="12" selection-start-line="180" selection-start-column="12" selection-end-line="180" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/core/Action.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="142" selection-start-line="142" selection-end-line="142" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/house_edit.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="34" column="74" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="74" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/admin/HouseAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2020">
-          <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
+        <state relative-caret-position="1038">
+          <caret line="138" column="38" selection-start-line="138" selection-start-column="38" selection-end-line="138" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hq/bean/House.java">
+    <entry file="file://$PROJECT_DIR$/src/com/hq/bean/Pictures.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="142" column="5" lean-forward="true" selection-start-line="142" selection-start-column="5" selection-end-line="142" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/house_list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-879">
-          <caret line="62" column="53" lean-forward="true" selection-start-line="62" selection-start-column="53" selection-end-line="62" selection-end-column="53" />
+        <state relative-caret-position="300">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
         </state>
       </provider>
     </entry>

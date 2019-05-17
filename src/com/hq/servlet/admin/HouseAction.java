@@ -11,6 +11,7 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
@@ -82,35 +83,60 @@ public class HouseAction extends Action {
             mapping.getBean(house);
 
             String[] alltys = mapping.getStringArray("types");
-            StringBuilder str = new StringBuilder();
-            if (null != alltys){
-                for (int i = 0; i < alltys.length; i++) {
-                    str.append(alltys[i]);
-                    if (i<alltys.length-1){
-                        str.append(",");
-                    }
-                }
-            }
-
-            house.setTypes(str.toString());
+            house.setTypes(Arrays.toString(alltys));
             String[] alltarget = mapping.getStringArray("target");
-            StringBuilder str1 = new StringBuilder();
-            if (alltarget != null){
-                for (int i = 0; i < alltarget.length; i++) {
-                    str.append(alltarget[i]);
-                    if (i<alltarget.length-1){
-                        str1.append(",");
-                    }
-                }
-            }
-            house.setTypes(str1.toString());
-
+            house.setTarget(Arrays.toString(alltarget));
             house.setCtimes(new Date());
         try {
             DB.add(house);
             mapping.setAttr("msg", "增加成功!");
         } catch (SQLException e) {
             mapping.setAttr("err", "增加失败!");
+            e.printStackTrace();
+        }
+        this.index(mapping);
+    }
+
+    public void toEdit(Mapping mapping) throws ServletException, IOException{
+        long id = mapping.getInt("id");
+
+        if (id > 0){
+
+            try {
+                // 所有国家信息
+                String sql = "select * from city where display = 1 and parent_id = 0 order by level";
+                List<City> countrys = DB.getAll(City.class,sql);
+                mapping.setAttr("cons",countrys);
+                House house = DB.get(id,House.class);
+                mapping.setAttr("house",house);
+            } catch (SQLException e) {
+                log.error("com.hq.servlet.admin.HouseAction_跳转到楼盘基本信息修改出错"+e.getMessage());
+            }
+        }
+        mapping.forward("admin/house_edit.jsp");
+    }
+
+    public void savebase(Mapping mapping) throws ServletException, IOException{
+        House house = new House();
+        mapping.getBean(house);
+        house.setCtimes(new Date());
+
+        String[] alltys = mapping.getStringArray("types");
+        house.setTypes(Arrays.toString(alltys));
+        String[] alltarget = mapping.getStringArray("target");
+        house.setTarget(Arrays.toString(alltarget));
+
+        try {
+            DB.update(house);
+
+            // 所有国家信息
+            String sql = "select * from city where display = 1 and parent_id = 0 order by level";
+            List<City> countrys = DB.getAll(City.class,sql);
+            mapping.setAttr("cons",countrys);
+
+            mapping.setAttr("msg", "修改成功!");
+        } catch (SQLException e) {
+            mapping.setAttr("err", "修改失败!");
             e.printStackTrace();
         }
         this.index(mapping);
