@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -96,6 +97,14 @@ public abstract class Action extends HttpServlet {
             return re;
         }
 
+        public BigDecimal getBigDecimal (String param){
+            BigDecimal re = null;
+            String str = this.getString(param);
+            re = new BigDecimal(str);
+            return re;
+        }
+
+
         // 填充请求参数到 Bean 对象
         public void getBean(Object bean){
             Class<? extends Object> clazz = bean.getClass();
@@ -117,6 +126,8 @@ public abstract class Action extends HttpServlet {
                             field.set(bean,this.getInt(fname));
                         }else if (type == Long.class || type == long.class || type == Long.TYPE){
                             field.set(bean,this.getInt(fname));
+                        }else if (type == BigDecimal.class){
+                            field.set(bean,this.getBigDecimal(fname));
                         }else if (type == Date.class){
                             if (paramv.matches("\\d{4}[-]\\d{2}[-]\\d{2}[ ]\\d{2}[:]\\d{2}[:]\\d{2}")){
                                 field.set(bean,simpleDateFormat.parse(paramv));
