@@ -41,7 +41,7 @@ public class HousePicAction extends Action {
             id = (Integer)mapping.getAttr("id");
         }
         if (null != (Integer)mapping.getAttr("channel")){
-            id = (Integer)mapping.getAttr("channel");
+            channel = (Integer)mapping.getAttr("channel");
         }
 
         try {
@@ -64,6 +64,7 @@ public class HousePicAction extends Action {
             log.error("com.hq.servlet.admin.HousePicAction_index出错_"+e.getMessage());
         }
         mapping.setAttr("channel", channel);
+        System.out.println("index===cahnnel"+channel);
         mapping.forward("admin/house_pic_list.jsp");
     }
 
@@ -97,6 +98,33 @@ public class HousePicAction extends Action {
         this.index(mapping);
     }
 
+    public void delImg(Mapping mapping) throws ServletException, IOException{
+//        href="admin/pic_house?action=delImg&id=<%=pic.getId()%>&hid=${house.id}&path=<%=pic.getPath()
+        String path = mapping.getString("path");
+        int channel = mapping.getInt("channel");
+        System.out.println("del==channel"+channel);
+        int houseID = mapping.getInt("hid");
+        long id = mapping.getLong("id");
+
+        try {
+            if (id > 0){
+                int lastIndex = path.lastIndexOf("ups");
+                String webPath = path.substring(lastIndex+4);
+                File file = new File(mapping.getReq().getServletContext().getRealPath("ups/"+webPath));
+
+                file.delete();
+                DB.delete(id,Pictures.class);
+
+                mapping.setAttr("channel",channel);
+                mapping.setAttr("id",houseID);
+                mapping.setAttr("msg","删除成功");
+            }
+        } catch (SQLException e) {
+            mapping.setAttr("err","删除失败");
+            e.printStackTrace();
+        }
+        this.index(mapping);
+    }
 }
 
 

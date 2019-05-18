@@ -1,3 +1,6 @@
+<%@ page import="com.hq.bean.Pictures" %>
+<%@ page import="java.util.List" %>
+
 <%--
   @author zth
   @create  2019-05-17 20:57
@@ -96,11 +99,32 @@
                                         <button class="btn btn-info " type="submit" >上传图片</button>
                                     </div>
                                 </div>
-
-
                             </form>
                         </c:if>
+                        <div  style="clear: both;"></div>
                     </div>
+                    <%--图片展示--%>
+
+                    <div style="margin-top: 20px">
+                        <%
+                            List<Pictures> pictures = (List<Pictures>)request.getAttribute("pics");
+                            if (null != pictures && pictures.size()>0){
+                                for (Pictures pic:pictures) {
+                        %>
+                        <div style="display: inline-block;padding-top: 10px;padding-right: 20px " >
+                            <img class="img-rounded" style="width: 150px ;" src="<%=pic.getPath()%> ">
+                            <div style="background: #E8E8E8; ">
+                                <p style="padding: 10px 0px 0px 10px;display: inline-block; "><%=pic.getDis()%></p>
+                                <a style="margin-top: 10px" href="admin/pic_house?action=delImg&id=<%=pic.getId()%>&channel=${channel}&hid=${house.id}&path=<%=pic.getPath()%>" class="btn btn-xs btn-danger pull-right">删除</a>
+                            </div>
+                        </div>
+                        <%
+                                }
+                            }
+                        %>
+                    </div>
+
+
                 </div>
             </div>
         </div>

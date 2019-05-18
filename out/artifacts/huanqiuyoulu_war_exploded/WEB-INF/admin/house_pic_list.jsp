@@ -1,3 +1,6 @@
+<%@ page import="com.hq.bean.Pictures" %>
+<%@ page import="java.util.List" %>
+
 <%--
   @author zth
   @create  2019-05-17 20:57
@@ -13,6 +16,33 @@
         .country_names li{ float: left; }
         .country_names  li a{ color: #333; text-decoration: none; line-height: 30px; padding: 5px 10px;}
         .country_names  li a:hover{ text-decoration: underline;}
+
+        .file {
+            position: relative;
+            display: inline-block;
+            background: #D0EEFF;
+            border: 1px solid #99D3F5;
+            border-radius: 4px;
+            padding: 4px 12px;
+            overflow: hidden;
+            color: #1E88C7;
+            text-decoration: none;
+            text-indent: 0;
+            line-height: 20px;
+        }
+        .file input {
+            position: absolute;
+            font-size: 100px;
+            right: 0;
+            top: 0;
+            opacity: 0;
+        }
+        .file:hover {
+            background: #AADFFD;
+            border-color: #78C3F3;
+            color: #004974;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body class="gray-bg">
@@ -26,7 +56,7 @@
                         <small style="font-size: 12px; font-weight: bold; margin-left: 25px;">${house.name}</small>
                     </h5>
                 </div>
-                <div class="ibox-content" style="font-size: 12px">
+                <div class="ibox-content" style="font-size: 12px;padding-bottom: 50px">
                     <div style="width: 100%">
                         <ul class="country_names" style="margin-left: 0px;padding-left: 0px">
                             <li><a href="admin/pic_house?id=${house.id}&channel=0" <c:if test="${channel==0}">style="font-weight:bold;color:red;"</c:if>>全部</a></li>
@@ -39,7 +69,7 @@
                         <c:if test="${channel >0}">
                             <form action="admin/pic_house?action=imgUpload" method="post" class="form-inline" enctype="multipart/form-data">
                                 <input type="hidden" name="channel" value="${channel}">
-                                <input type="hidden" name="id" value="${house.id}">
+                                <input type="hidden" name="house_id" value="${house.id}">
                                 <input type="text" class="form-control" name="dis" placeholder="图片描述">
                                 <div class="form-group">
                                     <select name="level" class="form-control" >
@@ -52,9 +82,49 @@
                                         %>
                                     </select>
                                 </div>
+
+                                <%--图片选择框--%>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="请选择上传图片" readonly id="fileName">
+                                </div>
+                                <div class="form-group " >
+                                    <div class="form-control"  style="padding: 0px">
+                                        <a href="javascript:;" class="file " style="width: 100%" >选择图片
+                                            <input type="file"  onchange="document.getElementById('fileName').value=this.value"  name="pic">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-control" style="padding: 0px">
+                                        <button class="btn btn-info " type="submit" >上传图片</button>
+                                    </div>
+                                </div>
                             </form>
                         </c:if>
+                        <div  style="clear: both;"></div>
                     </div>
+                    <%--图片展示--%>
+
+                    <div style="margin-top: 20px">
+                        <%
+                            List<Pictures> pictures = (List<Pictures>)request.getAttribute("pics");
+                            if (null != pictures && pictures.size()>0){
+                                for (Pictures pic:pictures) {
+                        %>
+                        <div style="display: inline-block;padding-top: 10px;padding-right: 20px " >
+                            <img class="img-rounded" style="width: 150px ;" src="<%=pic.getPath()%> ">
+                            <div style="background: #E8E8E8; ">
+                                <p style="padding: 10px 0px 0px 10px;display: inline-block; "><%=pic.getDis()%></p>
+                                <a style="margin-top: 10px" href="admin/pic_house?action=delImg&id=<%=pic.getId()%>&channel=${channel}&hid=${house.id}&path=<%=pic.getPath()%>" class="btn btn-xs btn-danger pull-right">删除</a>
+                            </div>
+                        </div>
+                        <%
+                                }
+                            }
+                        %>
+                    </div>
+
+
                 </div>
             </div>
         </div>
