@@ -12,7 +12,7 @@ public class PageDiv<T> {
     private int pageSize;           //  每页多少条
     private int totalPage;          //  总共多少页
     private long totalCount;         //  总共多少条
-    private int indexCount = 9;     //  显示页码数
+    private int indexCount = 5;     //  显示页码数
     private int start;              //  从第几页开始
     private int end;                //  到第几页结束
 
@@ -25,7 +25,7 @@ public class PageDiv<T> {
         this.pageNO = pageNO;
         this.pageSize = pageSize;
         this.totalCount = totalCount;
-        this.totalPage = (int)((totalPage+pageSize-1)/pageSize);
+        this.totalPage = (int)((totalCount + pageSize-1)/pageSize);
         this.list = list;
 
         if (pageNO-indexCount/2<1){

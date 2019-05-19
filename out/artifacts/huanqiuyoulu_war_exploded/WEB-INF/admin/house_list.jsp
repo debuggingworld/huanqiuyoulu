@@ -101,19 +101,22 @@
                             <%
                                 PageDiv<House> pageDiv = (PageDiv<House>)request.getAttribute("pageDiv");
                             %>
-                            <a href="admin/house/index?cid=${cid}&pageNo=<%=((pageDiv.getPageNO()-1)>1?(pageDiv.getPageNO()-1):1)%>" class="btn btn-white">
-                                <i class="fa  fa-chevron-left"></i>
+                            <a href="admin/house?cid=${cid}&pageNo=<%=((pageDiv.getPageNO()-1)>1?(pageDiv.getPageNO()-1):1)%>" class="btn btn-white">
+                                <%--<span class="glyphicon glyphicon-menu-left"></span>--%>
+                                    &lt;
                             </a>
                             <%
                                 for (int i = pageDiv.getStart(); i <=pageDiv.getEnd() ; i++) {
                                     %>
-                            <a href="admin/house/index?cid=${cid}&pageNo=<%=i%>"><%=i%></a>
+                            <a href="admin/house?cid=${cid}&pageNo=<%=i%>" class="btn btn-white"><%=i%></a>
                             <%
                                 }
                             %>
-                            <a href="admin/house/index?cid=${cid}&pageNo=<%=((pageDiv.getPageNO()+1)<pageDiv.getTotalPage()?(pageDiv.getPageNO()+1):(pageDiv.getTotalPage()))%>" class="btn btn-white">
-                                <i class="fa  fa-chevron-right"></i>
+                            <a href="admin/house?cid=${cid}&pageNo=<%=((pageDiv.getPageNO()+1)<pageDiv.getTotalPage()?(pageDiv.getPageNO()+1):(pageDiv.getTotalPage()))%>" class="btn btn-white">
+                                <%--<span class="glyphicon glyphicon-menu-right"></span>--%>
+                                &gt;
                             </a>
+
                         </div>
                     </div>
                 </div>

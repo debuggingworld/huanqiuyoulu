@@ -88,6 +88,24 @@ public abstract class Action extends HttpServlet {
             return re;
         }
 
+        public int[] getIntArray(String param){
+            int[] re = null;
+            String[] strs = this.getStringArray(param);
+            if (null != strs && strs.length > 0){
+                re = new int[strs.length];
+
+                for (int i = 0; i < strs.length; i++) {
+                    if (null != strs[i] && strs[i].matches("\\d+")){
+                        re[i] = Integer.parseInt(strs[i]);
+                    }else {
+                        re[i]= 0;
+                    }
+                }
+            }
+            return re;
+        }
+
+
         public Long getLong (String param){
             long re = 0;
             String str = this.getString(param);

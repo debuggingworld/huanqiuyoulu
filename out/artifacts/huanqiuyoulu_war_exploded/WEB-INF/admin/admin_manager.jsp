@@ -1,8 +1,6 @@
 <%@ page import="java.util.List" %>
-<%@ page import="com.hq.bean.Admin" %><%--
-  @author zth
-  @create  2019-05-08 16:22
---%>
+<%@ page import="com.hq.bean.Admin" %>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -51,12 +49,6 @@
                                 </div>
                             </form>
 
-                           <%-- <div class="panel panel-default ">
-                                <div class="panel-heading">添加管理员</div>
-                                <div class="panel-body">
-
-                                </div>
-                            </div>--%>
                             <div style="height: 40px"></div>
 
                             <table class="table table-hover table-striped" style="word-break:break-all; font-size: 12px;">
@@ -100,13 +92,6 @@
                                 %>
                             </table>
 
-                            <%--<div class="panel panel-default">
-                                <div class="panel-heading">修改管理员</div>
-                                <div class="panel-body">
-
-
-                                </div>
-                            </div>--%>
                         </div>
                     </div>
 

@@ -64,7 +64,6 @@ public class HousePicAction extends Action {
             log.error("com.hq.servlet.admin.HousePicAction_index出错_"+e.getMessage());
         }
         mapping.setAttr("channel", channel);
-        System.out.println("index===cahnnel"+channel);
         mapping.forward("admin/house_pic_list.jsp");
     }
 

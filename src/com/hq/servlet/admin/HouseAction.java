@@ -32,7 +32,7 @@ public class HouseAction extends Action {
             mapping.setAttr("countrys",countrys);
 
             PageDiv<House> pageDiv = null;
-            int pageSize = 15;
+            int pageSize = 10;
             int paseNo = 1;
 
             if (mapping.getInt("pageNo")>0){
@@ -45,6 +45,7 @@ public class HouseAction extends Action {
             if (cid > 0){
                 mapping.setAttr("country",DB.get(cid,City.class));
                 pageDiv = DB.getByPage(House.class,"select * from house where country_id = ? order by level,id ",paseNo,pageSize,cid);
+                System.out.println(pageDiv);
             }else {
                 pageDiv = DB.getByPage(House.class,"select * from house  order by level,id ",paseNo,pageSize);
 
