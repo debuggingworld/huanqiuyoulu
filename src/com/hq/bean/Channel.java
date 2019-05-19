@@ -37,4 +37,14 @@ public class Channel {
     public void setPath(String path) {
         this.path = path;
     }
+
+    @Override
+    public String toString() {
+        return "Channel{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", level=" + level +
+                ", path='" + path + '\'' +
+                '}';
+    }
 }
