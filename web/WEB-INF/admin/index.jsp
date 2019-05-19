@@ -67,19 +67,10 @@
                 </li>
 
                 <li>
-                    <a class="hassubs_menu">
+                    <a class="J_menuItem top_menu " href="admin/house?cid=0&pageNo=1">
                         <i class="fa fa-building-o"></i>
-                        <span class="nav-label">房产管理</span>
-                        <span class="fa arrow"></span>
+                        <span class="nav-label">楼盘管理
                     </a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a class="J_menuItem" href="admin/city">国家</a>
-                        </li>
-                        <li>
-                            <a class="J_menuItem" href="admin/house?cid=0&pageNo=1">楼盘</a>
-                        </li>
-                    </ul>
                 </li>
 
                 <li>
@@ -112,17 +103,27 @@
 
                 <li>
                     <a href="#" class="hassubs_menu">
-                        <i class="fa fa-bar-chart-o"></i>
+                        <i class="fa fa-wrench"></i>
                         <span class="nav-label">系统管理</span>
                         <span class="fa arrow"></span>
                     </a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a class="J_menuItem" href="admin/admin">管理员管理</a>
+                            <a class="J_menuItem" href="admin/city">国家</a>
                         </li>
                         <li>
                             <a class="J_menuItem" href="admin/focuspic">焦点图</a>
                         </li>
+                        <li>
+                            <a class="J_menuItem" href="admin/artchannel">资讯栏目</a>
+                        </li>
+                        <li>
+                            <a class="J_menuItem" href="admin/attach">附件管理</a>
+                        </li>
+                        <li>
+                            <a class="J_menuItem" href="admin/admin">管理员管理</a>
+                        </li>
+
                     </ul>
                 </li>
 

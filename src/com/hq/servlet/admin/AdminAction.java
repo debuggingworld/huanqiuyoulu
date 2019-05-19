@@ -36,6 +36,8 @@ public class AdminAction extends Action {
     public void saveAdd(Mapping mapping) throws ServletException, IOException{
         Admin admin = new Admin();
         mapping.getBean(admin);
+        String upwd = admin.getUpwd();
+        admin.setUpwd(Md5Encrypt.md5(upwd));
 
         try {
             DB.add(admin);
