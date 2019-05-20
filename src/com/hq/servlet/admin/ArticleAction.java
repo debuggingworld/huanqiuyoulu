@@ -1,5 +1,6 @@
 package com.hq.servlet.admin;
 
+import com.hq.bean.Admin;
 import com.hq.bean.Article;
 import com.hq.bean.Channel;
 import com.hq.bean.City;
@@ -7,6 +8,7 @@ import com.hq.db.DB;
 import com.hq.db.PageDiv;
 import com.hq.servlet.core.Action;
 import org.apache.commons.dbutils.handlers.ArrayHandler;
+import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.log4j.Logger;
 
@@ -156,6 +158,25 @@ public class ArticleAction extends Action {
             log.error("com.hq.servlet.admin.ArticleAction_修改资讯出错"+e.getMessage());
         }
         index(mapping);
+    }
+
+    /**
+     * 显示文章
+     */
+    public void show(Mapping mapping) throws ServletException, IOException{
+
+        long id = mapping.getLong("id");
+         try {
+             if (id >0){
+                 String sql="select a.*,c.name as channelName,t.name as cityName from article a,channel c,city t where a.channel_id=c.id and a.city_id=t.id and a.id=?";
+                 Article article=DB.query(sql, new BeanHandler<Article>(Article.class),id);
+                 mapping.setAttr("article", article);
+             }
+         } catch (SQLException e) {
+             e.printStackTrace();
+         }
+
+         mapping.forward("admin/article_show.jsp");
     }
 
 
