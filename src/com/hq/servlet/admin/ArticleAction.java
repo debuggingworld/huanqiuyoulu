@@ -33,7 +33,7 @@ public class ArticleAction extends Action {
             pageNo = mapping.getInt("pageNo");
         }
 
-        int pageSize = 2;
+        int pageSize = 10;
 
         try{
             // 列出所有栏目
@@ -106,7 +106,7 @@ public class ArticleAction extends Action {
             mapping.setAttr("msg","添加成功");
         } catch (SQLException e) {
             mapping.setAttr("err","添加失败");
-            log.error("com.hq.servlet.admin.ArticleAction_添加zi资讯出错"+e.getMessage());
+            log.error("com.hq.servlet.admin.ArticleAction_添加资讯出错"+e.getMessage());
         }
         this.index(mapping);
     }
@@ -136,4 +136,51 @@ public class ArticleAction extends Action {
         mapping.forward("admin/article_edit.jsp");
     }
 
+    /**
+     * 保存修改
+     */
+    public void saveEdit(Mapping mapping) throws ServletException, IOException{
+        Article article = null;
+        long id = mapping.getLong("id");
+
+        try {
+            if (id >0){
+                article = DB.get(id,Article.class);
+
+                mapping.getBean(article);
+                DB.update(article);
+            }
+            mapping.setAttr("msg","修改成功");
+        } catch (SQLException e) {
+            mapping.setAttr("err","修改失败");
+            log.error("com.hq.servlet.admin.ArticleAction_修改资讯出错"+e.getMessage());
+        }
+        index(mapping);
+    }
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
