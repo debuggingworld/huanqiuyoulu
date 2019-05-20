@@ -69,7 +69,7 @@
                 <li>
                     <a class="J_menuItem top_menu " href="admin/house?cid=0&pageNo=1">
                         <i class="fa fa-building-o"></i>
-                        <span class="nav-label">楼盘管理
+                        <span class="nav-label">楼盘管理</span>
                     </a>
                 </li>
 

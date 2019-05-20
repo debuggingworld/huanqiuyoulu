@@ -14,6 +14,7 @@ import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import java.io.File;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Date;
@@ -179,6 +180,38 @@ public class ArticleAction extends Action {
          mapping.forward("admin/article_show.jsp");
     }
 
+    /**
+     * 删除资讯
+     */
+    public void del(Mapping mapping) throws ServletException, IOException{
+
+        Article article = null;
+        long id = mapping.getLong("id");
+
+        try {
+            if (id > 0){
+                article = DB.get(id,Article.class);
+
+                if (null != article && null != article.getPic() && -1 != article.getPic().indexOf("ups")){
+                    // 删除主图
+                    int index = article.getPic().lastIndexOf("ups");
+                    File file = new File(this.getServletContext().getRealPath(article.getPic().substring(index)));
+
+                    System.out.println(file.toString());
+                    if (file.exists()){
+                        file.delete();
+                    }
+                    DB.delete(id,Article.class);
+                }
+            }
+            mapping.setAttr("msg","删除成功");
+        } catch (SQLException e) {
+            mapping.setAttr("err","删除失败");
+            e.printStackTrace();
+        }
+        mapping.setAttr("channel_id",mapping.getInt("channel_id"));
+        index(mapping);
+    }
 
 }
 
