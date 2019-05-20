@@ -42,15 +42,14 @@ public class ArticleAction extends Action {
 
             // 检查是不是搜索结果
             String keyword = mapping.getString("keyword");
+            System.out.println(keyword);
             if (keyword.length() > 0){
                 String sql = "select a.* ,t.name as cityName,c.name as channelName from article a,city t ,channel c where a.channel_id = c.id and a.city_id = t.id and a.title like ? order by level asc ,id desc limit ? ,?";
                 List<Article> articles = DB.query(sql,new BeanListHandler<Article>(Article.class),"%"+keyword+"%",(pageNo-1)*pageSize,pageSize);
-
                 long total = (long)DB.query("select count(id) from article where title like ?",new ArrayHandler(),"%"+keyword+"%")[0];
+
                 pageDiv = new PageDiv<>(pageNo,pageSize,total,articles);
-
                 mapping.setAttr("keyword",keyword);
-
             }else {
                 int channelID = mapping.getInt("channel_id");
                 if (channelID > 0){
@@ -70,8 +69,8 @@ public class ArticleAction extends Action {
                     pageDiv = new PageDiv<>(pageNo,pageSize,total,articles);
                     mapping.setAttr("channel_id",channelID);
                 }
-                mapping.setAttr("pageDiv",pageDiv);
-        }
+            }
+            mapping.setAttr("pageDiv",pageDiv);
         } catch (SQLException e) {
             log.error("com.hq.servlet.admin.ArticleAction_查询文章出错"+e.getMessage());
         }
@@ -109,6 +108,32 @@ public class ArticleAction extends Action {
             mapping.setAttr("err","添加失败");
             log.error("com.hq.servlet.admin.ArticleAction_添加zi资讯出错"+e.getMessage());
         }
-        this.toAdd(mapping);
+        this.index(mapping);
     }
+
+    /**
+     * 跳转到修改页面
+     */
+    public void edit(Mapping mapping) throws ServletException, IOException{
+
+        try{
+            long id = mapping.getLong("id");
+            if (id>0){
+
+                List<City> countrys = DB.getAll(City.class, "select * from city where display = 1 and  parent_id = 0 order by level ");
+                mapping.setAttr("countrys", countrys);
+
+                List<Channel> channels = DB.getAll(Channel.class, "select * from channel order by level ");
+                mapping.setAttr("channels", channels);
+
+                Article article = DB.get(id,Article.class);
+                mapping.setAttr("article",article);
+                mapping.setAttr("basePath",mapping.basePath());
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        mapping.forward("admin/article_edit.jsp");
+    }
+
 }
