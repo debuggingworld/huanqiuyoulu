@@ -48,7 +48,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="J_menuItem top_menu " href="admin/article?action=toadd">
+                    <a class="J_menuItem top_menu " href="admin/article?action=toAdd">
                         <i class="fa fa-image"></i>
                         <span class="nav-label">发布资讯</span>
                     </a>
