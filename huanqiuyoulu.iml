@@ -21,7 +21,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" scope="PROVIDED" name="Tomcat 9.0.11" level="application_server_libraries" />
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
@@ -44,6 +43,8 @@
     </orderEntry>
     <orderEntry type="library" exported="" name="fastjson-1.2.45" level="project" />
     <orderEntry type="library" exported="" name="lib" level="project" />
-    <orderEntry type="library" name="lib (2)" level="project" />
+    <orderEntry type="library" exported="" name="lib (2)" level="project" />
+    <orderEntry type="library" exported="" name="poi-3.9-20121203" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="Tomcat 9.0.11" level="application_server_libraries" />
   </component>
 </module>

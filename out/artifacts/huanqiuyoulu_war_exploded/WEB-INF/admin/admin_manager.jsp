@@ -47,6 +47,12 @@
                                 <div class="form-control" style="padding: 0px">
                                     <button type="submit" class=" btn btn-info">增加</button>
                                 </div>
+                                <div class="form-control" style="padding: 0px">
+
+                                    <a href="admin/printExcel?action=admin" style="margin: 0px; width: auto" class="btn btn-success ">
+                                        <i class="fa fa-print"></i>
+                                        导出所有管理员</a>
+                                </div>
                             </form>
 
                             <div style="height: 40px"></div>
