@@ -44,7 +44,7 @@
                         <td>
                             <a href="admin/article?action=edit&id=${art.id}" class="btn btn-sm btn-info"><i class="fa fa-edit">修改</i></a>
                             <a href="admin/article?action=del&id=${art.id}&channel_id=${art.channel_id}" class="btn btn-danger btn-sm"><i class="fa fa-close">删除</i></a>
-                            <a href="admin/article?action=createhtml&id=${art.id}&channel_id=${art.channel_id}" class="btn btn-sm btn-success"><i class="fa fa fa-check-square-o">发布</i></a>
+                            <a href="admin/article?action=createTtml&id=${art.id}&channel_id=${art.channel_id}" class="btn btn-sm btn-success"><i class="fa fa fa-check-square-o">发布</i></a>
                         </td>
                     </tr>
                 </c:forEach>

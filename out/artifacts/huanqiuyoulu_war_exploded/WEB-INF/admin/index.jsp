@@ -60,45 +60,22 @@
                     </a>
                 </li>
                 <li>
-                    <a class="J_menuItem top_menu " href="admin/train">
-                        <i class="fa fa-user-secret"></i>
-                        <span class="nav-label">培训管理</span>
+                    <a class="J_menuItem top_menu " href="admin/trval">
+                        <i class="fa fa-bus"></i>
+                        <span class="nav-label">旅游考察</span>
                     </a>
                 </li>
-
+                <li>
+                    <a class="J_menuItem top_menu " href="admin/successful">
+                        <i class="fa fa-bus"></i>
+                        <span class="nav-label">成功案例</span>
+                    </a>
+                </li>
                 <li>
                     <a class="J_menuItem top_menu " href="admin/house?cid=0&pageNo=1">
                         <i class="fa fa-building-o"></i>
                         <span class="nav-label">楼盘管理</span>
                     </a>
-                </li>
-
-                <li>
-                    <a class="hassubs_menu" >
-                        <i class="fa fa-bar-chart-o"></i>
-                        <span class="nav-label">经纪人管理</span>
-                        <span class="fa arrow"></span>
-                    </a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a class="J_menuItem" href="admin/celler?action=regist">注册经纪人</a>
-                        </li>
-                        <li>
-                            <a class="J_menuItem" href="admin/company?action=add">注册经纪公司</a>
-                        </li>
-                        <li>
-                            <a class="J_menuItem" href="admin/company">经纪公司管理</a>
-                        </li>
-                        <li>
-                            <a class="J_menuItem" href="admin/seller">经纪人管理</a>
-                        </li>
-                        <li>
-                            <a class="J_menuItem" href="admin/custom?action=add">新客户报备</a>
-                        </li>
-                        <li>
-                            <a class="J_menuItem" href="admin/custom">客户管理</a>
-                        </li>
-                    </ul>
                 </li>
 
                 <li>
@@ -119,6 +96,9 @@
                         </li>
                         <li>
                             <a class="J_menuItem" href="admin/attach">附件管理</a>
+                        </li>
+                        <li>
+                            <a class="J_menuItem" href="admin/druid">数据库监控</a>
                         </li>
                         <li>
                             <a class="J_menuItem" href="admin/admin">管理员管理</a>

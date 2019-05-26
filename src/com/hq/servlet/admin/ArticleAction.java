@@ -7,6 +7,8 @@ import com.hq.bean.City;
 import com.hq.db.DB;
 import com.hq.db.PageDiv;
 import com.hq.servlet.core.Action;
+import com.hq.utils.HtmlGenerator;
+import com.sun.xml.internal.bind.v2.model.core.ID;
 import org.apache.commons.dbutils.handlers.ArrayHandler;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
@@ -105,7 +107,8 @@ public class ArticleAction extends Action {
         article.setVisits(0);
 
         try {
-            DB.add(article);
+            long id = DB.add(article);
+            pub(id,article.getChannel_id(),mapping);
             mapping.setAttr("msg","添加成功");
         } catch (SQLException e) {
             mapping.setAttr("err","添加失败");
@@ -152,6 +155,7 @@ public class ArticleAction extends Action {
 
                 mapping.getBean(article);
                 DB.update(article);
+                pub(id,article.getChannel_id(),mapping);
             }
             mapping.setAttr("msg","修改成功");
         } catch (SQLException e) {
@@ -213,6 +217,32 @@ public class ArticleAction extends Action {
         index(mapping);
     }
 
+    /**
+     * 发布文章
+     */
+    public void pub(long id ,int channelID,Mapping mapping ) throws ServletException, IOException{
+        if (id > 0){
+            String basePath = mapping.basePath()+"/web/article?id="+id;
+            String realPath = this.getServletContext().getRealPath("web/art_"+channelID);
+
+            File file = new File(realPath);
+            if (!file.exists()){
+                file.mkdirs();
+            }
+            HtmlGenerator.creatHtmlPage(basePath,realPath+"/news_"+channelID+"_"+id+".html");
+        }
+    }
+
+    public void createTtml(Mapping mapping) throws ServletException, IOException{
+        long id = mapping.getLong("id");
+        int channelID = mapping.getInt("channel_id");
+        if (id>0 && channelID>0){
+            pub(id,channelID,mapping);
+            mapping.setAttr("msg","发布成功");
+        }
+        mapping.setAttr("channel_id",mapping.getInt("channel_id"));
+        index(mapping);
+    }
 }
 
 
