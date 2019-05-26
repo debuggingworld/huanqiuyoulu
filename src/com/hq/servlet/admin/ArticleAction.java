@@ -1,6 +1,5 @@
 package com.hq.servlet.admin;
 
-import com.hq.bean.Admin;
 import com.hq.bean.Article;
 import com.hq.bean.Channel;
 import com.hq.bean.City;
@@ -8,7 +7,6 @@ import com.hq.db.DB;
 import com.hq.db.PageDiv;
 import com.hq.servlet.core.Action;
 import com.hq.utils.HtmlGenerator;
-import com.sun.xml.internal.bind.v2.model.core.ID;
 import org.apache.commons.dbutils.handlers.ArrayHandler;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
