@@ -98,7 +98,7 @@
                             <a class="J_menuItem" href="admin/attach">附件管理</a>
                         </li>
                         <li>
-                            <a class="J_menuItem" href="admin/druid">数据库监控</a>
+                            <a class="J_menuItem" href="druid">数据库监控</a>
                         </li>
                         <li>
                             <a class="J_menuItem" href="admin/admin">管理员管理</a>

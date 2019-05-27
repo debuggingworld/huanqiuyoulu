@@ -24,7 +24,8 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>DruidStatView</servlet-name>
-        <url-pattern>/admin/druid/*</url-pattern>
+        <url-pattern>
+            /druid/*</url-pattern>
     </servlet-mapping>
 
 </web-app>

@@ -49,5 +49,6 @@
     <orderEntry type="library" name="httpclient-4.5.3" level="project" />
     <orderEntry type="library" name="lib (3)" level="project" />
     <orderEntry type="library" name="commons-logging-1.2" level="project" />
+    <orderEntry type="library" name="druid-1.1.15" level="project" />
   </component>
 </module>
