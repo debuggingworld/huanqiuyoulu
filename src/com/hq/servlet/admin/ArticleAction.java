@@ -203,8 +203,8 @@ public class ArticleAction extends Action {
                     if (file.exists()){
                         file.delete();
                     }
-                    DB.delete(id,Article.class);
                 }
+                DB.delete(id,Article.class);
             }
             mapping.setAttr("msg","删除成功");
         } catch (SQLException e) {

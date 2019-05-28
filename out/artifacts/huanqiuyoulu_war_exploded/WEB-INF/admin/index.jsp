@@ -60,7 +60,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="J_menuItem top_menu " href="admin/trval">
+                    <a class="J_menuItem top_menu " href="admin/travel">
                         <i class="fa fa-bus"></i>
                         <span class="nav-label">旅游考察</span>
                     </a>
