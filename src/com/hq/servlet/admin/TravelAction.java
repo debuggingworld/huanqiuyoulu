@@ -4,6 +4,7 @@ import com.hq.bean.Article;
 import com.hq.bean.Travel;
 import com.hq.db.DB;
 import com.hq.servlet.core.Action;
+import com.hq.utils.HtmlGenerator;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -49,8 +50,10 @@ public class TravelAction extends Action {
         travel.setCtimes(new Date());
 
         try {
-            DB.add(travel);
+            long id = DB.add(travel);
+            mapping.setAttr("id",id);
             mapping.setAttr("msg","增加成功!");
+            pub(mapping);
         } catch (SQLException e) {
             mapping.setAttr("err","添加失败!");
             e.printStackTrace();
@@ -86,6 +89,7 @@ public class TravelAction extends Action {
                 Travel travel = DB.get(id,Travel.class);
                 mapping.getBean(travel);
                 DB.update(travel);
+                pub(mapping);
                 mapping.setAttr("msg","修改成功");
             } catch (SQLException e) {
                 mapping.setAttr("err","修改失败");
@@ -161,9 +165,33 @@ public class TravelAction extends Action {
             mapping.setAttr("travel", travel);
         } catch (SQLException e) {
             e.printStackTrace();
-            mapping.forward("admin/travel_show.jsp");
         }
+        mapping.forward("admin/travel_show.jsp");
     }
+
+
+    /**
+     * 发布文章
+     */
+    public void pub(Mapping mapping ) throws ServletException, IOException{
+        long  id = mapping.getInt("id");
+        if (id <1){
+            id = (long) mapping.getAttr("id");
+        }
+        if (id > 0){
+            String basePath = mapping.basePath()+"web/travel?id="+id;
+            String realPath = this.getServletContext().getRealPath("web/travel");
+
+            File file = new File(realPath);
+            if (!file.exists()){
+                file.mkdirs();
+            }
+            HtmlGenerator.creatHtmlPage(basePath,realPath+"/travel_"+id+".html");
+            mapping.setAttr("msg","发布成功");
+        }
+        index(mapping);
+    }
+
 
 
 }

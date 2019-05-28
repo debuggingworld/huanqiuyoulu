@@ -8,7 +8,7 @@
 <html>
 <head>
     <title>${travel.title}</title>
-    <%@include file="header.jsp"%>
+    <%@include file="../admin/header.jsp"%>
 </head>
 <body class="gray-bg">
 <div class="wrapper wrapper-content  animated fadeInRight article">
@@ -41,7 +41,7 @@
     </div>
 </div>
 
-<%@include file="booter.jsp"%>
+<%@include file="../admin/booter.jsp"%>
 </body>
 </html>
 
