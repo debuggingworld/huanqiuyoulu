@@ -12,6 +12,11 @@
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/huanqiu.css" />
+    <style>
+        #txt_dec:hover{
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
 <div style="border-bottom: 1px #ccc solid; background: #FFF; width: 100%; z-index: 900;" id="outnav" class="full_screen">
@@ -302,7 +307,7 @@
     <div id="success_case">
         <c:forEach items="${successfuls}" var="successful">
             <div class="success_list">
-                <a href="web/successful/successful_${successful.id}.html">
+                <a id="#txt_dec" href="web/successful/successful_${successful.id}.html" onmouseover="this.style.text-dec=">
                     <div class="topimg">
                         <img src="${successful.pic1}" width="385" height="180" class="topimg"/>
                         <div>
@@ -323,10 +328,7 @@
                                 String txtcontent = temstr.replaceAll("</?[^>]+>", ""); //剔出<html>的标签
                                 txtcontent = txtcontent.replaceAll("<a>\\s*|\t|\r|\n</a>", "");
                                 out.print(txtcontent);
-                                /*if(txtcontent.length()>80)
-                                    out.print(txtcontent.substring(0,80));
-                                else
-                                    out.print(txtcontent);*/
+
                             %>
 
                         </p>

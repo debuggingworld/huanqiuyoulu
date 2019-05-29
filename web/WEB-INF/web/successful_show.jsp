@@ -17,7 +17,7 @@
                     <div class="pull-left">
                         <ol class="breadcrumb">
                             <li>
-                                <a href="index.html#succ_case">成功案例</a>
+                                <a href="index.html#succ" class="text-info">成功案例</a>
                             </li>
                             <li>
                                 ${successful.name}
@@ -30,11 +30,18 @@
                         <br><br>
                         <h4>选购项目：${successful.house}</h4>
                         <h4>选购理由：${successful.why}</h4>
+                        <hr>
                     </div>
-                    <hr>
+
                     <div>
                         ${successful.dis}
                     </div>
+                    <div style="height: 30px"></div>
+                    <div class="text-center">
+                        <a href="index.html#succ" class="btn btn-info">返回</a>
+                    </div>
+
+
                 </div>
             </div>
         </div>
