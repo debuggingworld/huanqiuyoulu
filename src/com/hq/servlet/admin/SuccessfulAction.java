@@ -1,6 +1,5 @@
 package com.hq.servlet.admin;
 
-import com.hq.bean.Article;
 import com.hq.bean.Successful;
 import com.hq.db.DB;
 import com.hq.servlet.core.Action;

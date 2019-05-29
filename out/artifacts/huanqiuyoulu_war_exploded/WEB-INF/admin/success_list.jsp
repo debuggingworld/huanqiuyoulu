@@ -15,7 +15,7 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="row">
-                <a href="admin/successful?action=saveAdd" class="btn btn-info" style="margin: 10px 20px;">+添加成功案例</a>
+                <a href="admin/successful?action=toAdd" class="btn btn-info" style="margin: 10px 20px;">+添加成功案例</a>
             </div>
             <table class="table table-striped table-hover table-condensed table-responsive" style="font-size: 12px">
                 <tr><th>ID</th><th>姓名</th><th>项目</th><th>排序</th><th>管理</th></tr>
