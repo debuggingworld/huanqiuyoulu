@@ -9,7 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <title>环球优路</title>
-
+    <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/huanqiu.css" />
 </head>
@@ -246,18 +246,13 @@
             </div>
             <!--房子例表结束-->
 
-
-
-
-
         </div>
 
         <div style="clear: both;"><!--房产列表清除浮动---></div>
     </div>
 </div>
+
 <!--
-    作者：langyamoren@163.com
-    时间：2018-08-14
     描述：以下是海外咨询
 -->
 <div id="haiwaizx">
@@ -270,133 +265,80 @@
             <img src="img/leftadw.jpg" />
         </div>
         <div class="right">
-            <div class="news_list">
-                <a href="news_content.html"><img src="img/new_pic.jpg" width="160" height="100" /></a>
-                <span>2018-08-12</span>
-                <h1><a href="news_content.html">德克萨斯州地产值不值得投资，过来了解一下</a></h1>
-                <p><a href="news_content.html">
-                    美国德克萨斯州，一直以来都是美国畜牧业重地。这里不仅盛产彪悍的牛仔，更盛产奶牛、良驹，肥沃的土壤赋予了这里丰富的牧草资源，也让有心的牧场主有机会从种植里找到大量商机。
-                </a>
-                </p>
-            </div>
+            <c:forEach items="${articles}" var="article">
+                <div class="news_list">
+                    <a href="news_content.html"><img src="${article.pic}" width="160" height="100" /></a>
+                    <span><fmt:formatDate value="${article.ctime}" pattern="yyyy-MM-dd"/> </span>
+                    <h1><a href="web/art_${article.channel_id}/news_${article.channel_id}_${article.id}.html">${article.title}</a></h1>
+                    <p><a href="web/art_${article.channel_id}/news_${article.channel_id}_${article.id}.html">
+                        <c:set value="${article.content}" var="temcont" scope="request"></c:set>
+                        <%
+                            String temstr=(String)request.getAttribute("temcont");
+                            String txtcontent = temstr.replaceAll("</?[^>]+>", ""); //剔出<html>的标签
+                            txtcontent = txtcontent.replaceAll("<a>\\s*|\t|\r|\n</a>", "");
+                            if(txtcontent.length()>80)
+                                out.print(txtcontent.substring(0,80));
+                            else
+                                out.print(txtcontent);
+                        %>
+                    </a>
+                    </p>
+                </div>
+            </c:forEach>
 
-            <div class="news_list">
-                <a href="news_content.html"><img src="img/new_pic.jpg" width="160" height="100" /></a>
-                <span>2018-08-12</span>
-                <h1><a href="news_content.html">德克萨斯州地产值不值得投资，过来了解一下</a></h1>
-                <p><a href="news_content.html">
-                    美国德克萨斯州，一直以来都是美国畜牧业重地。这里不仅盛产彪悍的牛仔，更盛产奶牛、良驹，肥沃的土壤赋予了这里丰富的牧草资源，也让有心的牧场主有机会从种植里找到大量商机。
-                </a>
-                </p>
-            </div>
-
-
-            <div class="news_list">
-                <a href="news_content.html"><img src="img/new_pic.jpg" width="160" height="100" /></a>
-                <span>2018-08-12</span>
-                <h1><a href="news_content.html">德克萨斯州地产值不值得投资，过来了解一下</a></h1>
-                <p><a href="news_content.html">
-                    美国德克萨斯州，一直以来都是美国畜牧业重地。美国德克萨斯州，一直以来都是美国畜牧业美国德克萨斯州，一直以来都是美国畜牧业美国德克萨斯州，一直以来都是美国畜牧业这里不仅盛产彪悍的牛仔，更盛产奶牛、良驹，肥沃的土壤赋予了这里丰富的牧草资源，也让有心的牧场主有机会从种植里找到大量商机。
-                </a>
-                </p>
-            </div>
-
-            <div class="news_list">
-                <a href="news_content.html"><img src="img/new_pic.jpg" width="160" height="100" /></a>
-                <span>2018-08-12</span>
-                <h1><a href="news_content.html">德克萨斯州地产值不值得投资，过来了解一下</a></h1>
-                <p><a href="news_content.html">
-                    美国德克萨斯州，一直以来都是美国畜牧业重地。这里不仅盛产彪悍的牛仔，更盛产奶牛、良驹，肥沃的土壤赋予了这里丰富的牧草资源，也让有心的牧场主有机会从种植里找到大量商机。
-                </a>
-                </p>
-            </div>
         </div>
     </div>
 </div>
+
 <!--
-    作者：langyamoren@163.com
-    时间：2018-08-14
     描述：
     成功案例
 -->
 <div style="background: #EEE; margin: 20px 0; padding: 20px;"  class="full_screen">
     <div class="bigtitle">
-        <h3><span>成功</span>案例</h3>
-        <p>帮助客户成功买到理想的房子</p>
+        <h3 ><span>成功</span>案例</h3>
+        <p>帮助客户成功买到理想的房<a style="color: #0D0A0A" name="succ">子</a></p>
     </div>
     <div id="success_case">
-        <div class="success_list">
-            <a href="#">
-                <div class="topimg">
-                    <img src="img/1-1f62gq404j2.jpg" width="385" height="180" class="topimg"/>
-                    <div>
-                        <h5>选购项目：</h5>
-                        <h6>碧桂园 森林城市</h6>
+        <c:forEach items="${successfuls}" var="successful">
+            <div class="success_list">
+                <a href="web/successful/successful_${successful.id}.html">
+                    <div class="topimg">
+                        <img src="${successful.pic1}" width="385" height="180" class="topimg"/>
+                        <div>
+                            <h5>选购项目：</h5>
+                            <h6>${successful.house}</h6>
+                        </div>
                     </div>
-                </div>
-                <div class="personcase">
-                    <img src="img/a1.jpg" width="55" height="55"  style="border-radius: 27px; float: left;" />
-                    <h6>
-                        李先生<br />
-                        只为成全孩子留美就业小梦想
-                    </h6>
-                    <p>
-                        先生经营的传媒公司自成立以来，成长状况非常乐观，但企业各项缴税金额较低，世通国际专家分析后认为，W先生的公司经营
-                    </p>
-                </div>
-            </a>
-        </div>
+                    <div class="personcase">
+                        <img src="${successful.pic2}" width="55" height="55"  style="border-radius: 27px; float: left;" />
+                        <h6>
+                            ${successful.name}<br />
+                            ${successful.why}
+                        </h6>
+                        <p>
+                            <c:set value="${successful.dis}" var="temcont" scope="request"></c:set>
+                            <%
+                                String temstr=(String)request.getAttribute("temcont");
+                                String txtcontent = temstr.replaceAll("</?[^>]+>", ""); //剔出<html>的标签
+                                txtcontent = txtcontent.replaceAll("<a>\\s*|\t|\r|\n</a>", "");
+                                out.print(txtcontent);
+                                /*if(txtcontent.length()>80)
+                                    out.print(txtcontent.substring(0,80));
+                                else
+                                    out.print(txtcontent);*/
+                            %>
 
-        <div class="success_list">
-            <a href="#">
-                <div class="topimg">
-                    <img src="img/1-1f62gq404j2.jpg" width="385" height="180" class="topimg"/>
-                    <div>
-                        <h5>选购项目：</h5>
-                        <h6>碧桂园 森林城市</h6>
+                        </p>
                     </div>
-                </div>
-                <div class="personcase">
-                    <img src="img/a1.jpg" width="55" height="55"  style="border-radius: 27px; float: left;" />
-                    <h6>
-                        李先生<br />
-                        只为成全孩子留美就业小梦想
-                    </h6>
-                    <p>
-                        先生经营的传媒公司自成立以来，成长状况非常乐观，但企业各项缴税金额较低，世通国际专家分析后认为，W先生的公司经营
-                    </p>
-                </div>
-            </a>
-        </div>
-
-        <div class="success_list">
-            <a href="#">
-                <div class="topimg">
-                    <img src="img/1-1f62gq404j2.jpg" width="385" height="180" class="topimg"/>
-                    <div>
-                        <h5>选购项目：</h5>
-                        <h6>碧桂园 森林城市</h6>
-                    </div>
-                </div>
-                <div class="personcase">
-                    <img src="img/a1.jpg" width="55" height="55"  style="border-radius: 27px; float: left;" />
-                    <h6>
-                        李先生<br />
-                        只为成全孩子留美就业小梦想
-                    </h6>
-                    <p>
-                        先生经营的传媒公司自成立以来，成长状况非常乐观，但企业各项缴税金额较低，世通国际专家分析后认为，W先生的公司经营
-                    </p>
-                </div>
-            </a>
-        </div>
+                </a>
+            </div>
+        </c:forEach>
 
         <div style="clear: both;"></div>
     </div>
 </div>
 <!--
-    作者：langyamoren@163.com
-    时间：2018-08-14
     描述：页脚
 -->
 <div style="background:#2C3644; height: 280px; width: 100%;"  class="full_screen">
@@ -406,25 +348,31 @@
                 <h3>环球优路</h3>
                 <h5>youlu.com</h5>
 
-                <h3><span class="glyphicon glyphicon-earphone"></span>&nbsp;:400-123-456</h3>
-                <h3><span class="glyphicon glyphicon-envelope"></span>&nbsp;:9703239@qq.com</h3>
+                <h3><span class="glyphicon glyphicon-earphone"></span>&nbsp;123-456-789</h3>
+                <h3><span class="glyphicon glyphicon-envelope"></span>&nbsp;    123456x@qq.com</h3>
             </div>
             <div class="right">
                 <div>
-                    <img src="img/app_ios_androiddown_app.jpg" width="140" height="140" />
-                    <p style="text-align: center;">公众号</p>
+                    <img src="img/alipay.png" width="140" height="140" />
+                    <p style="text-align: center;">支付宝</p>
                 </div>
 
                 <div>
-                    <img src="img/app_ios_androiddown_app.jpg" width="140" height="140" />
-                    <p style="text-align: center;">公众号</p>
+                    <img src="img/weixin.png" width="140" height="140" />
+                    <p style="text-align: center;">微信</p>
+                </div>
+
+                <div style="clear: both; text-align: center; ">
+                    <br>
+                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您的支持是我唯一的动力</h4>
                 </div>
             </div>
         </div>
-        <div id="foot_bottom" style="clear: both; text-align: center; line-height: 50px;">
-            Copyright © 2018 youlu.com Inc. All Rights Reserved.
 
-            陕西棕榈海岸置业有限公司&nbsp;陕ICP备18013995号
+        <div id="foot_bottom" style="clear: both; text-align: center; line-height: 50px;">
+            Copyright © 2018 zth.com Inc. All Rights Reserved.
+
+            潘小柔置业有限公司&nbsp;陕ICP备xxxxx号
 
 
         </div>

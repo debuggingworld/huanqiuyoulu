@@ -18,10 +18,22 @@
 
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css?v=4.1.0" rel="stylesheet">
+    <script src="js/sweetalert.min.js"></script>
 
 </head>
 
 <body class="gray-bg">
+
+<%
+    String msg = (String)request.getAttribute("msg");
+    String err = (String)request.getAttribute("err");
+    if (null!= msg){
+        out.println("<script type=\"text/javascript\">swal('"+msg+"!','','success')</script>");
+    }else if (null != err){
+        out.println("<script type=\"text/javascript\">swal('"+err+"!','','error')</script>");
+    }
+
+%>
     <div class="wrapper wrapper-content">
         <div class="row">
             <div class="col-sm-10">
@@ -1151,6 +1163,7 @@
     });
 });
     </script>
+
 </body>
 
 </html>

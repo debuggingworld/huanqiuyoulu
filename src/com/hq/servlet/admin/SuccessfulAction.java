@@ -3,6 +3,7 @@ package com.hq.servlet.admin;
 import com.hq.bean.Successful;
 import com.hq.db.DB;
 import com.hq.servlet.core.Action;
+import com.hq.utils.HtmlGenerator;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -43,7 +44,9 @@ public class SuccessfulAction extends Action {
         Successful successful = new Successful();
         mapping.getBean(successful);
         try {
-            DB.add(successful);
+            long id  = DB.add(successful);
+            System.out.println("id====="+id);
+            pub(id,mapping);
             mapping.setAttr("msg","添加成功");
         } catch (SQLException e) {
             mapping.setAttr("err","添加失败");
@@ -78,6 +81,8 @@ public class SuccessfulAction extends Action {
                 Successful successful = DB.get(id,Successful.class);
                 mapping.getBean(successful);
                 DB.update(successful);
+
+                pub(successful.getId(),mapping);
                 mapping.setAttr("msg","修改成功");
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -124,5 +129,45 @@ public class SuccessfulAction extends Action {
         }
         index(mapping);
     }
+
+    public void show(Mapping mapping) throws ServletException, IOException{
+        int id = mapping.getInt("id");
+
+        if (id > 0){
+            try {
+                Successful successful = DB.get(id,Successful.class);
+                mapping.setAttr("successful",successful);
+            } catch (SQLException e) {
+                e.printStackTrace();
+                mapping.setAttr("err","查看失败");
+            }
+        }
+        mapping.forward("web/successful_show.jsp");
+    }
+
+    public void pub(long id ,Mapping mapping) throws ServletException, IOException{
+        if (id > 0){
+            String basePath = mapping.basePath()+"/web/successful?id="+id;
+            String realPath = this.getServletContext().getRealPath("web/successful");
+            File file = new File(realPath);
+            if (!file.exists()){
+                file.mkdirs();
+            }
+            HtmlGenerator.creatHtmlPage(basePath,realPath+"/successful_"+id+".html");
+            mapping.setAttr("msg","发布成功");
+        }
+    }
+
+    public void createTtml(Mapping mapping) throws ServletException, IOException{
+        int id  = mapping.getInt("id");
+        if (id>0){
+            pub(id,mapping);
+            mapping.setAttr("msg","发布成功");
+        }
+        mapping.setAttr("channel_id",mapping.getInt("channel_id"));
+        index(mapping);
+    }
+
+
 
 }

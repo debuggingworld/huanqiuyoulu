@@ -32,6 +32,12 @@
                             <a href="admin/successful?action=del&id=${success.id}" class="btn btn-danger btn-sm">
                                 <i class="fa fa-close"></i>删除
                             </a>
+                            <a href="admin/successful?action=show&id=${success.id}" class="btn btn-primary btn-sm">
+                                <i class="fa fa-file-word-o"></i>查看
+                            </a>
+                            <a href="admin/successful?action=createTtml&id=${success.id}" class="btn btn-success btn-sm">
+                                <i class="fa fa-check-square-o"></i>发布
+                            </a>
                         </td>
                     </tr>
                 </c:forEach>

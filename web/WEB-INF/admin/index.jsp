@@ -48,7 +48,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="J_menuItem top_menu " href="admin/createindex">
+                    <a class="J_menuItem top_menu " href="admin/createIndex">
                         <i class="fa fa-file-text"></i>
                         <span class="nav-label">生成首页</span>
                     </a>

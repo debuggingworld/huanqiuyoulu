@@ -11,7 +11,7 @@ import java.io.IOException;
  * @author zth
  * @Date 2019-05-29 9:05
  */
-@WebServlet("/admin/createindex")
+@WebServlet("/admin/createIndex")
 public class CreateIndexAction extends Action {
 
     @Override
