@@ -40,12 +40,12 @@ public class HouseAction extends Action {
             }
 
             long cid = mapping.getLong("cid");
-            if(cid<1) cid=null!=(Long)mapping.getAttr("cid")?(Integer)mapping.getAttr("cid"):0;
+            if(cid<1) cid=null!=(Long)mapping.getAttr("cid")?(Long) mapping.getAttr("cid"):0;
 
             if (cid > 0){
                 mapping.setAttr("country",DB.get(cid,City.class));
                 pageDiv = DB.getByPage(House.class,"select * from house where country_id = ? order by level,id ",paseNo,pageSize,cid);
-                System.out.println(pageDiv);
+
             }else {
                 pageDiv = DB.getByPage(House.class,"select * from house  order by level,id ",paseNo,pageSize);
 
@@ -142,6 +142,42 @@ public class HouseAction extends Action {
         }
         this.index(mapping);
     }
+
+    /**
+     * 发布信息
+     */
+    public void pub(Mapping mapping) throws ServletException, IOException{
+        int id = mapping.getInt("id");
+        if (id >0){
+            String basepath = mapping.basePath()+"web/houseContent?id="+id;
+            String realPath = this.getServletContext().getRealPath("/house_"+id+".html");
+            mapping.setAttr("msg","发布成功");
+        }else {
+            mapping.setAttr("err","发布失败");
+        }
+        index(mapping);
+    }
+
+    public void isdel(Mapping mapping) throws ServletException, IOException{
+        int id = mapping.getInt("id");
+
+        try {
+            if(id>0)
+            {
+                DB.update("update house set isdel=? where id=?",mapping.getInt("vv"),id);
+
+                mapping.setAttr("msg","修改成功!");
+            }
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            mapping.setAttr("err","修改失败!");
+            e.printStackTrace();
+        }
+
+        mapping.setAttr("cid",mapping.getLong("cid"));
+        index(mapping);
+    }
+
 }
 
 

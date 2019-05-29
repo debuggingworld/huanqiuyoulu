@@ -71,7 +71,7 @@
                             <a href="admin/type_house?id=${house.id}" class="btn btn-success btn-sm">
                                 <li class="fa fa-bank">户型</li>
                             </a>
-                            <a href="admin/voide_house/index?id=${house.id}" class="btn btn-info btn-sm">
+                            <a href="admin/voide_house?id=${house.id}" class="btn btn-info btn-sm">
                                 <li class="fa fa-file-movie-o">视频</li>
                             </a>
                             <a href="admin/house/pub?id=${house.id}" class="btn btn-warning btn-sm">
@@ -79,12 +79,12 @@
                             </a>
                             <c:choose>
                                 <c:when test="${house.isdel == 0}">
-                                    <a href="admin/house/isdel?id=${house.id}&cid=${house.country_id}&vv=1" class="btn btn-danger btn-sm">
+                                    <a href="admin/house?action=isdel&id=${house.id}&cid=${cid}&vv=1" class="btn btn-danger btn-sm">
                                         <i class="fa fa-close">禁用</i>
                                     </a>
                                 </c:when>
                                 <c:when test="${house.isdel == 1}">
-                                    <a href="admin/house/isdel?id=${house.id}&cid=${house.country_id}&vv=0" class="btn btn-success btn-sm">
+                                    <a href="admin/house?action=isdel&id=${house.id}&cid=${cid}&vv=0" class="btn btn-success btn-sm">
                                         <i class="fa fa-check">启用</i>
                                     </a>
                                 </c:when>
