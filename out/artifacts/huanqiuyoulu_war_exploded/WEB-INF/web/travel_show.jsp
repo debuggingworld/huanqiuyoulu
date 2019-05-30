@@ -19,7 +19,7 @@
                     <div class="pull-left">
                         <ol class="breadcrumb">
                             <li>
-                                <a href="admin/travel">旅游考察</a>
+                                <a href="index.html#trav">旅游考察</a>
                             </li>
                             <li>
                                 ${travel.title}
@@ -35,6 +35,10 @@
                     <div>
                         ${travel.content}
                     </div>
+                    <div class="text-center">
+                        <a href="index.html#trav" class="btn btn-info">返回</a>
+                    </div>
+
                 </div>
             </div>
         </div>

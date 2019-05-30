@@ -18,10 +18,10 @@
                     <div class="pull-left">
                         <ol class="breadcrumb">
                             <li>
-                                <a href="admin/forward?page=admin/welcome.jsp">首页</a>
+                                <a href="index.html">首页</a>
                             </li>
                             <li>
-                                <a href="admin/article?channel_id=${article.channel_id}">${article.channelName}</a>
+                                <a href="index.html#art">${article.channelName}</a>
                             </li>
                             <li>
                                 ${article.title}
@@ -30,6 +30,9 @@
                     </div>
                     <div class="text-center article-title">
                         <h3>${article.content}</h3>
+                    </div>
+                    <div class="text-center">
+                        <a class="btn btn-info" href="index.html#art">返回</a>
                     </div>
                     <hr>
                 </div>

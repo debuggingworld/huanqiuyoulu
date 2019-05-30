@@ -9,22 +9,18 @@
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/huanqiu.css" />
-    <style>
-        #txt_dec:hover{
-            text-decoration: none;
-        }
-    </style>
+
 </head>
 <body>
 <div style="border-bottom: 1px #ccc solid; background: #FFF; width: 100%; z-index: 900;" id="outnav" class="full_screen">
 
-    <div  id="topnav">
+    <div  id="topnav" >
 
         <img src="img/logo.png"  style="max-width: 200px;"/>
 
         <ul>
             <li><a href="index.html">首页</a></li>
-            <li id="globhouse" style="position: relative;"><a href="house_list.html" >海外地产  <span class="caret"></span></a>
+            <li id="globhouse" style="position: relative;"><a href="#goufang" >海外地产  <span class="caret"></span></a>
                 <div id="downmenu">
                     <a href="country.html">马来西亚</a>
                     <a href="country.html">泰国</a>
@@ -33,9 +29,9 @@
                 </div>
 
             </li>
-            <li><a href="news_list.html">海外资讯</a></li>
-            <li><a href="news_content.html">关于我们</a></li>
-            <li><a href="news_content.html">联系我们</a></li>
+            <li><a href="WEB-INF/web/news_list.jsp">海外资讯</a></li>
+            <li><a href="#ousfocus">关于我们</a></li>
+            <li><a href="#pagefoot">联系我们</a></li>
         </ul>
         <p>
             <span class="glyphicon glyphicon-phone-alt"></span>  :
@@ -103,7 +99,9 @@
 </div>
 
 
-
+    <!--
+        描述：特点展示
+    -->
 <div id="ousfocus">
     <div class="us_list">
         <span class="glyphicon glyphicon-home"></span>
@@ -137,45 +135,42 @@
         </p>
     </div>
 </div>
-<!--
-    作者：langyamoren@163.com
-    时间：2018-08-14
-    描述：特点结束
--->
+
+
 <div id="kaochantuan">
     <div class="bigtitle">
         <h3><span>海外</span>考察团</h3>
-        <p>每天都期待与您一起旅行，买房</p>
+        <p>每天都期待与您一起旅行，买<a name="trav" style="color: #0D0A0A">房</a></p>
     </div>
 
     <div  class="kaocha_row">
         
 
             <div class="kaocha_list">
-                <a href="news_content.html">
+                <a href="web/travel/travel_13.html">
                     <img src="http://localhost:80/ups/20190529/20190529497.jpg" width="570" height="295" />
                 </a>
-                <h3><a href="news_content.html">五天四晚自由行</a> </h3>
+                <h3><a href="web/travel/travel_13.html">五天四晚自由行</a> </h3>
                 <span>报名中</span>
                 <ul>
                     <li>时间：2019-05-29 16:09:44.0日西安出发</li>
                     <li>访问城市：布宜诺斯</li>
                 </ul>
-                <a href="news_content.html"  class="baomingbutn">报名参加</a>
+                <a href="web/travel/travel_13.html"  class="baomingbutn">报名参加</a>
             </div>
         
 
             <div class="kaocha_list">
-                <a href="news_content.html">
+                <a href="web/travel/travel_12.html">
                     <img src="http://localhost:80/ups/20190529/20190529695.jpg" width="570" height="295" />
                 </a>
-                <h3><a href="news_content.html">四天三晚自由行</a> </h3>
+                <h3><a href="web/travel/travel_12.html">四天三晚自由行</a> </h3>
                 <span>报名中</span>
                 <ul>
                     <li>时间：2019-05-29 16:08:33.0日西安出发</li>
                     <li>访问城市：南京</li>
                 </ul>
-                <a href="news_content.html"  class="baomingbutn">报名参加</a>
+                <a href="web/travel/travel_12.html"  class="baomingbutn">报名参加</a>
             </div>
         
 
@@ -188,13 +183,11 @@
 </div>
 
 <!--
-    作者：langyamoren@163.com
-    时间：2018-08-14
     描述： 以下是海外购房
 -->
 
 <div style="background: #EEE; margin: 20px 0; padding: 20px;"  class="full_screen">
-    <div class="bigtitle">
+    <div class="bigtitle" id="goufang">
         <h3><span>海外</span>购房</h3>
         <p>只为您挑选全球好房源</p>
     </div>
@@ -296,7 +289,7 @@
 <div id="haiwaizx">
     <div class="bigtitle">
         <h3><span>海外</span>资讯</h3>
-        <p>实时发布海外房产资讯</p>
+        <p>实时发布海外房产资<a  style="color: #0D0A0A" name="art">讯</a></p>
     </div>
     <div id="news_content">
         <div class="left">
@@ -305,15 +298,22 @@
         <div class="right">
             
                 <div class="news_list">
-                    <a href="news_content.html"><img src="http://localhost:80/ups/20190529/20190529916.jpg" width="160" height="100" /></a>
+                    <a href="web/art_3/news_3_8.html"><img src="http://localhost:80/ups/20190529/20190529916.jpg" width="160" height="100" /></a>
                     <span>2019-05-29 17:55:33.0 </span>
                     <h1><a href="web/art_3/news_3_8.html">南京的雨不停的下不停的下</a></h1>
                     <p><a href="web/art_3/news_3_8.html">
                         
                         
 鲜花盛开在风里， 
-远山映在蓝天里， 
-观沧海 乌云破开， 
+
+远山映在蓝天里，
+
+
+
+
+
+观沧海 乌云破开，
+
 今霄宁静在心里， 
 五色云霞在梦里， 
 我的爱为为你等待
@@ -324,50 +324,39 @@
                 </div>
             
                 <div class="news_list">
-                    <a href="news_content.html"><img src="http://localhost:80/ups/20190529/20190529641.jpg" width="160" height="100" /></a>
-                    <span>2019-05-29 17:46:36.0 </span>
-                    <h1><a href="web/art_3/news_3_7.html">德克萨斯州地产值不值得投资，过来了解一下</a></h1>
-                    <p><a href="web/art_3/news_3_7.html">
+                    <a href="web/art_3/news_3_17.html"><img src="http://localhost:80/ups/20190530/20190530274.jpg" width="160" height="100" /></a>
+                    <span>2019-05-30 16:01:04.0 </span>
+                    <h1><a href="web/art_3/news_3_17.html">购房定金和订金，到底哪个能退？</a></h1>
+                    <p><a href="web/art_3/news_3_17.html">
                         
-                        
-美国德克萨斯州，一直以来都是美国畜牧业重地。这里不仅盛产彪悍的牛仔，
+                        每个人在选到自己心仪的房源后，或多或少都会遇到需要交定金/订金的情况，但是在没有拿到房子的情况；或是交了定金，后来又由于某种原因想推掉，但是楼盘那边又说规定
 
-
-更盛产奶牛、良驹，肥沃的土壤赋予了这里丰富的牧草资源，
-
-
-也让有心的牧场主有机会从
-                    </a>
-                    </p>
-                </div>
-            
-                <div class="news_list">
-                    <a href="news_content.html"><img src="http://localhost:80/ups/20190529/20190529739.jpg" width="160" height="100" /></a>
-                    <span>2019-05-26 17:40:49.0 </span>
-                    <h1><a href="web/art_1/news_1_6.html">西湖的水，我的泪</a></h1>
-                    <p><a href="web/art_1/news_1_6.html">
-                        
-                        
- 
-
-
-西湖的水，我的泪
 
                     </a>
                     </p>
                 </div>
             
                 <div class="news_list">
-                    <a href="news_content.html"><img src="http://localhost:80/ups/20190529/20190529849.jpg" width="160" height="100" /></a>
-                    <span>2019-05-26 17:29:10.0 </span>
-                    <h1><a href="web/art_3/news_3_5.html">柔柔最美丽</a></h1>
-                    <p><a href="web/art_3/news_3_5.html">
+                    <a href="web/art_3/news_3_16.html"><img src="http://localhost:80/ups/20190530/20190530274.jpg" width="160" height="100" /></a>
+                    <span>2019-05-30 16:01:04.0 </span>
+                    <h1><a href="web/art_3/news_3_16.html">购房定金和订金，到底哪个能退？</a></h1>
+                    <p><a href="web/art_3/news_3_16.html">
                         
-                        
-柔柔最美丽
+                        每个人在选到自己心仪的房源后，或多或少都会遇到需要交定金/订金的情况，但是在没有拿到房子的情况；或是交了定金，后来又由于某种原因想推掉，但是楼盘那边又说规定
 
 
-柔柔最美丽
+                    </a>
+                    </p>
+                </div>
+            
+                <div class="news_list">
+                    <a href="web/art_3/news_3_15.html"><img src="http://localhost:80/ups/20190530/20190530274.jpg" width="160" height="100" /></a>
+                    <span>2019-05-30 16:01:04.0 </span>
+                    <h1><a href="web/art_3/news_3_15.html">购房定金和订金，到底哪个能退？</a></h1>
+                    <p><a href="web/art_3/news_3_15.html">
+                        
+                        每个人在选到自己心仪的房源后，或多或少都会遇到需要交定金/订金的情况，但是在没有拿到房子的情况；或是交了定金，后来又由于某种原因想推掉，但是楼盘那边又说规定
+
 
                     </a>
                     </p>
@@ -385,12 +374,12 @@
 <div style="background: #EEE; margin: 20px 0; padding: 20px;"  class="full_screen">
     <div class="bigtitle">
         <h3 ><span>成功</span>案例</h3>
-        <p>帮助客户成功买到理想的房<a style="color: #0D0A0A" name="succ">子</a></p>
+        <p>帮助客户成功买到理想的房<a style="color: #0D0A0A" name="succ" >子</a></p>
     </div>
     <div id="success_case">
         
             <div class="success_list">
-                <a id="#txt_dec" href="web/successful/successful_10.html" onmouseover="this.style.text-dec=">
+                <a href="web/successful/successful_10.html" onmouseover="this.style.text-dec=">
                     <div class="topimg">
                         <img src="http://localhost:80/ups/20190529/20190529778.jpg" width="385" height="180" class="topimg"/>
                         <div>
@@ -398,13 +387,13 @@
                             <h6>森林城市</h6>
                         </div>
                     </div>
-                    <div class="personcase">
+                    <div class="personcase" >
                         <img src="http://localhost:80/ups/20190529/20190529169.jpg" width="55" height="55"  style="border-radius: 27px; float: left;" />
                         <h6>
                             南城姐夫<br />
                             买房还要理由
                         </h6>
-                        <p>
+                        <p >
                             
                             
 纵有红颜 百生千劫
@@ -417,14 +406,13 @@
 梅花清幽 独立春寒
 
 
-
                         </p>
                     </div>
                 </a>
             </div>
         
             <div class="success_list">
-                <a id="#txt_dec" href="web/successful/successful_4.html" onmouseover="this.style.text-dec=">
+                <a href="web/successful/successful_4.html" onmouseover="this.style.text-dec=">
                     <div class="topimg">
                         <img src="http://localhost:80/ups/20190529/20190529756.jpg" width="385" height="180" class="topimg"/>
                         <div>
@@ -432,13 +420,13 @@
                             <h6>森林城市</h6>
                         </div>
                     </div>
-                    <div class="personcase">
+                    <div class="personcase" >
                         <img src="http://localhost:80/ups/20190529/20190529587.jpg" width="55" height="55"  style="border-radius: 27px; float: left;" />
                         <h6>
                             张先生<br />
                             买房我只选环球优酷
                         </h6>
-                        <p>
+                        <p >
                             
                             
 先生经营的传媒公司自成立以来，成长状况非常乐观，并且企业各项缴税金额较低，世通国际专家分析后认为，W先生的公司经营前景非常可观&nbsp;
@@ -452,14 +440,13 @@
 
 
 
-
                         </p>
                     </div>
                 </a>
             </div>
         
             <div class="success_list">
-                <a id="#txt_dec" href="web/successful/successful_3.html" onmouseover="this.style.text-dec=">
+                <a href="web/successful/successful_3.html" onmouseover="this.style.text-dec=">
                     <div class="topimg">
                         <img src="http://localhost:80/ups/20190529/20190529742.jpg" width="385" height="180" class="topimg"/>
                         <div>
@@ -467,13 +454,13 @@
                             <h6>森林城市</h6>
                         </div>
                     </div>
-                    <div class="personcase">
+                    <div class="personcase" >
                         <img src="http://localhost:80/ups/20190529/201905295.png" width="55" height="55"  style="border-radius: 27px; float: left;" />
                         <h6>
                             张雨柔<br />
                             只为成全孩子留美就业小梦想
                         </h6>
-                        <p>
+                        <p >
                             
                             
 先生经营的传媒公司自成立以来，成长状况非常乐观，并且企业各项缴税金额较低，世通国际专家分析后认为，W先生的公司经营前景非常可观
@@ -482,7 +469,6 @@
 成长状况非常乐观，并且企业各项缴税金额较低，世通国际专家分析后认为，W先生的公司经营前景非常可观
 先生经营的传媒公司自成立以来，成长状况非常乐观，并且企业各项缴税金额较低，世通国际专家分析后认为，W先生的公司经营前景非常可观
 先生经营的传媒公司自成立以来，成长状况非常乐观，并且企业各项缴税金额较低，世通国际专家分析后认为，W先生的公司经营前景非常可观
-
 
                         </p>
                     </div>

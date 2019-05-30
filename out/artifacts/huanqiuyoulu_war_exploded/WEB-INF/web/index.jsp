@@ -12,22 +12,18 @@
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/huanqiu.css" />
-    <style>
-        #txt_dec:hover{
-            text-decoration: none;
-        }
-    </style>
+
 </head>
 <body>
 <div style="border-bottom: 1px #ccc solid; background: #FFF; width: 100%; z-index: 900;" id="outnav" class="full_screen">
 
-    <div  id="topnav">
+    <div  id="topnav" >
 
         <img src="img/logo.png"  style="max-width: 200px;"/>
 
         <ul>
             <li><a href="index.html">首页</a></li>
-            <li id="globhouse" style="position: relative;"><a href="house_list.html" >海外地产  <span class="caret"></span></a>
+            <li id="globhouse" style="position: relative;"><a href="#goufang" >海外地产  <span class="caret"></span></a>
                 <div id="downmenu">
                     <a href="country.html">马来西亚</a>
                     <a href="country.html">泰国</a>
@@ -36,9 +32,9 @@
                 </div>
 
             </li>
-            <li><a href="news_list.html">海外资讯</a></li>
-            <li><a href="news_content.html">关于我们</a></li>
-            <li><a href="news_content.html">联系我们</a></li>
+            <li><a href="WEB-INF/web/news_list.jsp">海外资讯</a></li>
+            <li><a href="#ousfocus">关于我们</a></li>
+            <li><a href="#pagefoot">联系我们</a></li>
         </ul>
         <p>
             <span class="glyphicon glyphicon-phone-alt"></span>  :
@@ -83,8 +79,10 @@
     </div>
 </div>
 
-<%--焦点图--%>
 
+    <!--
+        描述：特点展示
+    -->
 <div id="ousfocus">
     <div class="us_list">
         <span class="glyphicon glyphicon-home"></span>
@@ -118,31 +116,28 @@
         </p>
     </div>
 </div>
-<!--
-    作者：langyamoren@163.com
-    时间：2018-08-14
-    描述：特点结束
--->
+
+
 <div id="kaochantuan">
     <div class="bigtitle">
         <h3><span>海外</span>考察团</h3>
-        <p>每天都期待与您一起旅行，买房</p>
+        <p>每天都期待与您一起旅行，买<a name="trav" style="color: #0D0A0A">房</a></p>
     </div>
 
     <div  class="kaocha_row">
         <c:forEach items="${travels}" var="travel">
 
             <div class="kaocha_list">
-                <a href="news_content.html">
+                <a href="web/travel/travel_${travel.id}.html">
                     <img src="${travel.pic}" width="570" height="295" />
                 </a>
-                <h3><a href="news_content.html">${travel.title}</a> </h3>
+                <h3><a href="web/travel/travel_${travel.id}.html">${travel.title}</a> </h3>
                 <span>报名中</span>
                 <ul>
                     <li>时间：<fmt:formatDate pattern="yyyy-MM-dd" value="${travel.ctimes}"/>日${travel.city}出发</li>
                     <li>访问城市：${travel.visitcity}</li>
                 </ul>
-                <a href="news_content.html"  class="baomingbutn">报名参加</a>
+                <a href="web/travel/travel_${travel.id}.html"  class="baomingbutn">报名参加</a>
             </div>
         </c:forEach>
 
@@ -155,13 +150,11 @@
 </div>
 
 <!--
-    作者：langyamoren@163.com
-    时间：2018-08-14
     描述： 以下是海外购房
 -->
 
 <div style="background: #EEE; margin: 20px 0; padding: 20px;"  class="full_screen">
-    <div class="bigtitle">
+    <div class="bigtitle" id="goufang">
         <h3><span>海外</span>购房</h3>
         <p>只为您挑选全球好房源</p>
     </div>
@@ -263,7 +256,7 @@
 <div id="haiwaizx">
     <div class="bigtitle">
         <h3><span>海外</span>资讯</h3>
-        <p>实时发布海外房产资讯</p>
+        <p>实时发布海外房产资<a  style="color: #0D0A0A" name="art">讯</a></p>
     </div>
     <div id="news_content">
         <div class="left">
@@ -272,7 +265,7 @@
         <div class="right">
             <c:forEach items="${articles}" var="article">
                 <div class="news_list">
-                    <a href="news_content.html"><img src="${article.pic}" width="160" height="100" /></a>
+                    <a href="web/art_${article.channel_id}/news_${article.channel_id}_${article.id}.html"><img src="${article.pic}" width="160" height="100" /></a>
                     <span><fmt:formatDate value="${article.ctime}" pattern="yyyy-MM-dd"/> </span>
                     <h1><a href="web/art_${article.channel_id}/news_${article.channel_id}_${article.id}.html">${article.title}</a></h1>
                     <p><a href="web/art_${article.channel_id}/news_${article.channel_id}_${article.id}.html">
@@ -302,12 +295,12 @@
 <div style="background: #EEE; margin: 20px 0; padding: 20px;"  class="full_screen">
     <div class="bigtitle">
         <h3 ><span>成功</span>案例</h3>
-        <p>帮助客户成功买到理想的房<a style="color: #0D0A0A" name="succ">子</a></p>
+        <p>帮助客户成功买到理想的房<a style="color: #0D0A0A" name="succ" >子</a></p>
     </div>
     <div id="success_case">
         <c:forEach items="${successfuls}" var="successful">
             <div class="success_list">
-                <a id="#txt_dec" href="web/successful/successful_${successful.id}.html" onmouseover="this.style.text-dec=">
+                <a href="web/successful/successful_${successful.id}.html" onmouseover="this.style.text-dec=">
                     <div class="topimg">
                         <img src="${successful.pic1}" width="385" height="180" class="topimg"/>
                         <div>
@@ -315,13 +308,13 @@
                             <h6>${successful.house}</h6>
                         </div>
                     </div>
-                    <div class="personcase">
+                    <div class="personcase" >
                         <img src="${successful.pic2}" width="55" height="55"  style="border-radius: 27px; float: left;" />
                         <h6>
                             ${successful.name}<br />
                             ${successful.why}
                         </h6>
-                        <p>
+                        <p >
                             <c:set value="${successful.dis}" var="temcont" scope="request"></c:set>
                             <%
                                 String temstr=(String)request.getAttribute("temcont");
@@ -330,7 +323,6 @@
                                 out.print(txtcontent);
 
                             %>
-
                         </p>
                     </div>
                 </a>
