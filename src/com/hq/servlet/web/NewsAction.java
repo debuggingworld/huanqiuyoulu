@@ -5,8 +5,8 @@ import com.hq.db.DB;
 import com.hq.db.PageDiv;
 import com.hq.servlet.core.Action;
 import org.apache.commons.dbutils.handlers.ArrayHandler;
+import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import java.io.IOException;
@@ -30,29 +30,16 @@ public class NewsAction extends Action {
         }
         int pageSize = 7;
         try {
-            int channelID = mapping.getInt("channel_id");
-            if (channelID > 0){
-                String sql = "select a.* ,t.name as cityName,c.name as channelName from article a,city t ,channel c where a.channel_id = c.id and a.city_id = t.id and a.channel_id =  ? order by id desc ,level asc limit ? ,?";
+            String sql = "select a.* ,t.name as cityName,c.name as channelName from article a,city t ,channel c where a.channel_id = c.id and a.city_id = t.id order by id desc ,level asc  limit ? ,?";
+            List<Article> articles = DB.query(sql,new BeanListHandler<Article>(Article.class),(pageNo-1)*pageSize,pageSize);
 
-                List<Article> articles = DB.query(sql,new BeanListHandler<Article>(Article.class),channelID,(pageNo-1)*pageSize,pageSize);
-
-                long total = (long)DB.query("select count(id) from article where channel_id = ?",new ArrayHandler(),channelID)[0];
-                pageDiv = new PageDiv<>(pageNo,pageSize,total,articles);
-                mapping.setAttr("channel_id",channelID);
-            }else {
-                String sql = "select a.* ,t.name as cityName,c.name as channelName from article a,city t ,channel c where a.channel_id = c.id and a.city_id = t.id order by id desc ,level asc  limit ? ,?";
-
-                List<Article> articles = DB.query(sql,new BeanListHandler<Article>(Article.class),(pageNo-1)*pageSize,pageSize);
-
-                long total = (long)DB.query("select count(id) from article ",new ArrayHandler())[0];
-                pageDiv = new PageDiv<>(pageNo,pageSize,total,articles);
-                mapping.setAttr("channel_id",channelID);
-            }
+            long total = (long)DB.query("select count(id) from article ",new ArrayHandler())[0];
+            pageDiv = new PageDiv<>(pageNo,pageSize,total,articles);
 
             // 热点关注
-            String sql = "select a.* ,t.name as cityName,c.name as channelName from article a,city t ,channel c  order by  visits   limit 10";
+            String sql1 = "select a.* ,t.name as cityName,c.name as channelName from article a,city t ,channel c  order by  visits   limit 10";
 
-            List<Article> hot_arts = DB.query(sql,new BeanListHandler<Article>(Article.class));
+            List<Article> hot_arts = DB.query(sql1,new BeanListHandler<Article>(Article.class));
             mapping.setAttr("hot_arts",hot_arts);
 
             mapping.setAttr("pageDiv",pageDiv);
@@ -60,9 +47,23 @@ public class NewsAction extends Action {
             e.printStackTrace();
         }
 
-
-
-
         mapping.forward("web/news_list.jsp");
     }
+
+
+    public void show(Mapping mapping) throws ServletException, IOException {
+        long id = mapping.getLong("id");
+        try {
+            if (id > 0){
+                String sql="select a.*,c.name as channelName,t.name as cityName from article a,channel c,city t where a.channel_id=c.id and a.city_id=t.id and a.id=?";
+                Article article = DB.query(sql, new BeanHandler<Article>(Article.class),id);
+                mapping.setAttr("news",article);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        mapping.forward("web/news_content.jsp");
+    }
+
+
 }

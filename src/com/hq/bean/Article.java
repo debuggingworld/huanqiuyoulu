@@ -117,4 +117,22 @@ private String cityName;
 	public void setCityName(String cityName) {
 		this.cityName = cityName;
 	}
+
+    @Override
+    public String toString() {
+        return "Article{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", keywords='" + keywords + '\'' +
+                ", content='" + content + '\'' +
+                ", pic='" + pic + '\'' +
+                ", visits=" + visits +
+                ", ctime=" + ctime +
+                ", channel_id=" + channel_id +
+                ", city_id=" + city_id +
+                ", level=" + level +
+                ", channelName='" + channelName + '\'' +
+                ", cityName='" + cityName + '\'' +
+                '}';
+    }
 }

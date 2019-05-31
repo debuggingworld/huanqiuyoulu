@@ -23,12 +23,16 @@ public class ArticalAction extends Action {
             if (id > 0){
                 String sql="select a.*,c.name as channelName,t.name as cityName from article a,channel c,city t where a.channel_id=c.id and a.city_id=t.id and a.id=?";
                 Article article = DB.query(sql, new BeanHandler<Article>(Article.class),id);
-                mapping.setAttr("article",article);
+                mapping.setAttr("news",article);
                 mapping.setAttr("basepath",mapping.basePath());
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        mapping.forward("admin/article_show.jsp");
+        mapping.forward("web/news_list.jsp");
     }
+
+
+
+
 }

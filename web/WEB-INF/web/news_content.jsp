@@ -1,12 +1,15 @@
-
-
+<%--
+  @author zth
+  @create  2019-05-30 19:12
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <html>
 <head>
-    <base href="http://localhost:80/"/>
+    <base href="<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+request.getContextPath()+"/"%>"/>
     <link rel="shortcut icon" href="images/favicon.ico">
     <meta charset="UTF-8">
-    <title>南京的雨不停的下不停的下</title>
+    <title>${news.title}</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/huanqiu.css" />
     <style type="text/css">
@@ -36,7 +39,7 @@
                 </div>
 
             </li>
-            <li><a href="web/news_list.jsp">海外资讯</a></li>
+            <li><a href="news">海外资讯</a></li>
             <li><a href="news_content.html">关于我们</a></li>
             <li><a href="news_content.html">联系我们</a></li>
         </ul>
@@ -53,46 +56,31 @@
     <img src="img/news_banner.jpg" width="100%" />
 </div>
 
-
+<%--描述：面包屑导航--%>
 
 <div  style="height: 40px; background: #F2F2F2;">
     <div style="width: 1200px; margin: 0 auto;">
         <ol class="pathnav">
             <li><a href="#">首页</a></li>
             <li><a href="web/news_list.jsp">海外资讯</a></li>
-            <li><a >南京的雨不停的下不停的下</a></li>
+            <li><a >${news.title}</a></li>
         </ol>
         <div style="clear: both;"></div>
     </div>
 </div>
 
-
+<%--正文--%>
 
 <div id="news_content">
-    <h1>南京的雨不停的下不停的下</h1>
-    <h6>来源：环球第二家园 &nbsp; 作者：张三 &nbsp;  2019-05-29 17:55:33.05</h6>
+    <h1>${news.title}</h1>
+    <h6>来源：环球第二家园 &nbsp; 作者：张三 &nbsp;  ${news.ctime}5</h6>
     <div class="contents">
-        <div style="text-align:center;">
-	鲜花盛开在风里， <br />
-	<p>
-		远山映在蓝天里，
-	</p>
-	<div style="text-align:center;">
-		<img src="http://localhost:80/ups/20190530/20190530362.jpg" alt="" width="512" height="235" title="" align="" /><br />
-	</div>
-	<p>
-		观沧海 乌云破开，
-	</p>
-今霄宁静在心里， <br />
-五色云霞在梦里， <br />
-我的爱为为你等待<br />
-<br />
-</div>
+        ${news.content}
     </div>
 </div>
 
 
-
+<%--页脚--%>
 <div style="background:#2C3644; height: 280px; width: 100%;">
     <div id="pagefoot">
         <div id="foot_tel">

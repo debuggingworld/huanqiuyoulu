@@ -215,12 +215,13 @@ public class ArticleAction extends Action {
         index(mapping);
     }
 
+
     /**
      * 发布文章
      */
     public void pub(long id ,int channelID,Mapping mapping ) throws ServletException, IOException{
         if (id > 0){
-            String basePath = mapping.basePath()+"/web/article?id="+id;
+            String basePath = mapping.basePath()+"news?action=show&id="+id;
             String realPath = this.getServletContext().getRealPath("web/art_"+channelID);
 
             File file = new File(realPath);
@@ -241,4 +242,7 @@ public class ArticleAction extends Action {
         mapping.setAttr("channel_id",mapping.getInt("channel_id"));
         index(mapping);
     }
+
+
+
 }

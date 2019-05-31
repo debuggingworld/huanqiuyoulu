@@ -1,4 +1,5 @@
-<%--
+<%@ page import="com.hq.db.PageDiv" %>
+<%@ page import="com.hq.bean.Article" %><%--
   @author zth
   @create  2019-05-30 15:33
 --%>
@@ -89,11 +90,11 @@
 <div id="news_block">
     <ol class="pathnav">
         <li><a href="index.html">首页</a></li>
-        <li><a href="#">海外资讯</a></li>
+        <li><a href="news">海外资讯</a></li>
     </ol>
     <div style="clear: both;"></div>
 
-    <ul class="country_menu">
+   <%-- <ul class="country_menu">
         <li><a href="#">全部</a></li>
         <li><a href="#">美国</a></li>
         <li><a href="#">加拿大</a></li>
@@ -104,7 +105,7 @@
         <li><a href="#">英国</a></li>
         <li><a href="#">越南</a></li>
         <li><a href="#">日本</a></li>
-    </ul>
+    </ul>--%>
 
     <div style="clear: both;"></div>
 
@@ -113,10 +114,10 @@
 
             <c:forEach items="${pageDiv.list}" var="article" varStatus="vs">
                 <div class="news_list">
-                    <a href="news_content.html"><img src="${article.pic}" width="200" height="125" /></a>
+                    <a href="web/art_${article.channel_id}/news_${article.channel_id}_${article.id}.html"><img src="${article.pic}" width="200" height="125" /></a>
                     <div>
-                        <h1><a href="news_content.html">${article.title}</a></h1>
-                        <p><a href="news_content.html">
+                        <h1><a href="web/art_${article.channel_id}/news_${article.channel_id}_${article.id}.html">${article.title}</a></h1>
+                        <p><a href="web/art_${article.channel_id}/news_${article.channel_id}_${article.id}.html">
                                     <c:set value="${article.content}" var="temcont" scope="request"></c:set>
                                     <%
                                         String temstr=(String)request.getAttribute("temcont");
@@ -140,9 +141,9 @@
             <h3>热点关注</h3>
             <ul>
                 <c:forEach items="${hot_arts}" var="hot">
-                    <li><a href="news_content.html">${hot.title}</a></li>
+                    <li><a href="web/art_${hot.channel_id}/news_${hot.channel_id}_${hot.id}.html">${hot.title}</a></li>
                 </c:forEach>
-               
+
             </ul>
             <div style="clear: both;"></div>
             <div>
@@ -155,17 +156,30 @@
             <nav>
                 <ul class="pagination" >
                     <li>
-                        <a href="#" aria-label="Previous">
+                        <%
+                            PageDiv<Article> pageDiv = (PageDiv<Article>)request.getAttribute("pageDiv");
+                        %>
+                        <a href="news?pageNo=<%=(pageDiv.getPageNO()-1)>1?(pageDiv.getPageNO()-1):1%>" aria-label="Previous">
                             <span aria-hidden="true">上一页</span>
                         </a>
                     </li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
+
+                    <%
+                        for (int i = pageDiv.getStart(); i <= pageDiv.getEnd(); i++) {
+                            request.setAttribute("i",i);
+                    %>
                     <li>
-                        <a href="#" aria-label="Next">
+                        <a  href="news?pageNo=<%=i%>" <c:if test="${pageDiv.pageNO == i}"> style="background-color: pink" </c:if> >
+                            <%=i%>
+                        </a>
+                    </li>
+
+                    <%
+                        }
+                    %>
+
+                    <li>
+                        <a href="news?pageNo=<%=((pageDiv.getPageNO()+1)< pageDiv.getTotalPage()?(pageDiv.getPageNO()+1):pageDiv.getTotalPage())%> " aria-label="Next">
                             <span aria-hidden="true">下一页</span>
                         </a>
                     </li>
@@ -178,8 +192,6 @@
 
 
 <!--
-作者：langyamoren@163.com
-时间：2018-08-14
 描述：页脚
 -->
 <div style="background:#2C3644; height: 280px; width: 100%;">
@@ -189,27 +201,29 @@
                 <h3>环球优路</h3>
                 <h5>youlu.com</h5>
 
-                <h3><span class="glyphicon glyphicon-earphone"></span>&nbsp;:400-123-456</h3>
-                <h3><span class="glyphicon glyphicon-envelope"></span>&nbsp;:9703239@qq.com</h3>
+                <h3><span class="glyphicon glyphicon-earphone"></span>&nbsp;123-456-789</h3>
+                <h3><span class="glyphicon glyphicon-envelope"></span>&nbsp;1234566@qq.com</h3>
             </div>
             <div class="right">
                 <div>
-                    <img src="img/app_ios_androiddown_app.jpg" width="140" height="140" />
-                    <p style="text-align: center;">公众号</p>
+                    <img src="img/alipay.png" width="140" height="140" />
+                    <p style="text-align: center;">支付宝</p>
                 </div>
 
                 <div>
-                    <img src="img/app_ios_androiddown_app.jpg" width="140" height="140" />
-                    <p style="text-align: center;">公众号</p>
+                    <img src="img/weixin.png" width="140" height="140" />
+                    <p style="text-align: center;">微信</p>
+                </div>
+
+                <div style="clear: both; text-align: center; ">
+                    <br>
+                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您的支持是我唯一的动力</h4>
                 </div>
             </div>
         </div>
         <div id="foot_bottom" style="clear: both; text-align: center; line-height: 50px;">
-            Copyright © 2018 youlu.com Inc. All Rights Reserved.
-
-            陕西棕榈海岸置业有限公司&nbsp;陕ICP备18013995号
-
-
+            Copyright © 2018 zth.com Inc. All Rights Reserved.
+            潘小柔置业有限公司&nbsp;陕ICP备xxxxx号
         </div>
     </div>
 </div>

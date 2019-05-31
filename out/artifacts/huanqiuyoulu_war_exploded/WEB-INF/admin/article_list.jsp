@@ -37,7 +37,7 @@
                     <tr>
                         <td>${vs.count}</td>
                         <td><img src="${art.pic}" class="img-rounded" style="width: 40px"></td>
-                        <td><a href="admin/article?action=show&id=${art.id}">${art.title}</a></td>
+                        <td><a href="news?action=show&id=${art.id}">${art.title}</a></td>
                         <td>${art.channelName}</td>
                         <td>${art.cityName}</td>
                         <td>${art.ctime}</td>
