@@ -69,8 +69,8 @@
 
             </li>
             <li><a href="#">海外资讯</a></li>
-            <li><a href="news_content.html">关于我们</a></li>
-            <li><a href="news_content.html">联系我们</a></li>
+            <li><a href="aboutMe">关于我们</a></li>
+            <li><a href="#foot_bottom">联系我们</a></li>
         </ul>
         <p>
             <span class="glyphicon glyphicon-phone-alt"></span>  :

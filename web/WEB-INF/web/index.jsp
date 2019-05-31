@@ -33,7 +33,7 @@
 
             </li>
             <li><a href="news">海外资讯</a></li>
-            <li><a href="#ousfocus">关于我们</a></li>
+            <li><a href="aboutMe">关于我们</a></li>
             <li><a href="#pagefoot">联系我们</a></li>
         </ul>
         <p>
