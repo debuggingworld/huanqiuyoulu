@@ -1,9 +1,6 @@
 package com.hq.servlet.web;
 
-import com.hq.bean.Article;
-import com.hq.bean.Focuspic;
-import com.hq.bean.Successful;
-import com.hq.bean.Travel;
+import com.hq.bean.*;
 import com.hq.db.DB;
 import com.hq.servlet.core.Action;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
@@ -34,6 +31,9 @@ public class IndexAction extends Action {
 
             List<Successful> successfuls = DB.query("select * from successful order by level asc,id desc  limit 3",new BeanListHandler<Successful>(Successful.class));
             mapping.setAttr("successfuls",successfuls);
+
+            List<City> countrys = DB.query("select * from city  where parent_id = 0 order by level ",new BeanListHandler<City>(City.class));
+            mapping.setAttr("countrys",countrys);
 
         } catch (SQLException e) {
             e.printStackTrace();
