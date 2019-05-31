@@ -252,10 +252,10 @@
     <c:forEach items="${pageDiv.list}" var="house">
         <div class="houselist_v">
             <div class="left">
-                <a href="#"><img src="${house.pic}" border="0" /></a>
+                <a house?id=${house.id}><img src="${house.pic}" border="0" /></a>
             </div>
             <div class="right">
-                <h1><a href="house_content.html">${house.name}</a></h1>
+                <h1><a href="house?id=${house.id}">${house.name}</a></h1>
                 <p class="tedian">${house.feature}</p>
                 <p class="weizhi"><span class="glyphicon glyphicon-map-marker"></span>${house.addr}</p>
                 <p class="jiazhi">
