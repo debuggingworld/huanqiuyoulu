@@ -26,7 +26,7 @@
             <li id="globhouse" style="position: relative;"><a href="#goufang" >海外地产  <span class="caret"></span></a>
                 <div id="downmenu">
                     <c:forEach items="${countrys}" var="country">
-                        <a href="country?id=${country.id}">${country.name}</a>
+                        <a href="country?cityid=${country.id}">${country.name}</a>
                     </c:forEach>
                 </div>
 

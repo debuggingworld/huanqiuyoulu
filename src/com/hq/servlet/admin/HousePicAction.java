@@ -98,7 +98,7 @@ public class HousePicAction extends Action {
     }
 
     public void delImg(Mapping mapping) throws ServletException, IOException{
-//        href="admin/pic_house?action=delImg&id=<%=pic.getId()%>&hid=${house.id}&path=<%=pic.getPath()
+//        href="admin/pic_house?action=delImg&id=<%=pic.getId()%>&hid=${House.id}&path=<%=pic.getPath()
         String path = mapping.getString("path");
         int channel = mapping.getInt("channel");
         System.out.println("del==channel"+channel);

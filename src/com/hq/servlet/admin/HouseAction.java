@@ -44,10 +44,10 @@ public class HouseAction extends Action {
 
             if (cid > 0){
                 mapping.setAttr("country",DB.get(cid,City.class));
-                pageDiv = DB.getByPage(House.class,"select * from house where country_id = ? order by level,id ",paseNo,pageSize,cid);
+                pageDiv = DB.getByPage(House.class,"select * from House where country_id = ? order by level,id ",paseNo,pageSize,cid);
 
             }else {
-                pageDiv = DB.getByPage(House.class,"select * from house  order by level,id ",paseNo,pageSize);
+                pageDiv = DB.getByPage(House.class,"select * from House  order by level,id ",paseNo,pageSize);
 
             }
 
@@ -110,6 +110,7 @@ public class HouseAction extends Action {
                 mapping.setAttr("cons",countrys);
                 House house = DB.get(id,House.class);
                 mapping.setAttr("house",house);
+
             } catch (SQLException e) {
                 log.error("com.hq.servlet.admin.HouseAction_跳转到楼盘基本信息修改出错"+e.getMessage());
             }
@@ -164,7 +165,7 @@ public class HouseAction extends Action {
         try {
             if(id>0)
             {
-                DB.update("update house set isdel=? where id=?",mapping.getInt("vv"),id);
+                DB.update("update House set isdel=? where id=?",mapping.getInt("vv"),id);
 
                 mapping.setAttr("msg","修改成功!");
             }

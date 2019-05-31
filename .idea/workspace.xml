@@ -7,12 +7,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93aada36-7923-44a9-b274-7ad3d9d6713d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/hq/servlet/web/Country.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/hq/servlet/web/House.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/web/country.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/web/house.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/huanqiuyoulu_war_exploded/WEB-INF/classes/com/hq/servlet/web/IndexAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/huanqiuyoulu_war_exploded/WEB-INF/classes/com/hq/servlet/web/IndexAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/huanqiuyoulu_war_exploded/WEB-INF/admin/city_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/huanqiuyoulu_war_exploded/WEB-INF/admin/city_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/huanqiuyoulu_war_exploded/WEB-INF/admin/house_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/huanqiuyoulu_war_exploded/WEB-INF/admin/house_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/huanqiuyoulu_war_exploded/WEB-INF/classes/com/hq/bean/House.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/huanqiuyoulu_war_exploded/WEB-INF/classes/com/hq/bean/House.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/huanqiuyoulu_war_exploded/WEB-INF/classes/com/hq/servlet/admin/HouseAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/huanqiuyoulu_war_exploded/WEB-INF/classes/com/hq/servlet/admin/HouseAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/huanqiuyoulu_war_exploded/WEB-INF/classes/com/hq/servlet/admin/HouseTypesAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/huanqiuyoulu_war_exploded/WEB-INF/classes/com/hq/servlet/admin/HouseTypesAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/huanqiuyoulu_war_exploded/WEB-INF/classes/com/hq/servlet/admin/VoideAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/huanqiuyoulu_war_exploded/WEB-INF/classes/com/hq/servlet/admin/VoideAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/huanqiuyoulu_war_exploded/WEB-INF/classes/com/hq/servlet/web/ArticalAction.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/huanqiuyoulu_war_exploded/WEB-INF/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/huanqiuyoulu_war_exploded/WEB-INF/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hq/servlet/web/IndexAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hq/servlet/web/IndexAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/hq/servlet/web/IndexAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/hq/servlet/web/IndexAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/huanqiuyoulu_war_exploded/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/huanqiuyoulu_war_exploded/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hq/bean/House.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hq/bean/House.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hq/servlet/admin/HouseAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hq/servlet/admin/HouseAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hq/servlet/admin/HousePicAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hq/servlet/admin/HousePicAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hq/servlet/admin/HouseTypesAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hq/servlet/admin/HouseTypesAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hq/servlet/admin/VoideAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hq/servlet/admin/VoideAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hq/servlet/web/ArticalAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hq/servlet/web/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hq/servlet/web/Country.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/admin/city_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/admin/city_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/admin/house_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/admin/house_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/hq/bean/House.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/hq/bean/House.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/hq/servlet/admin/HouseAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/hq/servlet/admin/HouseAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/hq/servlet/admin/HouseTypesAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/hq/servlet/admin/HouseTypesAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/hq/servlet/admin/VoideAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/hq/servlet/admin/VoideAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/hq/servlet/web/ArticalAction.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web/index.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -24,29 +45,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/web/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="28" column="53" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/web/ArticalAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
-              <caret line="33" selection-start-line="33" selection-end-line="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/web/Country.java">
+        <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/web/House.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="335">
+              <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -55,28 +58,62 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/web/IndexAction.java">
+        <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/web/Country.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
-              <caret line="35" column="47" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
+            <state relative-caret-position="456">
+              <caret line="39" column="49" lean-forward="true" selection-start-line="38" selection-start-column="11" selection-end-line="39" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/city_edit.jsp">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/web/house.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1525">
-              <caret line="61" column="29" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
+            <state relative-caret-position="-2775">
+              <caret line="12" column="58" lean-forward="true" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/admin/CityAction.java">
+        <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/admin/HousePicAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+            <state relative-caret-position="700">
+              <caret line="59" column="49" lean-forward="true" selection-start-line="59" selection-start-column="49" selection-end-line="59" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/admin/HouseAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-166">
+              <caret line="112" selection-start-line="112" selection-end-line="112" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/house_pic_list.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="71" column="79" lean-forward="true" selection-start-line="71" selection-start-column="79" selection-end-line="71" selection-end-column="79" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/house_edit.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="31" column="18" lean-forward="true" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -131,13 +168,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/WEB-INF/admin/admin_manager.jsp" />
-        <option value="$PROJECT_DIR$/src/com/hq/utils/Test.java" />
-        <option value="$PROJECT_DIR$/src/com/hq/servlet/admin/ExcelAction.java" />
-        <option value="$PROJECT_DIR$/src/com/hq/utils/ExcelUtil.java" />
-        <option value="$PROJECT_DIR$/src/com/hq/utils/HtmlGenerator.java" />
-        <option value="$PROJECT_DIR$/src/com/hq/bean/Travel.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/admin/travel_add.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/admin/travel_edit.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/admin/travel_list.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/admin/travel_show.jsp" />
@@ -153,8 +183,6 @@
         <option value="$PROJECT_DIR$/src/com/hq/bean/Video.java" />
         <option value="$PROJECT_DIR$/src/com/hq/servlet/admin/VoideAction.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/admin/house_video_list.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/admin/house_list.jsp" />
-        <option value="$PROJECT_DIR$/src/com/hq/servlet/admin/HouseAction.java" />
         <option value="$PROJECT_DIR$/out/artifacts/huanqiuyoulu_war_exploded/index.html" />
         <option value="$PROJECT_DIR$/web/WEB-INF/admin/index.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
@@ -180,8 +208,17 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/web/aboutMe.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web/news_list.jsp" />
         <option value="$PROJECT_DIR$/src/com/hq/servlet/web/IndexAction.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/admin/city_list.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web/index.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web/country.jsp" />
         <option value="$PROJECT_DIR$/src/com/hq/servlet/web/Country.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/admin/house_list.jsp" />
+        <option value="$PROJECT_DIR$/src/com/hq/bean/House.java" />
+        <option value="$PROJECT_DIR$/src/com/hq/servlet/admin/HouseAction.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/admin/house_edit.jsp" />
+        <option value="$PROJECT_DIR$/src/com/hq/servlet/admin/HousePicAction.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web/house.jsp" />
+        <option value="$PROJECT_DIR$/src/com/hq/servlet/web/House.java" />
       </list>
     </option>
   </component>
@@ -199,8 +236,8 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="184" />
-    <option name="y" value="87" />
+    <option name="x" value="172" />
+    <option name="y" value="186" />
     <option name="width" value="937" />
     <option name="height" value="533" />
   </component>
@@ -212,7 +249,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -342,6 +378,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -633,7 +670,8 @@
       <workItem from="1559262531151" duration="871000" />
       <workItem from="1559264408172" duration="2869000" />
       <workItem from="1559268922040" duration="4989000" />
-      <workItem from="1559284851816" duration="440000" />
+      <workItem from="1559284851816" duration="11559000" />
+      <workItem from="1559299966520" duration="8403000" />
     </task>
     <task id="LOCAL-00001" summary="AdminAction">
       <created>1557319201839</created>
@@ -901,7 +939,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559273251237</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="2019年5月31日14:48:46">
+      <created>1559285349737</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1559285349737</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -937,13 +982,14 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="532800000" />
+    <option name="totallyTimeSpent" value="552322000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49344262" visible="true" weight="0.2375189" />
-      <window_info id="Structure" order="1" sideWeight="0.5065574" side_tool="true" weight="0.22692889" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49126637" visible="true" weight="0.22239032" />
+      <window_info id="Structure" order="1" sideWeight="0.50873363" side_tool="true" weight="0.18305598" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -952,8 +998,8 @@
       <window_info id="Web" order="7" sideWeight="0.5010846" side_tool="true" weight="0.4750378" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.33934426" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.12295082" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.7737705" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5852459" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -975,8 +1021,8 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49344262" visible="true" weight="0.23373677" />
-      <window_info id="Structure" order="1" sideWeight="0.5065574" side_tool="true" weight="0.22692889" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49126637" visible="true" weight="0.2753404" />
+      <window_info id="Structure" order="1" sideWeight="0.50873363" side_tool="true" weight="0.18305598" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -986,7 +1032,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.33934426" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.12295082" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.044262294" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3622951" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -1015,7 +1061,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="2019年5月14日10:23:39" />
     <MESSAGE value="增加图集" />
     <MESSAGE value="2019年5月14日22:03:49" />
     <MESSAGE value="house 模块" />
@@ -1040,7 +1085,8 @@
     <MESSAGE value="2019年5月30日17:37:32" />
     <MESSAGE value="UI" />
     <MESSAGE value="关于我们模块" />
-    <option name="LAST_COMMIT_MESSAGE" value="关于我们模块" />
+    <MESSAGE value="2019年5月31日14:48:46" />
+    <option name="LAST_COMMIT_MESSAGE" value="2019年5月31日14:48:46" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -1081,68 +1127,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/city_list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="62" selection-start-line="62" selection-end-line="62" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/artifacts/huanqiuyoulu_war_exploded/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2325" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/artifacts/huanqiuyoulu_war_exploded/index.jsp" />
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/booter.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/artifacts/huanqiuyoulu_war_exploded/web/successful/successful_6.html" />
-    <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/web/SuccessfulAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="31" column="48" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/artifacts/huanqiuyoulu_war_exploded/web/successful/successful_7.html" />
-    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-dbutils-1.7.jar!/org/apache/commons/dbutils/handlers/BeanListHandler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hq/db/DB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="422" selection-start-line="422" selection-end-line="422" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hq/bean/Successful.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/artifacts/huanqiuyoulu_war_exploded/web/successful/successful_10.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-889" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/log4j.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
@@ -1297,30 +1281,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hq/db/PageDiv.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-231">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web/news_content.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/article_add.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-432" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/web/NewsAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-568">
-          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/web/travel_show.jsp">
@@ -1331,13 +1294,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/web/aboutme.html" />
-    <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/web/TravelAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-40">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/web/AboutMe.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="335">
@@ -1361,52 +1317,168 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web/news_list.jsp">
+    <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/web/ArticalAction.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/web/SuccessfulAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="925">
-          <caret line="72" column="37" selection-start-line="72" selection-start-column="37" selection-end-line="72" selection-end-column="37" />
+        <state relative-caret-position="338">
+          <caret line="31" column="48" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web/news_content.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-175">
+          <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/web/TravelAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hq/bean/CityPic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="28" column="53" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/web/ArticalAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/web/IndexAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="35" column="47" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/city_edit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1525">
-          <caret line="61" column="29" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
+        <state relative-caret-position="9275">
+          <caret line="371" column="10" selection-start-line="337" selection-start-column="4" selection-end-line="371" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/admin/CityAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        <state relative-caret-position="-575">
+          <caret line="139" column="49" selection-start-line="139" selection-start-column="42" selection-end-line="139" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/city_edit.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="61" column="29" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/city_list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="41" column="47" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/web/IndexAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/web/NewsAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-300">
+          <caret line="36" column="68" lean-forward="true" selection-start-line="35" selection-start-column="11" selection-end-line="36" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web/news_list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="962">
+          <caret line="185" column="21" lean-forward="true" selection-start-line="156" selection-start-column="16" selection-end-line="185" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hq/db/PageDiv.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2025">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/house_list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="73" column="93" selection-start-line="73" selection-start-column="93" selection-end-line="73" selection-end-column="93" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/web/Country.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="456">
+          <caret line="39" column="49" lean-forward="true" selection-start-line="38" selection-start-column="11" selection-end-line="39" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/admin/HouseAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-166">
+          <caret line="112" selection-start-line="112" selection-end-line="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/house_pic_list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="71" column="79" lean-forward="true" selection-start-line="71" selection-start-column="79" selection-end-line="71" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/admin/HousePicAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="59" column="49" lean-forward="true" selection-start-line="59" selection-start-column="49" selection-end-line="59" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hq/bean/House.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="195" column="18" selection-start-line="195" selection-start-column="18" selection-end-line="195" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web/country.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="64" lean-forward="true" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/admin/house_edit.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="31" column="18" lean-forward="true" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web/house.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2775">
+          <caret line="12" column="58" lean-forward="true" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hq/servlet/web/House.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

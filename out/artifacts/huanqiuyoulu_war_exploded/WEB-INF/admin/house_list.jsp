@@ -71,8 +71,11 @@
                             <a href="admin/type_house?id=${house.id}" class="btn btn-success btn-sm">
                                 <li class="fa fa-bank">户型</li>
                             </a>
-                            <a href="admin/voide_house?id=${house.id}" class="btn btn-info btn-sm">
+                            <a href="admin/voide_house?id=${house.id}" class="btn btn-default btn-sm disabled">
                                 <li class="fa fa-file-movie-o">视频</li>
+                            </a>
+                            <a href="house?id=${house.id}" class="btn btn-info btn-sm ">
+                                <li class="fa fa-file-movie-o">查看</li>
                             </a>
                             <a href="admin/house/pub?id=${house.id}" class="btn btn-warning btn-sm">
                                 <li class="fa fa-newspaper-o">发布</li>

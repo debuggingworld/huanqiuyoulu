@@ -26,7 +26,7 @@ public class VoideAction extends Action {
                 House house = DB.get(id,House.class);
                 List<Video> videos = DB.query("select * from video where house_id=? order by level", new BeanListHandler<Video>(Video.class),id);
 
-                mapping.setAttr("house",house);
+                mapping.setAttr("House",house);
                 mapping.setAttr("videos",videos);
             } catch (SQLException e) {
                 e.printStackTrace();

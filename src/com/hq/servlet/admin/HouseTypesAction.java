@@ -43,7 +43,7 @@ public class HouseTypesAction extends Action {
                 List<Huxing> huxings = DB.getAll(Huxing.class,sql,id);
 
                 mapping.setAttr("huxings",huxings);
-                mapping.setAttr("house",house);
+                mapping.setAttr("House",house);
             }
         } catch (SQLException e) {
             log.error("com.hq.servlet.admin.HouseTypesAction_index_查询户型出错"+e.getMessage());
