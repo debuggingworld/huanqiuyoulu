@@ -1,6 +1,8 @@
 package com.hq.servlet.web;
 
 import com.hq.bean.City;
+import com.hq.bean.Huxing;
+import com.hq.bean.Pictures;
 import com.hq.db.DB;
 import com.hq.servlet.core.Action;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
@@ -21,10 +23,21 @@ public class House extends Action {
     public void index(Mapping mapping) throws ServletException, IOException {
 
         try {
+            int house_id = mapping.getInt("id");
             List<City> countrys = DB.query("select * from city  where parent_id = 0 order by level ",new BeanListHandler<City>(City.class));
             mapping.setAttr("countrys",countrys);
 
-            
+            List<Pictures> pictures = DB.query("select * from pictures where house_id = ?",new BeanListHandler<Pictures>(Pictures.class),house_id);
+            mapping.setAttr("pictures",pictures);
+
+            com.hq.bean.House house = DB.get(house_id,com.hq.bean.House.class);
+            mapping.setAttr("house",house);
+
+
+            List<Huxing> huxings = DB.query("select * from huxing where house_id = ? ",new BeanListHandler<Huxing>(Huxing.class),house_id);
+            mapping.setAttr("huxings",huxings);
+
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
