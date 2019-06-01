@@ -62,6 +62,9 @@ public class NewsAction extends Action {
                 String sql="select a.*,c.name as channelName,t.name as cityName from article a,channel c,city t where a.channel_id=c.id and a.city_id=t.id and a.id=?";
                 Article article = DB.query(sql, new BeanHandler<Article>(Article.class),id);
                 mapping.setAttr("news",article);
+
+                List<City> countrys = DB.query("select * from city  where parent_id = 0 order by level ",new BeanListHandler<City>(City.class));
+                mapping.setAttr("countrys",countrys);
             }
         } catch (SQLException e) {
             e.printStackTrace();

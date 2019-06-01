@@ -3,6 +3,7 @@
   @create  2019-05-30 19:12
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <html>
 <head>
@@ -32,10 +33,9 @@
             <li><a href="index.html">首页</a></li>
             <li id="globhouse" style="position: relative;"><a href="house_list.html" >海外地产  <span class="caret"></span></a>
                 <div id="downmenu">
-                    <a href="country.html">马来西亚</a>
-                    <a href="country.html">泰国</a>
-                    <a href="country.html">新加坡</a>
-                    <a href="country.html">越南</a>
+                    <c:forEach items="${countrys}" var="country">
+                        <a href="country?cityid=${country.id}">${country.name}</a>
+                    </c:forEach>
                 </div>
 
             </li>
