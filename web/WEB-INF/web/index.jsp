@@ -126,24 +126,24 @@
     <div  class="kaocha_row">
         <c:forEach items="${travels}" var="travel">
 
-            <div class="kaocha_list">
-                <a href="web/travel/travel_${travel.id}.html">
+            <div style="margin-top: 20px" class="kaocha_list">
+                <a href="travel?id=${travel.id}">
                     <img src="${travel.pic}" width="570" height="295" />
                 </a>
-                <h3><a href="web/travel/travel_${travel.id}.html">${travel.title}</a> </h3>
+                <h3><a href="travel?id=${travel.id}">${travel.title}</a> </h3>
                 <span>报名中</span>
                 <ul>
                     <li>时间：<fmt:formatDate pattern="yyyy-MM-dd" value="${travel.ctimes}"/>日${travel.city}出发</li>
                     <li>访问城市：${travel.visitcity}</li>
                 </ul>
-                <a href="web/travel/travel_${travel.id}.html"  class="baomingbutn">报名参加</a>
+                <a href="travel?id=${travel.id}"  class="baomingbutn">报名参加</a>
             </div>
         </c:forEach>
 
     </div>
     <div class="kaocha_more" style="clear: both; text-align: center;">
         <span>咨询电话：400-123-456</span>
-        <a href="#">更多旅行&gt;&gt;</a>
+        <%--<a href="#">更多旅行&gt;&gt;</a>--%>
 
     </div>
 </div>
@@ -158,7 +158,7 @@
         <p>只为您挑选全球好房源</p>
     </div>
     <div id="haiwaigoufang">
-        <ul>
+        <%--<ul>
             <li><a href="#" style="color:#0072E4; border-bottom: 2px #0072E4 solid;">精选</a></li>
             <li><a href="#">新加坡</a></li>
             <li><a href="#">加拿大</a></li>
@@ -166,81 +166,25 @@
             <li><a href="#">泰国</a></li>
             <li><a href="#">美国</a></li>
             <li><a href="#">更多房源</a></li>
-        </ul>
+        </ul>--%>
         <div style="clear: both; height: 15px;"></div>
         <div id="house_contents">
-            <div class="house_list">
-                <a href="house_content.html">
-                    <img src="img/house.jpg" width="380" height="215" />
-                </a>
-                <p class="location"><span class="glyphicon glyphicon-map-marker"></span>泰国○曼谷</p>
-                <h3><a href="house_content.html">碧桂园 森林城市</a></h3>
-                <div class="bot_kuang">
-                    <p>总价：<span>55万起</span></p>
-                    <p> 精装、无公摊、永久产权</p>
-                </div>
+            <c:forEach items="${houses}" var="house">
+                <div class="house_list">
+                    <a href="house?id=${house.id}">
+                        <img src="${house.pic}" width="380" height="215" />
+                    </a>
+                    <p class="location"><span class="glyphicon glyphicon-map-marker"></span>${house.area}</p>
+                    <h3><a href="house?id=${house.id}">${house.name}</a></h3>
+                    <div class="bot_kuang">
+                        <p>总价：<span>${house.price_rmb}起</span></p>
+                        <p>${house.feature}</p>
+                    </div>
 
-            </div>
-            <div class="house_list">
-                <a href="house_content.html">
-                    <img src="img/house.jpg" width="380" height="215" />
-                </a>
-                <p class="location"><span class="glyphicon glyphicon-map-marker"></span>泰国○曼谷</p>
-                <h3><a href="house_content.html">碧桂园 森林城市</a></h3>
-                <div class="bot_kuang">
-                    <p>总价：<span>55万起</span></p>
-                    <p> 精装、无公摊、永久产权</p>
                 </div>
+            </c:forEach>
 
-            </div>
-            <div class="house_list" style="margin-right: 0;">
-                <a href="house_content.html">
-                    <img src="img/house.jpg" width="380" height="215" />
-                </a>
-                <p class="location"><span class="glyphicon glyphicon-map-marker"></span>泰国○曼谷</p>
-                <h3><a href="house_content.html">碧桂园 森林城市</a></h3>
-                <div class="bot_kuang">
-                    <p>总价：<span>55万起</span></p>
-                    <p> 精装、无公摊、永久产权</p>
-                </div>
 
-            </div>
-            <div class="house_list">
-                <a href="house_content.html">
-                    <img src="img/house.jpg" width="380" height="215" />
-                </a>
-                <p class="location"><span class="glyphicon glyphicon-map-marker"></span>泰国○曼谷</p>
-                <h3><a href="house_content.html">碧桂园 森林城市</a></h3>
-                <div class="bot_kuang">
-                    <p>总价：<span>55万起</span></p>
-                    <p> 精装、无公摊、永久产权</p>
-                </div>
-
-            </div>
-            <div class="house_list">
-                <a href="house_content.html">
-                    <img src="img/house.jpg" width="380" height="215" />
-                </a>
-                <p class="location"><span class="glyphicon glyphicon-map-marker"></span>泰国○曼谷</p>
-                <h3><a href="house_content.html">碧桂园 森林城市</a></h3>
-                <div class="bot_kuang">
-                    <p>总价：<span>55万起</span></p>
-                    <p> 精装、无公摊、永久产权</p>
-                </div>
-
-            </div>
-            <div class="house_list" style="margin-right: 0;">
-                <a href="house_content.html">
-                    <img src="img/house.jpg" width="380" height="215" />
-                </a>
-                <p class="location"><span class="glyphicon glyphicon-map-marker"></span>泰国○曼谷</p>
-                <h3><a href="house_content.html">碧桂园 森林城市</a></h3>
-                <div class="bot_kuang">
-                    <p>总价：<span>55万起</span></p>
-                    <p> 精装、无公摊、永久产权</p>
-                </div>
-
-            </div>
             <!--房子例表结束-->
 
         </div>
@@ -370,6 +314,7 @@
 
         </div>
     </div>
+</div>
 </div>
 <script type="text/javascript" src="js/jquery.min.js" ></script>
 <script type="text/javascript" src="js/bootstrap.min.js" ></script>

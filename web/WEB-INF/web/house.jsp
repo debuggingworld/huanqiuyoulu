@@ -463,11 +463,7 @@
 </div>
 
 
-<!--
-作者：langyamoren@163.com
-时间：2018-08-14
-描述：页脚
--->
+
 <div style="background:#2C3644; height: 280px; width: 100%;">
     <div id="pagefoot">
         <div id="foot_tel">

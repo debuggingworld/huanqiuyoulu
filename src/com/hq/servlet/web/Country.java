@@ -51,7 +51,6 @@ public class Country extends Action {
             long total = (long)DB.query("select count(id)  from House where country_id = ? ",new ArrayHandler(),id)[0];
             pageDiv = new PageDiv<>(pageNo,pageSize,total,houses);
             mapping.setAttr("pageDiv",pageDiv);
-            System.out.println(pageDiv);
 
         } catch (SQLException e) {
             e.printStackTrace();

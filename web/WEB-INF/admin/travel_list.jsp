@@ -23,7 +23,8 @@
                     <tr>
                         <td>${vs.count}</td>
                         <td>
-                            <a href="admin/travel?action=show&id=${travel.id}">${travel.title}</a>
+                            <%--<a href="admin/travel?action=show&id=${travel.id}">${travel.title}</a>--%>
+                                <a href="travel?id=${travel.id}">${travel.title}</a>
                         </td>
                         <td>${travel.depart}</td>
                         <td>

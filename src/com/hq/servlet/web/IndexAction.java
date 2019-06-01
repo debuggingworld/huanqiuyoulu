@@ -35,6 +35,9 @@ public class IndexAction extends Action {
             List<City> countrys = DB.query("select * from city  where parent_id = 0 order by level ",new BeanListHandler<City>(City.class));
             mapping.setAttr("countrys",countrys);
 
+            List<com.hq.bean.House> houses = DB.query("select * from house order by level limit 6",new BeanListHandler<com.hq.bean.House>(com.hq.bean.House.class));
+            mapping.setAttr("houses",houses);
+
         } catch (SQLException e) {
             e.printStackTrace();
         }

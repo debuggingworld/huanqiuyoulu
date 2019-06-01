@@ -133,7 +133,6 @@
 
                 <!-- Wrapper for slides -->
 
-
                 <div class="carousel-inner" role="listbox">
 
                     <c:forEach items="${cityPics}"  var="cityPic" varStatus="vs">
@@ -189,13 +188,9 @@
         <li><a data-ids="#house_02"  href="#" >生活百科</a></li>
         <li><a data-ids="#house_03"  href="#" >最新资讯</a></li>
     </ul>--%>
-
        <%-- <ul id="zhinan_menu">
-
             <li><a data-ids="#house_03"  ></a></li>
         </ul>--%>
-
-
 
     <div style="height: 40px;font-size: 20px;background-color: #ee4500 ; text-align: center;line-height: 40px"; >
         最新资讯
@@ -227,25 +222,16 @@
                     </label>
                 </div>
             </c:forEach>
-
-
         </div>
-
-
     </div><!--end zhinan_block-->
-
 </div>
-
 
 <div style="width: 1200px; margin: 25px auto;">
     <img src="img/step5.jpg" />
 </div>
-<!--
-    作者：langyamoren@163.com
-    时间：2018-08-17
-    描述:以下是房列表
--->
 
+
+<%-- 描述:以下是房列表--%>
 <div id="housesearch_list">
     <%--<h5>${country.name}精选房：<a href="#"></a><a href="#">旧金山</a><a href="#">旧金山</a></h5>--%>
 
@@ -314,16 +300,6 @@
 
 </div>
 
-
-
-
-
-
-<!--
-作者：langyamoren@163.com
-时间：2018-08-14
-描述：页脚
--->
 <div style="background:#2C3644; height: 280px; width: 100%;">
     <div id="pagefoot">
         <div id="foot_tel">

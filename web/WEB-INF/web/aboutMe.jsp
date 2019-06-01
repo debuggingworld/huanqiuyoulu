@@ -31,12 +31,9 @@
             <li><a href="index.html">首页</a></li>
             <li id="globhouse" style="position: relative;"><a href="houses" >海外地产  <span class="caret"></span></a>
                 <div id="downmenu">
-
-                    <a href="countrys?id=2">马来西亚</a>
-
-                    <a href="countrys?id=3">新加坡</a>
-
-
+                    <c:forEach items="${countrys}" var="country">
+                        <a href="country?cityid=${country.id}">${country.name}</a>
+                    </c:forEach>
                 </div>
 
             </li>
