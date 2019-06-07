@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="huanqiuyoulu">
+    <output-path>C:/</output-path>
+    <root id="archive" name="huanqiuyoulu.war">
+      <element id="artifact" artifact-name="huanqiuyoulu:war exploded" />
+      <element id="dir-copy" path="$PROJECT_DIR$/web" />
+    </root>
+  </artifact>
+</component>
